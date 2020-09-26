@@ -1,0 +1,12 @@
+CONCEPT
+=======
+Objects for Wikidata:
+- item
+- string
+- monolingualtext
+- wikibase-entityid
+- url
+- time
+
+https://www.mediawiki.org/wiki/Wikibase/DataModel
+https://www.wikidata.org/wiki/Help:Data_type
