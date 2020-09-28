@@ -32,6 +32,7 @@ t/Wikidata-Datatype-Statement/01-use.t
 t/Wikidata-Datatype-Statement/02-version.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
+t/Wikidata-Datatype-Value-Item/03-new.t
 t/Wikidata-Datatype-Value-Monolingual/01-use.t
 t/Wikidata-Datatype-Value-Monolingual/02-version.t
 t/Wikidata-Datatype-Value-String/01-use.t
@@ -40,6 +41,8 @@ t/Wikidata-Datatype-Value-Time/01-use.t
 t/Wikidata-Datatype-Value-Time/02-version.t
 t/Wikidata-Datatype-Value/01-use.t
 t/Wikidata-Datatype-Value/02-version.t
+t/Wikidata-Datatype-Value/03-new.t
+t/Wikidata-Datatype-Value/04-value.t
 t/Wikidata-Datatype/01-use.t
 t/Wikidata-Datatype/02-version.t
 xt/Wikidata-Datatype-Reference/01-pod_coverage.t
