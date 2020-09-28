@@ -35,10 +35,13 @@ t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t
 t/Wikidata-Datatype-Value-Monolingual/01-use.t
 t/Wikidata-Datatype-Value-Monolingual/02-version.t
+t/Wikidata-Datatype-Value-Monolingual/03-new.t
 t/Wikidata-Datatype-Value-String/01-use.t
 t/Wikidata-Datatype-Value-String/02-version.t
+t/Wikidata-Datatype-Value-String/03-new.t
 t/Wikidata-Datatype-Value-Time/01-use.t
 t/Wikidata-Datatype-Value-Time/02-version.t
+t/Wikidata-Datatype-Value-Time/03-new.t
 t/Wikidata-Datatype-Value/01-use.t
 t/Wikidata-Datatype-Value/02-version.t
 t/Wikidata-Datatype-Value/03-new.t

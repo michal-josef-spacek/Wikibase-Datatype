@@ -2,7 +2,8 @@ TODO
 ====
 1. Do Item apod. dat Error::Pure::Always, ale pouze tehdy, pokud se vyresit
 nepredelavani err na err :-)
-2.
+2. Fix SKIP v testech (inheritance)
+3.
 
 Applied
 =======
