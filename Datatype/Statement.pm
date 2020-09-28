@@ -4,9 +4,11 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use Error::Pure::Always;
+use List::MoreUtils qw(none);
 use Mo qw(build default is required);
-use Wikidata::Datatype::Utils qw(check_references);
+use Readonly;
+
+Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
 our $VERSION = 0.01;
 
@@ -15,12 +17,16 @@ has entity => (
 	required => 1,
 );
 
+has property_snak => (
+	is => 'rw',
+);
+
 has references => (
 	default => [],
 	is => 'rw',
 );
 
-has property => (
+has snak => (
 	is => 'rw',
 	required => 1,
 );
@@ -30,15 +36,45 @@ has rank => (
 	default => 'normal',
 );
 
-has value => (
-	is => 'rw',
-	required => 1,
-);
-
 sub BUILD {
 	my $self = shift;
 
-	check_references($self);
+	# Check rank.
+	if (defined $self->{'rank'} && none { $_ eq $self->{'rank'} } @RANKS) {
+		err "Parameter 'rank' has bad value. Possible values are ".(
+			join ', ', @RANKS).'.';
+	}
+
+	# Check snak.
+	if (! $self->{'snak'}->isa('Wikidata::Datatype::Snak')) {
+		err "Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.";
+	}
+
+	# Check property snak.
+	if ($self->{'property_snak'}) {
+		if (ref $self->{'property_snak'} ne 'ARRAY') {
+			err "Parameter 'property_snak' must be a array.";
+		} else {
+			foreach my $reference (@{$self->{'property_snak'}}) {
+				if (! $reference->isa('Wikidata::Datatype::Snak')) {
+					err "Reference isn't 'Wikidata::Datatype::Snak' object.";
+				}
+			}
+		}
+	}
+
+	# Check references.
+	if ($self->{'references'}) {
+		if (ref $self->{'references'} ne 'ARRAY') {
+			err "Parameter 'references' must be a array.";
+		} else {
+			foreach my $reference (@{$self->{'references'}}) {
+				if (! $reference->isa('Wikidata::Datatype::Reference')) {
+					err "Reference isn't 'Wikidata::Datatype::Reference' object.";
+				}
+			}
+		}
+	}
 
 	return;
 }

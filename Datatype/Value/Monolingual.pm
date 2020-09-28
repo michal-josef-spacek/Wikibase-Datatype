@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Value::String;
+package Wikidata::Datatype::Value::Monolingual;
 
 use strict;
 use warnings;
@@ -9,8 +9,13 @@ our $VERSION = 0.01;
 
 extends 'Wikidata::Datatype::Value';
 
+has language => (
+	is => 'rw',
+	required => 1,
+);
+
 sub type {
-	return 'string';
+	return 'monolingualtext';
 }
 
 1;

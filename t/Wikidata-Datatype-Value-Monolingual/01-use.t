@@ -7,8 +7,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('Wikidata::Datatype::Rank');
+	use_ok('Wikidata::Datatype::Value::Monolingual');
 }
 
 # Test.
-require_ok('Wikidata::Datatype::Rank');
+require_ok('Wikidata::Datatype::Value::Monolingual');

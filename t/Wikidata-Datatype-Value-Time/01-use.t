@@ -7,8 +7,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('Wikidata::Datatype::Utils');
+	use_ok('Wikidata::Datatype::Value::Time');
 }
 
 # Test.
-require_ok('Wikidata::Datatype::Utils');
+require_ok('Wikidata::Datatype::Value::Time');

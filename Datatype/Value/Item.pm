@@ -4,19 +4,15 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use Mo qw(build default is required);
+use Mo qw(build is required);
 
 our $VERSION = 0.01;
 
-has value => (
-	is => 'rw',
-	required => 1,
-);
+extends 'Wikidata::Datatype::Value';
 
-has type => (
-	default => 'item',
-	is => 'ro',
-);
+sub type {
+	return 'item';
+}
 
 sub BUILD {
 	my $self = shift;
