@@ -10,6 +10,7 @@ use Readonly;
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
+	'commonsMedia' => 'string',
 	'external-id' => 'string',
 	'monolingualtext' => 'monolingualtext',
 	'string' => 'string',
