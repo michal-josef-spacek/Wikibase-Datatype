@@ -18,7 +18,11 @@ Readonly::Hash our %DATA_TYPES => (
 	'url' => 'string',
 	'wikibase-item' => 'wikibase-entityid',
 );
-Readonly::Array our @SNAK_TYPES => qw(value);
+Readonly::Array our @SNAK_TYPES => qw(
+	novalue
+	somevalue
+	value
+);
 
 our $VERSION = 0.01;
 
