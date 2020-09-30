@@ -3,7 +3,7 @@ package Wikidata::Datatype::Value::Monolingual;
 use strict;
 use warnings;
 
-use Mo qw(is required);
+use Mo qw(default is);
 
 our $VERSION = 0.01;
 
@@ -11,7 +11,7 @@ extends 'Wikidata::Datatype::Value';
 
 has language => (
 	is => 'rw',
-	required => 1,
+	default => 'en',
 );
 
 sub type {
