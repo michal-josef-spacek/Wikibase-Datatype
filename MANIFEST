@@ -28,6 +28,8 @@ META.yml
 README
 t/Wikidata-Datatype-Reference/01-use.t
 t/Wikidata-Datatype-Reference/02-version.t
+t/Wikidata-Datatype-Sitelink/01-use.t
+t/Wikidata-Datatype-Sitelink/02-version.t
 t/Wikidata-Datatype-Snak/01-use.t
 t/Wikidata-Datatype-Snak/02-version.t
 t/Wikidata-Datatype-Statement/01-use.t
@@ -56,6 +58,8 @@ xt/Wikidata-Datatype-Label/01-pod_coverage.t
 xt/Wikidata-Datatype-Label/02-pod.t
 xt/Wikidata-Datatype-Reference/01-pod_coverage.t
 xt/Wikidata-Datatype-Reference/02-pod.t
+xt/Wikidata-Datatype-Sitelink/01-pod_coverage.t
+xt/Wikidata-Datatype-Sitelink/02-pod.t
 xt/Wikidata-Datatype-Snak/01-pod_coverage.t
 xt/Wikidata-Datatype-Snak/02-pod.t
 xt/Wikidata-Datatype-Statement/01-pod_coverage.t
