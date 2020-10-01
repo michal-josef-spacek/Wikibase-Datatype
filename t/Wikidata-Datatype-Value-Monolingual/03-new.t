@@ -25,9 +25,7 @@ like($EVAL_ERROR, qr{value required}, "Parameter 'value' is required.");
 };
 
 # Test.
-eval {
-	Wikidata::Datatype::Value::Monolingual->new(
-		'value' => 'foo',
-	);
-};
-like($EVAL_ERROR, qr{^language required}, "Missing 'language' parameter.");
+$obj = Wikidata::Datatype::Value::Monolingual->new(
+	'value' => 'foo',
+);
+isa_ok($obj, 'Wikidata::Datatype::Value::Monolingual');
