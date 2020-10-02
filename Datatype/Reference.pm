@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use Mo qw(build default is required);
+use Mo qw(build is required);
 
 our $VERSION = 0.01;
 
