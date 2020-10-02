@@ -3,7 +3,11 @@ TODO
 1. Do Item apod. dat Error::Pure::Always, ale pouze tehdy, pokud se vyresit
 nepredelavani err na err :-)
 2. Fix SKIP v testech (inheritance)
-3.
+3. Pridat testy pro Snak.
+4. Pridat testy pro Statement.
+5. Pridat testy pro Reference.
+6. Dodelat testy pro Item.
+7.
 
 Applied
 =======
