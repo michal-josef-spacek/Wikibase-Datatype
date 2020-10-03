@@ -43,6 +43,7 @@ t/Wikidata-Datatype-Snak/06-property.t
 t/Wikidata-Datatype-Snak/07-snaktype.t
 t/Wikidata-Datatype-Statement/01-use.t
 t/Wikidata-Datatype-Statement/02-version.t
+t/Wikidata-Datatype-Statement/03-new.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t
