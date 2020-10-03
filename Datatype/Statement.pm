@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::MoreUtils qw(none);
-use Mo qw(build default is required);
+use Mo qw(build default is);
 use Readonly;
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
@@ -14,7 +14,6 @@ our $VERSION = 0.01;
 
 has entity => (
 	is => 'ro',
-	required => 1,
 );
 
 has property_snak => (
@@ -28,7 +27,6 @@ has references => (
 
 has snak => (
 	is => 'rw',
-	required => 1,
 );
 
 has rank => (
@@ -38,6 +36,14 @@ has rank => (
 
 sub BUILD {
 	my $self = shift;
+
+	# Check requirements.
+	if (! $self->{'entity'}) {
+		err "Parameter 'entity' is required.";
+	}
+	if (! $self->{'snak'}) {
+		err "Parameter 'snak' is required.";
+	}
 
 	# Check rank.
 	if (defined $self->{'rank'} && none { $_ eq $self->{'rank'} } @RANKS) {
