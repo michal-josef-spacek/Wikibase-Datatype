@@ -2,6 +2,7 @@ use strict;
 use warnings;
 
 use English;
+use Error::Pure::Utils qw(clean);
 use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Wikidata::Datatype::Sitelink;
@@ -19,7 +20,9 @@ eval {
 		'title' => 'Title',
 	);
 };
-like($EVAL_ERROR, qr{site required}, "Parameter 'site' is required.");
+is($EVAL_ERROR, "Parameter 'site' is required.\n",
+	"Parameter 'site' is required.");
+clean();
 
 # Test.
 eval {
@@ -27,4 +30,6 @@ eval {
 		'site' => 'enwiki',
 	);
 };
-like($EVAL_ERROR, qr{title required}, "Parameter 'value' is required.");
+is($EVAL_ERROR, "Parameter 'title' is required.\n",
+	"Parameter 'title' is required.");
+clean();

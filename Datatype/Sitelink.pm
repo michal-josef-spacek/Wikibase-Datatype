@@ -3,7 +3,8 @@ package Wikidata::Datatype::Sitelink;
 use strict;
 use warnings;
 
-use Mo qw(default is required);
+use Mo qw(build default is);
+use Wikidata::Datatype::Utils qw(check_required);
 
 our $VERSION = 0.01;
 
@@ -14,12 +15,17 @@ has badges => (
 
 has site => (
 	is => 'rw',
-	required => 1,
 );
 
 has title => (
 	is => 'rw',
-	required => 1,
 );
+
+sub BUILD {
+	my $self = shift;
+
+	check_required($self, 'site');
+	check_required($self, 'title');
+}
 
 1;
