@@ -9,8 +9,9 @@ nepredelavani err na err :-)
 6. Dodelat testy pro Item.
 7. Dokumentace.
 8. Predelat 'required' na explicitni err.
-9. Check pro array nejakych objektu dat do Utils.
 10.
 
 Applied
 =======
+9. Check pro array nejakych objektu dat do Utils.
+OK [20201003] skim
