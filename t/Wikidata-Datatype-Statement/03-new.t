@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 use Wikidata::Datatype::Snak;
 use Wikidata::Datatype::Statement;
@@ -77,6 +77,20 @@ is($EVAL_ERROR,
 	"Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.\n",
 	"Parameter 'rank' has bad value.");
 clean();
+
+# Test.
+$obj = Wikidata::Datatype::Statement->new(
+	'entity' => 'Q42',
+	'rank' => 'preferred',
+	'snak' => Wikidata::Datatype::Snak->new(
+		'datavalue' => Wikidata::Datatype::Value::String->new(
+			'value' => 'foo',
+		),
+		'datatype' => 'string',
+		'property' => 'P123',
+	),
+);
+isa_ok($obj, 'Wikidata::Datatype::Statement');
 
 # Test.
 eval {
