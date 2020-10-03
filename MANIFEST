@@ -31,6 +31,8 @@ t/Wikidata-Datatype-Sitelink/01-use.t
 t/Wikidata-Datatype-Sitelink/02-version.t
 t/Wikidata-Datatype-Sitelink/03-new.t
 t/Wikidata-Datatype-Sitelink/04-badges.t
+t/Wikidata-Datatype-Sitelink/05-site.t
+t/Wikidata-Datatype-Sitelink/06-title.t
 t/Wikidata-Datatype-Snak/01-use.t
 t/Wikidata-Datatype-Snak/02-version.t
 t/Wikidata-Datatype-Snak/03-new.t
