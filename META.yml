@@ -5,6 +5,7 @@ author:
 build_requires:
   English: 0
   ExtUtils::MakeMaker: 6.59
+  Test::MockObject: 0
   Test::More: 0
   Test::NoWarnings: 0
 configure_requires:
