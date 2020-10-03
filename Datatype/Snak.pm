@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::MoreUtils qw(none);
-use Mo qw(build default is required);
+use Mo qw(build default is);
 use Readonly;
 
 # Pairs data type and datatype.
@@ -28,17 +28,14 @@ our $VERSION = 0.01;
 
 has datavalue => (
 	is => 'rw',
-	required => 1,
 );
 
 has datatype => (
 	is => 'rw',
-	required => 1,
 );
 
 has property => (
 	is => 'rw',
-	required => 1,
 );
 
 has snaktype => (
@@ -48,6 +45,17 @@ has snaktype => (
 
 sub BUILD {
 	my $self = shift;
+
+	# Requirements.
+	if (! defined $self->{'datavalue'}) {
+		err "Parameter 'datavalue' is required.";
+	}
+	if (! defined $self->{'datatype'}) {
+		err "Parameter 'datatype' is required.";
+	}
+	if (! defined $self->{'property'}) {
+		err "Parameter 'property' is required.";
+	}
 
 	# Check data value.
 	if (! $self->{'datavalue'}->isa('Wikidata::Datatype::Value')) {
