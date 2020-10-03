@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 use Wikidata::Datatype::Reference;
 
@@ -12,6 +12,14 @@ my $obj = Wikidata::Datatype::Reference->new(
 	'snaks' => [],
 );
 isa_ok($obj, 'Wikidata::Datatype::Reference');
+
+# Test.
+eval {
+	Wikidata::Datatype::Reference->new;
+};
+is($EVAL_ERROR, "Parameter 'snaks' is required.\n",
+	"Parameter 'snaks' is required.");
+clean();
 
 # Test.
 eval {
