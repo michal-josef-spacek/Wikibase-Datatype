@@ -63,7 +63,7 @@ sub BUILD {
 		} else {
 			foreach my $property_snak (@{$self->{'property_snak'}}) {
 				if (! $property_snak->isa('Wikidata::Datatype::Snak')) {
-					err "Reference isn't 'Wikidata::Datatype::Snak' object.";
+					err "Property snak isn't 'Wikidata::Datatype::Snak' object.";
 				}
 			}
 		}
