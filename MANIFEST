@@ -48,6 +48,7 @@ t/Wikidata-Datatype-Statement/03-new.t
 t/Wikidata-Datatype-Utils/01-use.t
 t/Wikidata-Datatype-Utils/02-version.t
 t/Wikidata-Datatype-Utils/03-check_array_object.t
+t/Wikidata-Datatype-Utils/04-check_required.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t

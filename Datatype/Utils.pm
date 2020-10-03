@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(check_array_object);
+Readonly::Array our @EXPORT_OK => qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -24,6 +24,16 @@ sub check_array_object {
 				}
 			}
 		}
+	}
+
+	return;
+}
+
+sub check_required {
+	my ($self, $key) = @_;
+
+	if (! defined $self->{$key}) {
+		err "Parameter '$key' is required.";
 	}
 
 	return;

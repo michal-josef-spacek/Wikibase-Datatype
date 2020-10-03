@@ -29,6 +29,7 @@ resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikidata-Datat
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikidata-Datatype';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Wikidata-Datatype';
 test_requires 'English' => 0;
+test_requires 'Error::Pure::Utils' => 0;
 test_requires 'Test::MockObject' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
