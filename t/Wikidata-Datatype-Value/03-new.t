@@ -2,6 +2,7 @@ use strict;
 use warnings;
 
 use English;
+use Error::Pure::Utils qw(clean);
 use Test::More 'tests' => 3;
 use Test::NoWarnings;
 use Wikidata::Datatype::Value;
@@ -16,4 +17,6 @@ isa_ok($obj, 'Wikidata::Datatype::Value');
 eval {
 	Wikidata::Datatype::Value->new
 };
-like($EVAL_ERROR, qr{value required}, "Parameter 'value' is required.");
+is($EVAL_ERROR, "Parameter 'value' is required.\n",
+	"Parameter 'value' is required.");
+clean();

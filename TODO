@@ -2,7 +2,6 @@ TODO
 ====
 1. Do Item apod. dat Error::Pure::Always, ale pouze tehdy, pokud se vyresit
 nepredelavani err na err :-)
-2. Fix SKIP v testech (inheritance)
 6. Dodelat testy pro Item.
 7. Dokumentace.
 8. Predelat 'required' na explicitni err.
@@ -20,4 +19,7 @@ OK [20201003] skim
 OK [20201003] skim
 
 5. Pridat testy pro Reference.
+OK [20201003] skim
+
+2. Fix SKIP v testech (inheritance)
 OK [20201003] skim

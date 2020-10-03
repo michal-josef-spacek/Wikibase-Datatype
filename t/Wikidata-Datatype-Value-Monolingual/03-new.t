@@ -16,13 +16,12 @@ my $obj = Wikidata::Datatype::Value::Monolingual->new(
 isa_ok($obj, 'Wikidata::Datatype::Value::Monolingual');
 
 # Test.
-SKIP: {
-	skip 'Fix inheritance.', 1;
 eval {
-	Wikidata::Datatype::Value::Monolingual->new;
+	Wikidata::Datatype::Value->new
 };
-like($EVAL_ERROR, qr{value required}, "Parameter 'value' is required.");
-};
+is($EVAL_ERROR, "Parameter 'value' is required.\n",
+	"Parameter 'value' is required.");
+clean();
 
 # Test.
 $obj = Wikidata::Datatype::Value::Monolingual->new(

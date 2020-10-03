@@ -3,13 +3,19 @@ package Wikidata::Datatype::Value;
 use strict;
 use warnings;
 
-use Mo qw(is required);
+use Mo qw(build is);
+use Wikidata::Datatype::Utils qw(check_required);
 
 our $VERSION = 0.01;
 
 has value => (
 	is => 'rw',
-	required => 1,
 );
+
+sub BUILD {
+	my $self = shift;
+
+	check_required($self, 'value');
+}
 
 1;
