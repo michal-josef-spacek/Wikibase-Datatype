@@ -37,6 +37,10 @@ t/Wikidata-Datatype-Sitelink/06-title.t
 t/Wikidata-Datatype-Snak/01-use.t
 t/Wikidata-Datatype-Snak/02-version.t
 t/Wikidata-Datatype-Snak/03-new.t
+t/Wikidata-Datatype-Snak/04-datavalue.t
+t/Wikidata-Datatype-Snak/05-datatype.t
+t/Wikidata-Datatype-Snak/06-property.t
+t/Wikidata-Datatype-Snak/07-snaktype.t
 t/Wikidata-Datatype-Statement/01-use.t
 t/Wikidata-Datatype-Statement/02-version.t
 t/Wikidata-Datatype-Value-Item/01-use.t
