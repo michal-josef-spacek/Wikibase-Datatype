@@ -55,8 +55,8 @@ sub BUILD {
 		if (ref $self->{'property_snak'} ne 'ARRAY') {
 			err "Parameter 'property_snak' must be a array.";
 		} else {
-			foreach my $reference (@{$self->{'property_snak'}}) {
-				if (! $reference->isa('Wikidata::Datatype::Snak')) {
+			foreach my $property_snak (@{$self->{'property_snak'}}) {
+				if (! $property_snak->isa('Wikidata::Datatype::Snak')) {
 					err "Reference isn't 'Wikidata::Datatype::Snak' object.";
 				}
 			}
