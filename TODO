@@ -8,7 +8,8 @@ nepredelavani err na err :-)
 5. Pridat testy pro Reference.
 6. Dodelat testy pro Item.
 7. Dokumentace.
-8.
+8. Predelat 'required' na explicitni err.
+9.
 
 Applied
 =======
