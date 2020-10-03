@@ -29,6 +29,6 @@ eval {
 		'snaks' => ['bad'],
 	);
 };
-is($EVAL_ERROR, "Reference isn't 'Wikidata::Datatype::Snak' object.\n",
-	"Reference isn't 'Wikidata::Datatype::Snak' object.");
+is($EVAL_ERROR, "Snak isn't 'Wikidata::Datatype::Snak' object.\n",
+	"Snak isn't 'Wikidata::Datatype::Snak' object.");
 clean();

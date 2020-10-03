@@ -7,6 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
 use Readonly;
+use Wikidata::Datatype::Utils qw(check_array_object);
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
@@ -57,30 +58,11 @@ sub BUILD {
 	}
 
 	# Check property snak.
-	if ($self->{'property_snak'}) {
-		if (ref $self->{'property_snak'} ne 'ARRAY') {
-			err "Parameter 'property_snak' must be a array.";
-		} else {
-			foreach my $property_snak (@{$self->{'property_snak'}}) {
-				if (! $property_snak->isa('Wikidata::Datatype::Snak')) {
-					err "Property snak isn't 'Wikidata::Datatype::Snak' object.";
-				}
-			}
-		}
-	}
+	check_array_object($self, 'property_snak', 'Wikidata::Datatype::Snak',
+		'Property snak');
 
 	# Check references.
-	if ($self->{'references'}) {
-		if (ref $self->{'references'} ne 'ARRAY') {
-			err "Parameter 'references' must be a array.";
-		} else {
-			foreach my $reference (@{$self->{'references'}}) {
-				if (! $reference->isa('Wikidata::Datatype::Reference')) {
-					err "Reference isn't 'Wikidata::Datatype::Reference' object.";
-				}
-			}
-		}
-	}
+	check_array_object($self, 'references', 'Wikidata::Datatype::Reference', 'Reference');
 
 	return;
 }

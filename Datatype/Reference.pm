@@ -5,6 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is required);
+use Wikidata::Datatype::Utils qw(check_array_object);
 
 our $VERSION = 0.01;
 
@@ -16,17 +17,7 @@ has snaks => (
 sub BUILD {
 	my $self = shift;
 
-	if ($self->{'snaks'}) {
-		if (ref $self->{'snaks'} ne 'ARRAY') {
-			err "Parameter 'snaks' must be a array.";
-		} else {
-			foreach my $snak (@{$self->{'snaks'}}) {
-				if (! $snak->isa('Wikidata::Datatype::Snak')) {
-					err "Reference isn't 'Wikidata::Datatype::Snak' object.";
-				}
-			}
-		}
-	}
+	check_array_object($self, 'snaks', 'Wikidata::Datatype::Snak', 'Snak');
 
 	return;
 }
