@@ -7,6 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
 use Readonly;
+use Wikidata::Datatype::Utils qw(check_required);
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
@@ -47,15 +48,9 @@ sub BUILD {
 	my $self = shift;
 
 	# Requirements.
-	if (! defined $self->{'datavalue'}) {
-		err "Parameter 'datavalue' is required.";
-	}
-	if (! defined $self->{'datatype'}) {
-		err "Parameter 'datatype' is required.";
-	}
-	if (! defined $self->{'property'}) {
-		err "Parameter 'property' is required.";
-	}
+	check_required($self, 'datavalue');
+	check_required($self, 'datatype');
+	check_required($self, 'property');
 
 	# Check data value.
 	if (! $self->{'datavalue'}->isa('Wikidata::Datatype::Value')) {
