@@ -26,8 +26,10 @@ no_index:
 requires:
   Class::Utils: 0.03
   Error::Pure: 0.15
-  JSON::XS: 0
-  MediaWiki::API: 0
+  Exporter: 0
+  List::MoreUtils: 0
+  Mo: 0
+  Readonly: 0
   Unicode::UTF8: 0
   perl: 5.6.2
 resources:
