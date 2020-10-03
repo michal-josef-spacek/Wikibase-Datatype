@@ -25,6 +25,8 @@ sub check_array_object {
 			}
 		}
 	}
+
+	return;
 }
 
 1;
