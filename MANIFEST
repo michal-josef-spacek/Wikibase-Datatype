@@ -4,6 +4,7 @@ Datatype/Reference.pm
 Datatype/Sitelink.pm
 Datatype/Snak.pm
 Datatype/Statement.pm
+Datatype/Utils.pm
 Datatype/Value.pm
 Datatype/Value/Item.pm
 Datatype/Value/Monolingual.pm
@@ -44,6 +45,9 @@ t/Wikidata-Datatype-Snak/07-snaktype.t
 t/Wikidata-Datatype-Statement/01-use.t
 t/Wikidata-Datatype-Statement/02-version.t
 t/Wikidata-Datatype-Statement/03-new.t
+t/Wikidata-Datatype-Utils/01-use.t
+t/Wikidata-Datatype-Utils/02-version.t
+t/Wikidata-Datatype-Utils/03-check_array_object.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t
@@ -84,6 +88,8 @@ xt/Wikidata-Datatype-Snak/01-pod_coverage.t
 xt/Wikidata-Datatype-Snak/02-pod.t
 xt/Wikidata-Datatype-Statement/01-pod_coverage.t
 xt/Wikidata-Datatype-Statement/02-pod.t
+xt/Wikidata-Datatype-Utils/01-pod_coverage.t
+xt/Wikidata-Datatype-Utils/02-pod.t
 xt/Wikidata-Datatype-Value-Item/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Item/02-pod.t
 xt/Wikidata-Datatype-Value-Monolingual/01-pod_coverage.t
