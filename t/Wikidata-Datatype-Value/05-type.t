@@ -10,5 +10,5 @@ my $obj = Wikidata::Datatype::Value->new(
 	'value' => 'foo',
 	'type' => 'string',
 );
-my $ret = $obj->value;
-is($ret, 'foo', 'Get value().');
+my $ret = $obj->type;
+is($ret, 'string', 'Get type().');

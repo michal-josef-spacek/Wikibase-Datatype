@@ -12,6 +12,10 @@ has value => (
 	is => 'rw',
 );
 
+has type => (
+	'is' => 'rw',
+);
+
 sub BUILD {
 	my $self = shift;
 
