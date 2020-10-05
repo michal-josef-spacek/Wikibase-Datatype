@@ -17,7 +17,8 @@ has entity => (
 	is => 'ro',
 );
 
-has property_snak => (
+has property_snaks => (
+	default => [],
 	is => 'ro',
 );
 
@@ -57,8 +58,8 @@ sub BUILD {
 		err "Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.";
 	}
 
-	# Check property snak.
-	check_array_object($self, 'property_snak', 'Wikidata::Datatype::Snak',
+	# Check property snaks.
+	check_array_object($self, 'property_snaks', 'Wikidata::Datatype::Snak',
 		'Property snak');
 
 	# Check references.

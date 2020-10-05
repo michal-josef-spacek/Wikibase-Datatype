@@ -96,7 +96,7 @@ isa_ok($obj, 'Wikidata::Datatype::Statement');
 eval {
 	Wikidata::Datatype::Statement->new(
 		'entity' => 'Q42',
-		'property_snak' => 'bad',
+		'property_snaks' => 'bad',
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
 				'value' => 'foo',
@@ -106,15 +106,15 @@ eval {
 		),
 	);
 };
-is($EVAL_ERROR, "Parameter 'property_snak' must be a array.\n",
-	"Parameter 'property_snak' must be a array.");
+is($EVAL_ERROR, "Parameter 'property_snaks' must be a array.\n",
+	"Parameter 'property_snaks' must be a array.");
 clean();
 
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
 		'entity' => 'Q42',
-		'property_snak' => ['bad'],
+		'property_snaks' => ['bad'],
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
 				'value' => 'foo',
