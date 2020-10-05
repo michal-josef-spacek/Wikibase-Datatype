@@ -39,8 +39,8 @@ Wikidata::Datatype::Value - Wikidata value datatype.
  use Wikidata::Datatype::Value;
 
  my $obj = Wikidata::Datatype::Value->new(%params);
- my $value = $obj->value;
  my $type = $obj->type;
+ my $value = $obj->value;
 
 =head1 DESCRIPTION
 
@@ -58,31 +58,31 @@ Retruns instance of object.
 
 =over 8
 
-=item * C<value>
-
-Value of instance.
-Parameter is required.
-
 =item * C<type>
 
 Type of instance.
 Default value is undef.
 
+=item * C<value>
+
+Value of instance.
+Parameter is required.
+
 =back
-
-=head2 C<value>
-
- my $value = $obj->value;
-
-Get value.
-
-Returns string.
 
 =head2 C<type>
 
  my $type = $obj->type;
 
 Get type.
+
+Returns string.
+
+=head2 C<value>
+
+ my $value = $obj->value;
+
+Get value.
 
 Returns string.
 
