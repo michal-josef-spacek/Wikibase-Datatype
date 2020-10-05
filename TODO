@@ -1,11 +1,15 @@
 TODO
 ====
-7. Dokumentace.
 13. Do Snak pridat globe-coordinate
 14. Do Snak pridat geo-shape
 15. Do Snak pridat tabular-data
 16. Do Snak pridat quantity
-17.
+17. Dokumentace pro Sitelink.
+18. Dokumentace pro Value::Time
+19. Dokumentace pro Value::String
+20. Dokumentace pro Value::Item
+21. Dokumentace pro Value::Monolingual
+22.
 
 Applied
 =======
@@ -42,4 +46,7 @@ OK [20201005] skim
 OK [20201005] skim
 
 12. Do Utils pridat check na isa. A prepsat uziti na tento helper.
+OK [20201005] skim
+
+7. Dokumentace.
 OK [20201005] skim
