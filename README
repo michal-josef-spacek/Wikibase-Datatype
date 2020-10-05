@@ -1,0 +1,53 @@
+NAME
+    Wikidata::Datatype - Wikidata datatypes.
+
+DESCRIPTION
+    This distributions is set of datatypes for Wikidata.
+
+SEE ALSO
+    Wikidata::Datatype::Reference
+        Wikidata reference datatype
+
+    Wikidata::Datatype::Sitelink
+        Wikidata sitelink datatype
+
+    Wikidata::Datatype::Snak
+        Wikidata snak datatype
+
+    Wikidata::Datatype::Statement
+        Wikidata statement datatype
+
+    Wikidata::Datatype::Utils
+        Wikidata datatype utilities
+
+    Wikidata::Datatype::Value
+        Wikidata value datatype
+
+    Wikidata::Datatype::Value::Item
+        Wikidata item value datatype
+
+    Wikidata::Datatype::Value::Monolingual
+        Wikidata monolingual value datatype
+
+    Wikidata::Datatype::Value::String
+        Wikidata string value datatype
+
+    Wikidata::Datatype::Value::Time
+        Wikidata time value datatype
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Wikidata-Datatype>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © Michal Josef Špaček 2020
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
