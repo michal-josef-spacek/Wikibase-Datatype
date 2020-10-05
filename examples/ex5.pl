@@ -17,4 +17,4 @@ check_required($self, 'key');
 print "ok\n";
 
 # Output:
-# TODO
+# #Error [/../Wikidata/Datatype/Utils.pm:35] Parameter 'key' is required.
