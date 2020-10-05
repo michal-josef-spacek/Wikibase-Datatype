@@ -16,5 +16,5 @@ check_required($self, 'key');
 # Print out.
 print "ok\n";
 
-# Output:
-# #Error [/../Wikidata/Datatype/Utils.pm:35] Parameter 'key' is required.
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.

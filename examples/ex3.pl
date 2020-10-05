@@ -21,5 +21,5 @@ check_array_object($self, 'key', 'Wikidata::Datatype::Snak', 'Snak');
 # Print out.
 print "ok\n";
 
-# Output:
-# #Error [/../Wikidata/Datatype/Utils.pm:22] Snak isn't 'Wikidata::Datatype::Snak' object.
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Snak isn't 'Wikidata::Datatype::Snak' object.
