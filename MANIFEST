@@ -85,8 +85,8 @@ t/Wikidata-Datatype-Value-Time/10-value.t
 t/Wikidata-Datatype-Value/01-use.t
 t/Wikidata-Datatype-Value/02-version.t
 t/Wikidata-Datatype-Value/03-new.t
-t/Wikidata-Datatype-Value/04-value.t
-t/Wikidata-Datatype-Value/05-type.t
+t/Wikidata-Datatype-Value/04-type.t
+t/Wikidata-Datatype-Value/05-value.t
 t/Wikidata-Datatype/01-use.t
 t/Wikidata-Datatype/02-version.t
 xt/Wikidata-Datatype-Reference/01-pod_coverage.t
