@@ -7,7 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
 use Readonly;
-use Wikidata::Datatype::Utils qw(check_array_object);
+use Wikidata::Datatype::Utils qw(check_array_object check_required);
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
@@ -40,12 +40,8 @@ sub BUILD {
 	my $self = shift;
 
 	# Check requirements.
-	if (! $self->{'entity'}) {
-		err "Parameter 'entity' is required.";
-	}
-	if (! $self->{'snak'}) {
-		err "Parameter 'snak' is required.";
-	}
+	check_required($self, 'entity');
+	check_required($self, 'snak');
 
 	# Check rank.
 	if (defined $self->{'rank'} && none { $_ eq $self->{'rank'} } @RANKS) {
