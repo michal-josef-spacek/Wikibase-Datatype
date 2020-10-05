@@ -7,7 +7,6 @@ TODO
 17. Dokumentace pro Sitelink.
 18. Dokumentace pro Value::Time
 19. Dokumentace pro Value::String
-20. Dokumentace pro Value::Item
 21. Dokumentace pro Value::Monolingual
 22.
 
@@ -49,4 +48,7 @@ OK [20201005] skim
 OK [20201005] skim
 
 7. Dokumentace.
+OK [20201005] skim
+
+20. Dokumentace pro Value::Item
 OK [20201005] skim
