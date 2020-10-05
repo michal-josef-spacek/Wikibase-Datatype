@@ -10,7 +10,7 @@ our $VERSION = 0.01;
 extends 'Wikidata::Datatype::Value';
 
 has language => (
-	is => 'rw',
+	is => 'ro',
 	default => 'en',
 );
 

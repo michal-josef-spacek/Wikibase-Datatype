@@ -9,7 +9,7 @@ use Wikidata::Datatype::Utils qw(check_required);
 our $VERSION = 0.01;
 
 has value => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has type => (

@@ -9,16 +9,16 @@ use Wikidata::Datatype::Utils qw(check_required);
 our $VERSION = 0.01;
 
 has badges => (
-	is => 'rw',
+	is => 'ro',
 	default => [],
 );
 
 has site => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has title => (
-	is => 'rw',
+	is => 'ro',
 );
 
 sub BUILD {

@@ -10,12 +10,12 @@ our $VERSION = 0.01;
 extends 'Wikidata::Datatype::Value';
 
 has after => (
-	is => 'rw',
+	is => 'ro',
 	default => 0,
 );
 
 has before => (
-	is => 'rw',
+	is => 'ro',
 	default => 0,
 );
 
@@ -25,12 +25,12 @@ has calendarmodel => (
 );
 
 has precision => (
-	is => 'rw',
+	is => 'ro',
 	default => 11,
 );
 
 has timezone => (
-	is => 'rw',
+	is => 'ro',
 	default => 0,
 );
 

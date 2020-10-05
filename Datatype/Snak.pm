@@ -28,19 +28,19 @@ Readonly::Array our @SNAK_TYPES => qw(
 our $VERSION = 0.01;
 
 has datavalue => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has datatype => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has property => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has snaktype => (
-	is => 'rw',
+	is => 'ro',
 	default => 'value',
 );
 

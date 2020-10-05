@@ -18,20 +18,20 @@ has entity => (
 );
 
 has property_snak => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has references => (
 	default => [],
-	is => 'rw',
+	is => 'ro',
 );
 
 has snak => (
-	is => 'rw',
+	is => 'ro',
 );
 
 has rank => (
-	is => 'rw',
+	is => 'ro',
 	default => 'normal',
 );
 

@@ -10,7 +10,7 @@ use Wikidata::Datatype::Utils qw(check_array_object check_required);
 our $VERSION = 0.01;
 
 has snaks => (
-	is => 'rw',
+	is => 'ro',
 );
 
 sub BUILD {
