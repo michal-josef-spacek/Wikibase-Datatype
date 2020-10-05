@@ -5,4 +5,6 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('Wikidata::Datatype::Value::Time', 'Wikidata::Datatype::Value::Time is covered.');
+pod_coverage_ok('Wikidata::Datatype::Value::Time',
+	{ 'also_private' => ['BUILD'] },
+	'Wikidata::Datatype::Value::Time is covered.');

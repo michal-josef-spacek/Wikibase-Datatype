@@ -5,4 +5,6 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('Wikidata::Datatype::Statement', 'Wikidata::Datatype::Statement is covered.');
+pod_coverage_ok('Wikidata::Datatype::Statement',
+	{ 'also_private' => ['BUILD'] },
+	'Wikidata::Datatype::Statement is covered.');
