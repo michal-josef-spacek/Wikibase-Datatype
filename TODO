@@ -2,7 +2,6 @@ TODO
 ====
 6. Dodelat testy pro Item.
 7. Dokumentace.
-8. Predelat 'required' na explicitni err.
 12.
 
 Applied
@@ -31,4 +30,7 @@ NONE [20201003] skim
 OK [20201005] skim
 
 11. Value->type by asi melo byt konstanta primo v tech konkretnich, tzn. nededit.
+OK [20201005] skim
+
+8. Predelat 'required' na explicitni err.
 OK [20201005] skim
