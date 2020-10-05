@@ -54,7 +54,7 @@ This datatype is base class for all Value datatypes.
 
 Constructor.
 
-Retruns instance of object.
+Returns instance of object.
 
 =over 8
 
@@ -131,19 +131,19 @@ L<Wikidata::Datatype::Utils>.
 
 =item L<Wikidata::Datatype::Value::Item>
 
-Wikidata item value datatype
+Wikidata item value datatype.
 
 =item L<Wikidata::Datatype::Value::Monolingual>
 
-Wikidata monolingual value datatype
+Wikidata monolingual value datatype.
 
 =item L<Wikidata::Datatype::Value::String>
 
-Wikidata string value datatype
+Wikidata string value datatype.
 
 =item L<Wikidata::Datatype::Value::Time>
 
-Wikidata time value datatype
+Wikidata time value datatype.
 
 =back
 
