@@ -97,7 +97,7 @@ Returns reference to array of Wikidata::Datatype::Snak instances.
                  Wikidata::Datatype::Snak->new(
                          'datatype' => 'string',
                          'datavalue' => Wikidata::Datatype::Value::String->new(
-                                 'value' => 'text',,
+                                 'value' => 'text',
                          ),
                          'property' => 'P11',
                  ),

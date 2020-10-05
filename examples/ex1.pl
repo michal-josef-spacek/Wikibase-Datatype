@@ -13,7 +13,7 @@ my $obj = Wikidata::Datatype::Reference->new(
                 Wikidata::Datatype::Snak->new(
                         'datatype' => 'string',
                         'datavalue' => Wikidata::Datatype::Value::String->new(
-                                'value' => 'text',,
+                                'value' => 'text',
                         ),
                         'property' => 'P11',
                 ),
