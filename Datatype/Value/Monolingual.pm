@@ -3,7 +3,7 @@ package Wikidata::Datatype::Value::Monolingual;
 use strict;
 use warnings;
 
-use Mo qw(build default is);
+use Mo qw(default is);
 
 our $VERSION = 0.01;
 
@@ -14,10 +14,8 @@ has language => (
 	default => 'en',
 );
 
-sub BUILD {
-	my $self = shift;
-
-	$self->type('monolingualtext');
+sub type {
+	return 'monolingualtext';
 }
 
 1;

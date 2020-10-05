@@ -3,7 +3,7 @@ package Wikidata::Datatype::Value::Time;
 use strict;
 use warnings;
 
-use Mo qw(build default is);
+use Mo qw(default is);
 
 our $VERSION = 0.01;
 
@@ -34,10 +34,8 @@ has timezone => (
 	default => 0,
 );
 
-sub BUILD {
-	my $self = shift;
-
-	$self->type('time');
+sub type {
+	return 'time';
 }
 
 1;

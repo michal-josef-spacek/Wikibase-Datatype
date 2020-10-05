@@ -13,7 +13,7 @@ has value => (
 );
 
 has type => (
-	'is' => 'rw',
+	'is' => 'ro',
 );
 
 sub BUILD {
