@@ -21,6 +21,11 @@ has property_snak => (
 	is => 'ro',
 );
 
+has rank => (
+	is => 'ro',
+	default => 'normal',
+);
+
 has references => (
 	default => [],
 	is => 'ro',
@@ -28,11 +33,6 @@ has references => (
 
 has snak => (
 	is => 'ro',
-);
-
-has rank => (
-	is => 'ro',
-	default => 'normal',
 );
 
 sub BUILD {
