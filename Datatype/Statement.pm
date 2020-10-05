@@ -7,7 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
 use Readonly;
-use Wikidata::Datatype::Utils qw(check_array_object check_required);
+use Wikidata::Datatype::Utils qw(check_array_object check_isa check_required);
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
@@ -50,9 +50,7 @@ sub BUILD {
 	}
 
 	# Check snak.
-	if (! $self->{'snak'}->isa('Wikidata::Datatype::Snak')) {
-		err "Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.";
-	}
+	check_isa($self, 'snak', 'Wikidata::Datatype::Snak');
 
 	# Check property snaks.
 	check_array_object($self, 'property_snaks', 'Wikidata::Datatype::Snak',
