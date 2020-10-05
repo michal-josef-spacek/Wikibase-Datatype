@@ -33,6 +33,7 @@ README
 t/Wikidata-Datatype-Reference/01-use.t
 t/Wikidata-Datatype-Reference/02-version.t
 t/Wikidata-Datatype-Reference/03-new.t
+t/Wikidata-Datatype-Reference/04-snaks.t
 t/Wikidata-Datatype-Sitelink/01-use.t
 t/Wikidata-Datatype-Sitelink/02-version.t
 t/Wikidata-Datatype-Sitelink/03-new.t
