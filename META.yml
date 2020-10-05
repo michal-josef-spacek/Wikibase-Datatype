@@ -21,6 +21,7 @@ meta-spec:
 name: Wikidata-Datatype
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt

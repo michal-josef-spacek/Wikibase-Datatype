@@ -10,6 +10,10 @@ Datatype/Value/Item.pm
 Datatype/Value/Monolingual.pm
 Datatype/Value/String.pm
 Datatype/Value/Time.pm
+examples/ex2.pl
+examples/ex3.pl
+examples/ex4.pl
+examples/ex5.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
