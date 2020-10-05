@@ -16,6 +16,7 @@ examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
 examples/ex6.pl
+examples/ex7.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
