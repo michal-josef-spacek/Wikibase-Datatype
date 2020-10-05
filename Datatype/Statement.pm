@@ -184,8 +184,9 @@ Returns Wikidata::Datatype::Snak instance.
                  Parameter 'references' must be a array.
                  Property snak isn't 'Wikidata::Datatype::Snak' object.
                  Reference isn't 'Wikidata::Datatype::Reference' object.
+         From Wikidata::Datatype::Utils::check_isa():
+                 Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
-         Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.
 
 =head1 EXAMPLE
 
