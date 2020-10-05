@@ -3,7 +3,8 @@ TODO
 6. Dodelat testy pro Item.
 7. Dokumentace.
 8. Predelat 'required' na explicitni err.
-10.
+10. Predelat rw na ro. Je lepsi, kdyz budou immutable.
+11.
 
 Applied
 =======
