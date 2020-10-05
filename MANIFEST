@@ -61,7 +61,9 @@ t/Wikidata-Datatype-Statement/08-snak.t
 t/Wikidata-Datatype-Utils/01-use.t
 t/Wikidata-Datatype-Utils/02-version.t
 t/Wikidata-Datatype-Utils/03-check_array_object.t
-t/Wikidata-Datatype-Utils/04-check_required.t
+t/Wikidata-Datatype-Utils/04-check_isa.t
+t/Wikidata-Datatype-Utils/04-check_object.t
+t/Wikidata-Datatype-Utils/05-check_required.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t

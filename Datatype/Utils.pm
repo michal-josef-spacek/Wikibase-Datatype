@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(check_array_object check_required);
+Readonly::Array our @EXPORT_OK => qw(check_array_object check_isa check_required);
 
 our $VERSION = 0.01;
 
@@ -24,6 +24,16 @@ sub check_array_object {
 				}
 			}
 		}
+	}
+
+	return;
+}
+
+sub check_isa {
+	my ($self, $key, $class) = @_;
+
+	if (! $self->{$key}->isa($class)) {
+		err "Parameter '$key' must be a '$class' object.";
 	}
 
 	return;
@@ -53,9 +63,10 @@ Wikidata::Datatype::Utils - Wikidata datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Utils qw(check_array_object check_required);
+ use Wikidata::Datatype::Utils qw(check_array_object check_isa check_required);
 
  check_array_object($self, $key, $class, $class_name);
+ check_isa($self, $key, $class);
  check_required($self, $key);
 
 =head1 DESCRIPTION
@@ -70,6 +81,16 @@ Datatype utilities for checking of data objects.
 
 Check parameter defined by C<$key> which is reference to array with instances
 of some object type (C<$class>). C<$class_name> is used to error message.
+
+Put error if check isn't ok.
+
+Returns undef.
+
+=head2 C<check_isa>
+
+ check_isa($self, $key, $class);
+
+Check parameter defined by C<$key> which is instance of C<$class> or no.
 
 Put error if check isn't ok.
 
@@ -90,6 +111,9 @@ Returns undef.
  check_array_object():
          Parameter '%s' must be a array.
          %s isn't '%s' object.
+
+ check_isa():
+         Parameter '%s' must be a '%s' object.
 
  check_required():
          Parameter '%s' is required.
@@ -148,6 +172,48 @@ Returns undef.
  use strict;
  use warnings;
 
+ use Wikidata::Datatype::Utils qw(check_isa);
+ use Wikidata::Datatype::Value;
+
+ my $self = {
+         'key' => Wikidata::Datatype::Value(
+                 'value' => 'foo',
+         ),
+ };
+ check_isa($self, 'key', 'Wikidata::Datatype::Value');
+
+ # Print out.
+ print "ok\n";
+
+ # Output:
+ # ok
+
+=head1 EXAMPLE4
+
+ use strict;
+ use warnings;
+
+ $Error::Pure::TYPE = 'Error';
+
+ use Wikidata::Datatype::Utils qw(check_isa);
+ use Wikidata::Datatype::Value;
+
+ my $self = {
+         'key' => 'foo',
+ };
+ check_isa($self, 'key', 'Wikidata::Datatype::Value');
+
+ # Print out.
+ print "ok\n";
+
+ # Output like:
+ # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikidata::Datatype::Value' object.
+
+=head1 EXAMPLE5
+
+ use strict;
+ use warnings;
+
  use Wikidata::Datatype::Utils qw(check_required);
 
  my $self = {
@@ -161,7 +227,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE4
+=head1 EXAMPLE6
 
  use strict;
  use warnings;

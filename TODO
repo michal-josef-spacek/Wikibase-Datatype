@@ -1,7 +1,6 @@
 TODO
 ====
 7. Dokumentace.
-12. Do Utils pridat check na isa. A prepsat uziti na tento helper.
 13. Do Snak pridat globe-coordinate
 14. Do Snak pridat geo-shape
 15. Do Snak pridat tabular-data
@@ -40,4 +39,7 @@ OK [20201005] skim
 OK [20201005] skim
 
 6. Dodelat testy pro Item.
+OK [20201005] skim
+
+12. Do Utils pridat check na isa. A prepsat uziti na tento helper.
 OK [20201005] skim
