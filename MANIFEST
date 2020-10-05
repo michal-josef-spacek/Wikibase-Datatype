@@ -52,6 +52,11 @@ t/Wikidata-Datatype-Snak/07-snaktype.t
 t/Wikidata-Datatype-Statement/01-use.t
 t/Wikidata-Datatype-Statement/02-version.t
 t/Wikidata-Datatype-Statement/03-new.t
+t/Wikidata-Datatype-Statement/04-entity.t
+t/Wikidata-Datatype-Statement/05-property_snaks.t
+t/Wikidata-Datatype-Statement/06-rank.t
+t/Wikidata-Datatype-Statement/07-references.t
+t/Wikidata-Datatype-Statement/08-snak.t
 t/Wikidata-Datatype-Utils/01-use.t
 t/Wikidata-Datatype-Utils/02-version.t
 t/Wikidata-Datatype-Utils/03-check_array_object.t
