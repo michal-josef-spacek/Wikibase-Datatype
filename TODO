@@ -1,6 +1,5 @@
 TODO
 ====
-6. Dodelat testy pro Item.
 7. Dokumentace.
 12.
 
@@ -33,4 +32,7 @@ OK [20201005] skim
 OK [20201005] skim
 
 8. Predelat 'required' na explicitni err.
+OK [20201005] skim
+
+6. Dodelat testy pro Item.
 OK [20201005] skim

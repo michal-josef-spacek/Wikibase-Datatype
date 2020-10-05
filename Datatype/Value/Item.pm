@@ -17,7 +17,7 @@ sub type {
 sub BUILD {
 	my $self = shift;
 
-	if (defined $self->{'value'} && $self->{'value'} !~ m/^Q\d+$/ms) {
+	if ($self->{'value'} !~ m/^Q\d+$/ms) {
 		err "Parameter 'value' must begin with 'Q' and number after it.";
 	}
 
