@@ -57,7 +57,8 @@ sub BUILD {
 		'Property snak');
 
 	# Check references.
-	check_array_object($self, 'references', 'Wikidata::Datatype::Reference', 'Reference');
+	check_array_object($self, 'references', 'Wikidata::Datatype::Reference',
+		'Reference');
 
 	return;
 }
