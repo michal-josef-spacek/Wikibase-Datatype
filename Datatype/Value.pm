@@ -20,6 +20,8 @@ sub BUILD {
 	my $self = shift;
 
 	check_required($self, 'value');
+
+	return;
 }
 
 1;

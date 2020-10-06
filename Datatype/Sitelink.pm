@@ -26,6 +26,8 @@ sub BUILD {
 
 	check_required($self, 'site');
 	check_required($self, 'title');
+
+	return;
 }
 
 1;
