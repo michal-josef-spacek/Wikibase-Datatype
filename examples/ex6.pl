@@ -3,15 +3,18 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_required);
+$Error::Pure::TYPE = 'Error';
+
+use Wikidata::Datatype::Utils qw(check_isa);
+use Wikidata::Datatype::Value;
 
 my $self = {
-        'key' => 'value',
+        'key' => 'foo',
 };
-check_required($self, 'key');
+check_isa($self, 'key', 'Wikidata::Datatype::Value');
 
 # Print out.
 print "ok\n";
 
-# Output:
-# ok
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikidata::Datatype::Value' object.

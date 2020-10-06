@@ -3,18 +3,23 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_isa);
+use Error::Pure;
+use Wikidata::Datatype::Utils qw(check_array_object);
 use Wikidata::Datatype::Value;
 
+$Error::Pure::TYPE = 'Error';
+
 my $self = {
-        'key' => Wikidata::Datatype::Value(
-                'value' => 'foo',
-        ),
+        'key' => [
+                Wikidata::Datatype::Value->new(
+                        'value' => 'Text value',
+                ),
+        ],
 };
-check_isa($self, 'key', 'Wikidata::Datatype::Value');
+check_array_object($self, 'key', 'Wikidata::Datatype::Snak', 'Snak');
 
 # Print out.
 print "ok\n";
 
-# Output:
-# ok
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Snak isn't 'Wikidata::Datatype::Snak' object.

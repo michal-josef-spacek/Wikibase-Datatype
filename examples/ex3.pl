@@ -3,11 +3,8 @@
 use strict;
 use warnings;
 
-use Error::Pure;
 use Wikidata::Datatype::Utils qw(check_array_object);
 use Wikidata::Datatype::Value;
-
-$Error::Pure::TYPE = 'Error';
 
 my $self = {
         'key' => [
@@ -16,10 +13,10 @@ my $self = {
                 ),
         ],
 };
-check_array_object($self, 'key', 'Wikidata::Datatype::Snak', 'Snak');
+check_array_object($self, 'key', 'Wikidata::Datatype::Value', 'Value');
 
 # Print out.
 print "ok\n";
 
-# Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:?] Snak isn't 'Wikidata::Datatype::Snak' object.
+# Output:
+# ok

@@ -3,24 +3,18 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value;
+use Error::Pure;
+use Wikidata::Datatype::Utils qw(check_required);
 
-# Object.
-my $obj = Wikidata::Datatype::Value->new(
-        'value' => 'foo',
-        'type' => 'string',
-);
+$Error::Pure::TYPE = 'Error';
 
-# Get value.
-my $value = $obj->value;
-
-# Get type.
-my $type = $obj->type;
+my $self = {
+        'key' => undef,
+};
+check_required($self, 'key');
 
 # Print out.
-print "Value: $value\n";
-print "Type: $type\n";
+print "ok\n";
 
-# Output:
-# Value: foo
-# Type: string
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.
