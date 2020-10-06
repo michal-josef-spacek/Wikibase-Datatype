@@ -3,12 +3,18 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 6;
 use Test::NoWarnings;
 use Wikidata::Datatype::Sitelink;
+use Wikidata::Datatype::Value::Item;
 
 # Test.
 my $obj = Wikidata::Datatype::Sitelink->new(
+	'badges' => [
+		Wikidata::Datatype::Value::Item->new(
+			'value' => 'Q123',
+		),
+	],
 	'site' => 'enwiki',
 	'title' => 'Title',
 );
@@ -32,4 +38,28 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'title' is required.\n",
 	"Parameter 'title' is required.");
+clean();
+
+# Test.
+eval {
+	Wikidata::Datatype::Sitelink->new(
+		'badges' => 'bad',
+		'site' => 'enwiki',
+		'title' => 'Main page',
+	);
+};
+is($EVAL_ERROR, "Parameter 'badges' must be a array.\n",
+	"Parameter 'badges' must be a array.");
+clean();
+
+# Test.
+eval {
+	Wikidata::Datatype::Sitelink->new(
+		'badges' => ['bad'],
+		'site' => 'enwiki',
+		'title' => 'Main page',
+	);
+};
+is($EVAL_ERROR, "Badge isn't 'Wikidata::Datatype::Value::Item' object.\n",
+	"Badge isn't 'Wikidata::Datatype::Value::Item' object.");
 clean();

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Wikidata::Datatype::Utils qw(check_required);
+use Wikidata::Datatype::Utils qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -26,6 +26,8 @@ sub BUILD {
 
 	check_required($self, 'site');
 	check_required($self, 'title');
+
+	check_array_object($self, 'badges', 'Wikidata::Datatype::Value::Item', 'Badge');
 
 	return;
 }
