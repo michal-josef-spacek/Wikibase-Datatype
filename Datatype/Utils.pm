@@ -176,7 +176,7 @@ Returns undef.
  use Wikidata::Datatype::Value;
 
  my $self = {
-         'key' => Wikidata::Datatype::Value(
+         'key' => Wikidata::Datatype::Value->new(
                  'value' => 'foo',
          ),
  };

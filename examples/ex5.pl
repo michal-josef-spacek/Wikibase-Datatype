@@ -7,7 +7,7 @@ use Wikidata::Datatype::Utils qw(check_isa);
 use Wikidata::Datatype::Value;
 
 my $self = {
-        'key' => Wikidata::Datatype::Value(
+        'key' => Wikidata::Datatype::Value->new(
                 'value' => 'foo',
         ),
 };
