@@ -72,7 +72,7 @@ Parameter is required.
 
  my $type = $obj->type;
 
-Get type.
+Get type. This is constant 'item'.
 
 Returns string.
 
