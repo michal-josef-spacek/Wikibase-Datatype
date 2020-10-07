@@ -89,7 +89,6 @@ Returns string.
  new():
          From Wikidata::Datatype::Value::new():
                  Parameter 'value' is required.
-                 Parameter 'type' is required.
          Parameter 'value' must begin with 'Q' and number after it.
 
 =head1 EXAMPLE
@@ -111,16 +110,16 @@ Returns string.
  my $type = $obj->type;
 
  # Print out.
- print "Value: $value\n";
  print "Type: $type\n";
+ print "Value: $value\n";
 
  # Output:
- # Value: Q123
  # Type: item
+ # Value: Q123
 
 =head1 DEPENDENCIES
 
-L<Error::Pure>
+L<Error::Pure>,
 L<Mo>,
 L<Wikidata::Datatype::Value>.
 
