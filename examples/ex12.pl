@@ -3,23 +3,29 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Item;
+use Wikidata::Datatype::Value::Time;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Item->new(
-        'value' => 'Q123',
+my $obj = Wikidata::Datatype::Value::Time->new(
+        'precision' => 10,
+        'value' => '+2020-09-01T00:00:00Z',
 );
 
-# Get value.
-my $value = $obj->value;
+# Get precision.
+my $precision = $obj->precision;
 
 # Get type.
 my $type = $obj->type;
 
+# Get value.
+my $value = $obj->value;
+
 # Print out.
-print "Value: $value\n";
+print "Precision: $precision\n";
 print "Type: $type\n";
+print "Value: $value\n";
 
 # Output:
-# Value: Q123
-# Type: item
+# Precision: 10
+# Type: time
+# Value: +2020-09-01T00:00:00Z
