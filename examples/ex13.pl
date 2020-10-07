@@ -3,23 +3,23 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Item;
+use Wikidata::Datatype::Value::String;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Item->new(
-        'value' => 'Q123',
+my $obj = Wikidata::Datatype::Value::String->new(
+        'value' => 'foo',
 );
-
-# Get value.
-my $value = $obj->value;
 
 # Get type.
 my $type = $obj->type;
+
+# Get value.
+my $value = $obj->value;
 
 # Print out.
 print "Type: $type\n";
 print "Value: $value\n";
 
 # Output:
-# Type: item
-# Value: Q123
+# Type: string
+# Value: foo

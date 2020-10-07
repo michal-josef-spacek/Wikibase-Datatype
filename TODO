@@ -4,7 +4,6 @@ TODO
 14. Do Snak pridat geo-shape
 15. Do Snak pridat tabular-data
 16. Do Snak pridat quantity
-19. Dokumentace pro Value::String
 21. Dokumentace pro Value::Monolingual
 22. Badges jsou presny seznam. Kde ho ziskam, jak ho zkontroluji?
 23.
@@ -56,4 +55,7 @@ OK [20201005] skim
 OK [20201006] skim
 
 18. Dokumentace pro Value::Time
+OK [20201007] skim
+
+19. Dokumentace pro Value::String
 OK [20201007] skim
