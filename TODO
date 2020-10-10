@@ -3,7 +3,6 @@ TODO
 13. Do Snak pridat globe-coordinate
 14. Do Snak pridat geo-shape
 15. Do Snak pridat tabular-data
-16. Do Snak pridat quantity
 22. Badges jsou presny seznam. Kde ho ziskam, jak ho zkontroluji?
 23.
 
@@ -61,3 +60,6 @@ OK [20201007] skim
 
 21. Dokumentace pro Value::Monolingual
 OK [20201007] skim
+
+16. Do Snak pridat quantity
+OK [20201010] skim

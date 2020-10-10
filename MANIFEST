@@ -8,6 +8,7 @@ Datatype/Utils.pm
 Datatype/Value.pm
 Datatype/Value/Item.pm
 Datatype/Value/Monolingual.pm
+Datatype/Value/Quantity.pm
 Datatype/Value/String.pm
 Datatype/Value/Time.pm
 examples/ex1.pl
@@ -19,6 +20,8 @@ examples/ex14.pl
 examples/ex15.pl
 examples/ex16.pl
 examples/ex17.pl
+examples/ex18.pl
+examples/ex19.pl
 examples/ex2.pl
 examples/ex3.pl
 examples/ex4.pl
@@ -85,6 +88,14 @@ t/Wikidata-Datatype-Value-Monolingual/03-new.t
 t/Wikidata-Datatype-Value-Monolingual/04-language.t
 t/Wikidata-Datatype-Value-Monolingual/05-type.t
 t/Wikidata-Datatype-Value-Monolingual/06-value.t
+t/Wikidata-Datatype-Value-Quantity/01-use.t
+t/Wikidata-Datatype-Value-Quantity/02-version.t
+t/Wikidata-Datatype-Value-Quantity/03-new.t
+t/Wikidata-Datatype-Value-Quantity/04-lower_bound.t
+t/Wikidata-Datatype-Value-Quantity/05-type.t
+t/Wikidata-Datatype-Value-Quantity/06-unit.t
+t/Wikidata-Datatype-Value-Quantity/07-upper_bound.t
+t/Wikidata-Datatype-Value-Quantity/08-value.t
 t/Wikidata-Datatype-Value-String/01-use.t
 t/Wikidata-Datatype-Value-String/02-version.t
 t/Wikidata-Datatype-Value-String/03-new.t
@@ -121,6 +132,8 @@ xt/Wikidata-Datatype-Value-Item/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Item/02-pod.t
 xt/Wikidata-Datatype-Value-Monolingual/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Monolingual/02-pod.t
+xt/Wikidata-Datatype-Value-Quantity/01-pod_coverage.t
+xt/Wikidata-Datatype-Value-Quantity/02-pod.t
 xt/Wikidata-Datatype-Value-String/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-String/02-pod.t
 xt/Wikidata-Datatype-Value-Time/01-pod_coverage.t
