@@ -14,6 +14,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'commonsMedia' => 'string',
 	'external-id' => 'string',
 	'monolingualtext' => 'monolingualtext',
+	'quantity' => 'quantity',
 	'string' => 'string',
 	'time' => 'time',
 	'url' => 'string',
