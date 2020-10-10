@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 use Wikidata::Datatype::Value::Quantity;
 
@@ -26,6 +26,17 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'value' is required.\n",
 	"Parameter 'value' is required.");
+clean();
+
+# Test.
+eval {
+	Wikidata::Datatype::Value::Quantity->new(
+		'unit' => 'foo',
+		'value' => 10,
+	);
+};
+is($EVAL_ERROR, "Parameter 'unit' is bad. Possible value is /^Q\\d+\$/.\n",
+	"Parameter 'unit' is bad. Possible value is /^Q\\d+\$/.");
 clean();
 
 # Test.
