@@ -3,33 +3,18 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Value::Item;
+use Error::Pure;
+use Wikidata::Datatype::Utils qw(check_required);
 
-# Object.
-my $obj = Wikidata::Datatype::Snak->new(
-        'datatype' => 'wikibase-item',
-        'datavalue' => Wikidata::Datatype::Value::Item->new(
-                'value' => 'Q5',
-        ),
-        'property' => 'P31',
-);
+$Error::Pure::TYPE = 'Error';
 
-# Get value.
-my $datavalue = $obj->datavalue->value;
-
-# Get datatype.
-my $datatype = $obj->datatype;
-
-# Get property.
-my $property = $obj->property;
+my $self = {
+        'key' => undef,
+};
+check_required($self, 'key');
 
 # Print out.
-print "Property: $property\n";
-print "Type: $datatype\n";
-print "Value: $datavalue\n";
+print "ok\n";
 
-# Output:
-# Property: P31
-# Type: wikibase-item
-# Value: Q5
+# Output like:
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.

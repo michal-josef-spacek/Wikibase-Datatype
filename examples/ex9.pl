@@ -3,24 +3,15 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value;
+use Wikidata::Datatype::Utils qw(check_required);
 
-# Object.
-my $obj = Wikidata::Datatype::Value->new(
-        'value' => 'foo',
-        'type' => 'string',
-);
-
-# Get value.
-my $value = $obj->value;
-
-# Get type.
-my $type = $obj->type;
+my $self = {
+        'key' => 'value',
+};
+check_required($self, 'key');
 
 # Print out.
-print "Value: $value\n";
-print "Type: $type\n";
+print "ok\n";
 
 # Output:
-# Value: foo
-# Type: string
+# ok

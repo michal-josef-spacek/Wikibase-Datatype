@@ -3,18 +3,17 @@
 use strict;
 use warnings;
 
-use Error::Pure;
-use Wikidata::Datatype::Utils qw(check_required);
-
 $Error::Pure::TYPE = 'Error';
 
+use Wikidata::Datatype::Utils qw(check_number);
+
 my $self = {
-        'key' => undef,
+        'key' => 'foo',
 };
-check_required($self, 'key');
+check_number($self, 'key');
 
 # Print out.
 print "ok\n";
 
 # Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a number.

@@ -17,6 +17,8 @@ examples/ex12.pl
 examples/ex13.pl
 examples/ex14.pl
 examples/ex15.pl
+examples/ex16.pl
+examples/ex17.pl
 examples/ex2.pl
 examples/ex3.pl
 examples/ex4.pl
@@ -70,7 +72,8 @@ t/Wikidata-Datatype-Utils/01-use.t
 t/Wikidata-Datatype-Utils/02-version.t
 t/Wikidata-Datatype-Utils/03-check_array_object.t
 t/Wikidata-Datatype-Utils/04-check_isa.t
-t/Wikidata-Datatype-Utils/05-check_required.t
+t/Wikidata-Datatype-Utils/05-check_number.t
+t/Wikidata-Datatype-Utils/06-check_required.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t

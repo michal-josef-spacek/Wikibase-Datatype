@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(check_array_object check_isa check_required);
+Readonly::Array our @EXPORT_OK => qw(check_array_object check_isa check_number check_required);
 
 our $VERSION = 0.01;
 
@@ -39,6 +39,16 @@ sub check_isa {
 	return;
 }
 
+sub check_number {
+	my ($self, $key) = @_;
+
+	if ($self->{$key} !~ m/^-?\d+$/ms) {
+		err "Parameter '$key' must be a number.";
+	}
+
+	return;
+}
+
 sub check_required {
 	my ($self, $key) = @_;
 
@@ -63,10 +73,11 @@ Wikidata::Datatype::Utils - Wikidata datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Utils qw(check_array_object check_isa check_required);
+ use Wikidata::Datatype::Utils qw(check_array_object check_isa check_number check_required);
 
  check_array_object($self, $key, $class, $class_name);
  check_isa($self, $key, $class);
+ check_number($self, $key);
  check_required($self, $key);
 
 =head1 DESCRIPTION
@@ -96,6 +107,16 @@ Put error if check isn't ok.
 
 Returns undef.
 
+=head2 C<check_number>
+
+ check_number($self, $key);
+
+Check parameter defined by C<$key> which is number (positive or negative) or no.
+
+Put error if check isn't ok.
+
+Returns undef.
+
 =head2 C<check_required>
 
  check_required($self, $key);
@@ -114,6 +135,9 @@ Returns undef.
 
  check_isa():
          Parameter '%s' must be a '%s' object.
+
+ check_number():
+         Parameter '%s' must a number.
 
  check_required():
          Parameter '%s' is required.
@@ -214,6 +238,44 @@ Returns undef.
  use strict;
  use warnings;
 
+ use Wikidata::Datatype::Utils qw(check_number);
+
+ my $self = {
+         'key' => '10',
+ };
+ check_number($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output:
+ # ok
+
+=head1 EXAMPLE6
+
+ use strict;
+ use warnings;
+
+ $Error::Pure::TYPE = 'Error';
+
+ use Wikidata::Datatype::Utils qw(check_number);
+
+ my $self = {
+         'key' => 'foo',
+ };
+ check_number($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output like:
+ # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a number.
+
+=head1 EXAMPLE7
+
+ use strict;
+ use warnings;
+
  use Wikidata::Datatype::Utils qw(check_required);
 
  my $self = {
@@ -227,7 +289,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE6
+=head1 EXAMPLE8
 
  use strict;
  use warnings;
