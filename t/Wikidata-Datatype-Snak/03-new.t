@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 9;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 use Wikidata::Datatype::Snak;
 use Wikidata::Datatype::Value::String;
@@ -109,3 +109,19 @@ eval {
 is($EVAL_ERROR, "Parameter 'property' has bad value.\n",
 	"Parameter 'property' has bad value.");
 clean();
+
+# Test.
+$obj = Wikidata::Datatype::Snak->new(
+	'datatype' => 'string',
+	'property' => 'P123',
+	'snaktype' => 'novalue',
+);
+isa_ok($obj, 'Wikidata::Datatype::Snak');
+
+# Test.
+$obj = Wikidata::Datatype::Snak->new(
+	'datatype' => 'string',
+	'property' => 'P123',
+	'snaktype' => 'somevalue',
+);
+isa_ok($obj, 'Wikidata::Datatype::Snak');

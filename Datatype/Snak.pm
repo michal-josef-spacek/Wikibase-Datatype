@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::MoreUtils qw(none);
-use Mo qw(build default is);
+use Mo qw(build is);
 use Readonly;
 use Wikidata::Datatype::Utils qw(check_isa check_required);
 
@@ -41,28 +41,35 @@ has property => (
 
 has snaktype => (
 	is => 'ro',
-	default => 'value',
 );
 
 sub BUILD {
 	my $self = shift;
 
+	# Check snak type.
+	if (defined $self->{'snaktype'}) {
+		if (none { $self->{'snaktype'} eq $_ } @SNAK_TYPES) {
+			err "Parameter 'snaktype' = '$self->{'snaktype'}' isn't supported.";
+		}
+	} else {
+		$self->{'snaktype'} = 'value';
+	}
+
 	# Requirements.
-	check_required($self, 'datavalue');
+	if ($self->{'snaktype'} eq 'value') {
+		check_required($self, 'datavalue');
+	}
 	check_required($self, 'datatype');
 	check_required($self, 'property');
 
 	# Check data value.
-	check_isa($self, 'datavalue', 'Wikidata::Datatype::Value');
+	if ($self->{'snaktype'} eq 'value') {
+		check_isa($self, 'datavalue', 'Wikidata::Datatype::Value');
+	}
 
 	# Check data type.
 	if (none { $self->{'datatype'} eq $_ } keys %DATA_TYPES) {
 		err "Parameter 'datatype' = '$self->{'datatype'}' isn't supported.";
-	}
-
-	# Check snak type.
-	if (defined $self->{'snaktype'} && none { $self->{'snaktype'} eq $_ } @SNAK_TYPES) {
-		err "Parameter 'snaktype' = '$self->{'snaktype'}' isn't supported.";
 	}
 
 	if ($self->{'property'} !~ m/^P\d+$/ms) {
