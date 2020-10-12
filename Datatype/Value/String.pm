@@ -36,8 +36,8 @@ Wikidata::Datatype::Value::String - Wikidata string value datatype.
 =head1 DESCRIPTION
 
 This datatype is string class for representation of common string. There are
-upper datatypes as commonsMedia, external-id, geo-shape, musical-notation, string,
-tabular-data and url, which uses this data type.
+upper datatypes as commonsMedia, external-id, geo-shape, math, musical-notation,
+string, tabular-data and url, which uses this data type.
 
 =head1 METHODS
 
