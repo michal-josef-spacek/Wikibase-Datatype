@@ -4,7 +4,6 @@ TODO
 23. Do Snak pridat form.
 24. Do Snak pridat lexem.
 28. Do Snak pridat sense.
-30. Ve Snak by sem mel kontrolovat objekt podle datatype.
 31.
 
 Applied
@@ -86,4 +85,7 @@ OK [20201012] skim
 OK [20201012] skim
 
 29. Do Snak pridat property.
+OK [20201012] skim
+
+30. Ve Snak by sem mel kontrolovat objekt podle datatype.
 OK [20201012] skim

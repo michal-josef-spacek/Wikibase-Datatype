@@ -11,20 +11,20 @@ use Wikidata::Datatype::Utils qw(check_isa check_required);
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
-	'commonsMedia' => 'string',
-	'external-id' => 'string',
-	'geo-shape' => 'string',
-	'globe-coordinate' => 'globecoordinate',
-	'math' => 'string',
-	'monolingualtext' => 'monolingualtext',
-	'musical-notation' => 'string',
-	'quantity' => 'quantity',
-	'string' => 'string',
-	'tabular-data' => 'string',
-	'time' => 'time',
-	'url' => 'string',
-	'wikibase-item' => 'wikibase-entityid',
-	'wikibase-property' => 'wikibase-entityid',
+	'commonsMedia' => 'Wikidata::Datatype::Value::String',
+	'external-id' => 'Wikidata::Datatype::Value::String',
+	'geo-shape' => 'Wikidata::Datatype::Value::String',
+	'globe-coordinate' => 'Wikidata::Datatype::Value::Globecoordinate',
+	'math' => 'Wikidata::Datatype::Value::String',
+	'monolingualtext' => 'Wikidata::Datatype::Value::Monolingual',
+	'musical-notation' => 'Wikidata::Datatype::Value::String',
+	'quantity' => 'Wikidata::Datatype::Value::Quantity',
+	'string' => 'Wikidata::Datatype::Value::String',
+	'tabular-data' => 'Wikidata::Datatype::Value::String',
+	'time' => 'Wikidata::Datatype::Value::Time',
+	'url' => 'Wikidata::Datatype::Value::String',
+	'wikibase-item' => 'Wikidata::Datatype::Value::Item',
+	'wikibase-property' => 'Wikidata::Datatype::Value::Property',
 );
 Readonly::Array our @SNAK_TYPES => qw(
 	novalue
@@ -69,14 +69,15 @@ sub BUILD {
 	check_required($self, 'datatype');
 	check_required($self, 'property');
 
-	# Check data value.
-	if ($self->{'snaktype'} eq 'value') {
-		check_isa($self, 'datavalue', 'Wikidata::Datatype::Value');
-	}
 
 	# Check data type.
 	if (none { $self->{'datatype'} eq $_ } keys %DATA_TYPES) {
 		err "Parameter 'datatype' = '$self->{'datatype'}' isn't supported.";
+	}
+
+	# Check data value.
+	if ($self->{'snaktype'} eq 'value') {
+		check_isa($self, 'datavalue', $DATA_TYPES{$self->{'datatype'}});
 	}
 
 	if ($self->{'property'} !~ m/^P\d+$/ms) {
@@ -188,7 +189,7 @@ Returns string.
                  Parameter 'datavalue' is required.
                  Parameter 'property' is required.
          From Wikidata::Datatype::Utils::check_isa():
-                 Parameter 'datavalue' must be a 'Wikidata::Datatype::Value' object.
+                 Parameter 'datavalue' must be a 'Wikidata::Datatype::Value::%s' object.
          Parameter 'datatype' = '%s' isn't supported.
          Parameter 'property' has bad value.
          Parameter 'snaktype' = '%s' isn't supported.

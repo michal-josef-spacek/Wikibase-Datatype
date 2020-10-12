@@ -63,7 +63,7 @@ eval {
 		'property' => 'P123',
 	);
 };
-is($EVAL_ERROR, "Parameter 'datavalue' must be a 'Wikidata::Datatype::Value' object.\n",
+is($EVAL_ERROR, "Parameter 'datavalue' must be a 'Wikidata::Datatype::Value::String' object.\n",
 	"Parameter 'datavalue' is bad string.");
 clean();
 
