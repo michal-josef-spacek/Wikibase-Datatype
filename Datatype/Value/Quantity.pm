@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikidata::Datatype::Utils qw(check_number);
+use Wikidata::Datatype::Utils qw(check_entity check_number);
 
 our $VERSION = 0.01;
 
@@ -30,8 +30,8 @@ sub type {
 sub BUILD {
 	my $self = shift;
 
-	if (defined $self->{'unit'} && $self->{'unit'} !~ m/^Q\d+$/ms) {
-		err "Parameter 'unit' is bad. Possible value is /^Q\\d+\$/."
+	if (defined $self->{'unit'}) {
+		check_entity($self, 'unit');
 	}
 
 	check_number($self, 'value');
@@ -163,14 +163,15 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Value::new():
-                 Parameter 'value' is required.
+         From Wikidata::Datatype::Utils::check_entity():
+                 Parameter 'unit' must begin with 'Q' and number after it.
          From Wikidata::Datatype::Utils::check_number():
                  Parameter 'lower_bound' must be a number.
                  Parameter 'upper_bound' must be a number.
                  Parameter 'value' must be a number.
+         From Wikidata::Datatype::Value::new():
+                 Parameter 'value' is required.
          Parameter 'lower_bound' must be less than value.
-         Parameter 'unit' is bad. Possible value is /^Q\d+$/.
          Parameter 'upper_bound' must be greater than value.
 
 =head1 EXAMPLE1

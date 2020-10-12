@@ -28,6 +28,6 @@ eval {
 		'value' => '+2020-09-01T00:00:00Z',
 	);
 };
-is($EVAL_ERROR, "Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/.\n",
-	"Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/.");
+is($EVAL_ERROR, "Parameter 'calendarmodel' must begin with 'Q' and number after it.\n",
+	"Parameter 'calendarmodel' must begin with 'Q' and number after it.");
 clean();

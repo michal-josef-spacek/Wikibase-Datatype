@@ -5,6 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
+use Wikidata::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
@@ -45,9 +46,7 @@ sub BUILD {
 		$self->{'calendarmodel'} = 'Q1985727';
 	}
 
-	if ($self->{'calendarmodel'} !~ m/^Q\d+$/ms) {
-		err "Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/."
-	}
+	check_entity($self, 'calendarmodel');
 
 	return;
 }
@@ -185,9 +184,10 @@ Returns string.
 =head1 ERRORS
 
  new():
+         From Wikidata::Datatype::Utils::check_entity():
+                 Parameter 'calendarmodel' must begin with 'Q' and number after it.
          From Wikidata::Datatype::Value::new():
                  Parameter 'value' is required.
-         Parameter 'calendarmodel' is bad. Possible value is /^Q\d+$/.
 
 =head1 EXAMPLE
 
@@ -230,6 +230,7 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
+L<Wikidata::Datatype::Utils>,
 L<Wikidata::Datatype::Value>.
 
 =head1 SEE ALSO

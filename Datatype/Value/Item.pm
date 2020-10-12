@@ -86,9 +86,10 @@ Returns string.
 =head1 ERRORS
 
  new():
+         From Wikidata::Datatype::Utils::check_entity():
+                 Parameter 'value' must begin with 'Q' and number after it.
          From Wikidata::Datatype::Value::new():
                  Parameter 'value' is required.
-         Parameter 'value' must begin with 'Q' and number after it.
 
 =head1 EXAMPLE
 

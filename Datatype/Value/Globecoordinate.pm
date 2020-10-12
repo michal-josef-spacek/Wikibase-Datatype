@@ -5,6 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
+use Wikidata::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
@@ -59,10 +60,7 @@ sub BUILD {
 	if (! defined $self->{'globe'}) {
 		$self->{'globe'} = 'Q2',
 	}
-
-	if ($self->{'globe'} !~ m/^Q\d+$/ms) {
-		err "Parameter 'globe' is bad. Possible value is /^Q\\d+\$/."
-	}
+	check_entity($self, 'globe');
 
 	if (! defined $self->{'precision'}) {
 		$self->{'precision'} = '1e-07',
@@ -196,9 +194,10 @@ Returns string.
 =head1 ERRORS
 
  new():
+         From Wikidata::Datatype::Utils::check_entity():
+                 Parameter 'globe' must begin with 'Q' and number after it.
          From Wikidata::Datatype::Value::new():
                  Parameter 'value' is required.
-         Parameter 'globe' is bad. Possible value is /^Q\d+$/.
          Parameter 'value' array must have two fields (latitude and longitude).
          Parameter 'value' has bad first parameter (latitude).
          Parameter 'value' has bad first parameter (longitude).
@@ -254,6 +253,7 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
+L<Wikidata::Datatype::Utils>,
 L<Wikidata::Datatype::Value>.
 
 =head1 SEE ALSO

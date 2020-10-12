@@ -35,8 +35,8 @@ eval {
 		'value' => 10,
 	);
 };
-is($EVAL_ERROR, "Parameter 'unit' is bad. Possible value is /^Q\\d+\$/.\n",
-	"Parameter 'unit' is bad. Possible value is /^Q\\d+\$/.");
+is($EVAL_ERROR, "Parameter 'unit' must begin with 'Q' and number after it.\n",
+	"Parameter 'unit' must begin with 'Q' and number after it.");
 clean();
 
 # Test.
