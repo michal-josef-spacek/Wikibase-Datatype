@@ -17,7 +17,7 @@ isa_ok($obj, 'Wikidata::Datatype::Value::Monolingual');
 
 # Test.
 eval {
-	Wikidata::Datatype::Value::Monolingual->new
+	Wikidata::Datatype::Value::Monolingual->new;
 };
 is($EVAL_ERROR, "Parameter 'value' is required.\n",
 	"Parameter 'value' is required.");

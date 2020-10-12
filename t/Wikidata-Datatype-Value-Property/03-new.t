@@ -15,7 +15,7 @@ isa_ok($obj, 'Wikidata::Datatype::Value::Property');
 
 # Test.
 eval {
-	Wikidata::Datatype::Value::Property->new
+	Wikidata::Datatype::Value::Property->new;
 };
 is($EVAL_ERROR, "Parameter 'value' is required.\n",
 	"Parameter 'value' is required.");
