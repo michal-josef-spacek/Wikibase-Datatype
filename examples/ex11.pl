@@ -3,12 +3,12 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_required);
+use Wikidata::Datatype::Utils qw(check_property);
 
 my $self = {
-        'key' => 'value',
+        'key' => 'P123',
 };
-check_required($self, 'key');
+check_property($self, 'key');
 
 # Print out.
 print "ok\n";

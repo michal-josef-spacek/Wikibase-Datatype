@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(check_array_object check_entity check_isa
-	check_number check_required);
+	check_number check_property check_required);
 
 our $VERSION = 0.01;
 
@@ -60,6 +60,16 @@ sub check_number {
 	return;
 }
 
+sub check_property {
+	my ($self, $key) = @_;
+
+	if ($self->{$key} !~ m/^P\d+$/ms) {
+		err "Parameter '$key' must begin with 'P' and number after it.";
+	}
+
+	return;
+}
+
 sub check_required {
 	my ($self, $key) = @_;
 
@@ -90,6 +100,7 @@ Wikidata::Datatype::Utils - Wikidata datatype utilities.
  check_entity($self, $key);
  check_isa($self, $key, $class);
  check_number($self, $key);
+ check_property($self, $key);
  check_required($self, $key);
 
 =head1 DESCRIPTION
@@ -137,6 +148,14 @@ Put error if check isn't ok.
 
 Returns undef.
 
+=head2 C<check_property>
+
+ check_property($self, $key);
+
+Check parameter defined by C<$key> whith is property (/^P\d+/).
+
+Returns undef.
+
 =head2 C<check_required>
 
  check_required($self, $key);
@@ -161,6 +180,9 @@ Returns undef.
 
  check_number():
          Parameter '%s' must a number.
+
+ check_property():
+         Parameter '%s' must begin with 'P' and number after it.";
 
  check_required():
          Parameter '%s' is required.
@@ -251,7 +273,7 @@ Returns undef.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:36] Parameter 'key' must begin with 'Q' and number after it.
+ # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
 
 =head1 EXAMPLE5
 
@@ -338,6 +360,45 @@ Returns undef.
  use strict;
  use warnings;
 
+ use Wikidata::Datatype::Utils qw(check_property);
+
+ my $self = {
+         'key' => 'P123',
+ };
+ check_property($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output:
+ # ok
+
+=head1 EXAMPLE10
+
+ use strict;
+ use warnings;
+
+ use Error::Pure;
+ use Wikidata::Datatype::Utils qw(check_property);
+
+ $Error::Pure::TYPE = 'Error';
+
+ my $self = {
+         'key' => 'bad_property',
+ };
+ check_property($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output like:
+ # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'P' and number after it.
+
+=head1 EXAMPLE11
+
+ use strict;
+ use warnings;
+
  use Wikidata::Datatype::Utils qw(check_required);
 
  my $self = {
@@ -351,7 +412,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE10
+=head1 EXAMPLE12
 
  use strict;
  use warnings;

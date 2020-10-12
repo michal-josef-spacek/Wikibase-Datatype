@@ -17,4 +17,4 @@ check_entity($self, 'key');
 print "ok\n";
 
 # Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:36] Parameter 'key' must begin with 'Q' and number after it.
+# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
