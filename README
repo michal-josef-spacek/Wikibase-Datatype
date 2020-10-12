@@ -6,34 +6,43 @@ DESCRIPTION
 
 SEE ALSO
     Wikidata::Datatype::Reference
-        Wikidata reference datatype
+        Wikidata reference datatype.
 
     Wikidata::Datatype::Sitelink
-        Wikidata sitelink datatype
+        Wikidata sitelink datatype.
 
     Wikidata::Datatype::Snak
-        Wikidata snak datatype
+        Wikidata snak datatype.
 
     Wikidata::Datatype::Statement
-        Wikidata statement datatype
+        Wikidata statement datatype.
 
     Wikidata::Datatype::Utils
-        Wikidata datatype utilities
+        Wikidata datatype utilities.
 
     Wikidata::Datatype::Value
-        Wikidata value datatype
+        Wikidata value datatype.
+
+    Wikidata::Datatype::Value::Globecoordinate
+        Wikidata globe coordinate value datatype.
 
     Wikidata::Datatype::Value::Item
-        Wikidata item value datatype
+        Wikidata item value datatype.
 
     Wikidata::Datatype::Value::Monolingual
-        Wikidata monolingual value datatype
+        Wikidata monolingual value datatype.
+
+    Wikidata::Datatype::Value::Property
+        Wikidata property value datatype.
+
+    Wikidata::Datatype::Value::Quantity
+        Wikidata quantity value datatype.
 
     Wikidata::Datatype::Value::String
-        Wikidata string value datatype
+        Wikidata string value datatype.
 
     Wikidata::Datatype::Value::Time
-        Wikidata time value datatype
+        Wikidata time value datatype.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Wikidata-Datatype>

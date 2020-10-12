@@ -27,43 +27,55 @@ This distributions is set of datatypes for Wikidata.
 
 =item L<Wikidata::Datatype::Reference>
 
-Wikidata reference datatype
+Wikidata reference datatype.
 
 =item L<Wikidata::Datatype::Sitelink>
 
-Wikidata sitelink datatype
+Wikidata sitelink datatype.
 
 =item L<Wikidata::Datatype::Snak>
 
-Wikidata snak datatype
+Wikidata snak datatype.
 
 =item L<Wikidata::Datatype::Statement>
 
-Wikidata statement datatype
+Wikidata statement datatype.
 
 =item L<Wikidata::Datatype::Utils>
 
-Wikidata datatype utilities
+Wikidata datatype utilities.
 
 =item L<Wikidata::Datatype::Value>
 
-Wikidata value datatype
+Wikidata value datatype.
+
+=item L<Wikidata::Datatype::Value::Globecoordinate>
+
+Wikidata globe coordinate value datatype.
 
 =item L<Wikidata::Datatype::Value::Item>
 
-Wikidata item value datatype
+Wikidata item value datatype.
 
 =item L<Wikidata::Datatype::Value::Monolingual>
 
-Wikidata monolingual value datatype
+Wikidata monolingual value datatype.
+
+=item L<Wikidata::Datatype::Value::Property>
+
+Wikidata property value datatype.
+
+=item L<Wikidata::Datatype::Value::Quantity>
+
+Wikidata quantity value datatype.
 
 =item L<Wikidata::Datatype::Value::String>
 
-Wikidata string value datatype
+Wikidata string value datatype.
 
 =item L<Wikidata::Datatype::Value::Time>
 
-Wikidata time value datatype
+Wikidata time value datatype.
 
 =back
 
