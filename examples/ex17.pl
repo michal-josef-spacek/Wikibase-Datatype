@@ -14,9 +14,6 @@ use Wikidata::Datatype::Value::Time;
 # Object.
 my $obj = Wikidata::Datatype::Statement->new(
 
-        # Douglas Adams
-        'entity' => 'Q42',
-
         # instance of (P31) human (Q5)
         'snak' => Wikidata::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
@@ -70,7 +67,6 @@ my $obj = Wikidata::Datatype::Statement->new(
 );
 
 # Print out.
-print 'Entity: '.$obj->entity."\n";
 print 'Claim: '.$obj->snak->property.' -> '.$obj->snak->datavalue->value."\n";
 print "Qualifiers:\n";
 foreach my $property_snak (@{$obj->property_snaks}) {
@@ -88,7 +84,6 @@ foreach my $reference (@{$obj->references}) {
 print 'Rank: '.$obj->rank."\n";
 
 # Output:
-# Entity: Q42
 # Claim: P31 -> Q5
 # Qualifiers:
 #         P642 -> Q474741

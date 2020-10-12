@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 11;
+use Test::More 'tests' => 10;
 use Test::NoWarnings;
 use Wikidata::Datatype::Snak;
 use Wikidata::Datatype::Statement;
@@ -11,7 +11,6 @@ use Wikidata::Datatype::Value::String;
 
 # Test.
 my $obj = Wikidata::Datatype::Statement->new(
-	'entity' => 'Q42',
 	'snak' => Wikidata::Datatype::Snak->new(
 		'datavalue' => Wikidata::Datatype::Value::String->new(
 			'value' => 'foo',
@@ -24,25 +23,7 @@ isa_ok($obj, 'Wikidata::Datatype::Statement');
 
 # Test.
 eval {
-	Wikidata::Datatype::Statement->new(
-		'snak' => Wikidata::Datatype::Snak->new(
-			'datavalue' => Wikidata::Datatype::Value::String->new(
-				'value' => 'foo',
-			),
-			'datatype' => 'string',
-			'property' => 'P123',
-		),
-	);
-};
-is($EVAL_ERROR, "Parameter 'entity' is required.\n",
-	"Parameter 'entity' is required.");
-clean();
-
-# Test.
-eval {
-	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
-	);
+	Wikidata::Datatype::Statement->new;
 };
 is($EVAL_ERROR, "Parameter 'snak' is required.\n",
 	"Parameter 'snak' is required.");
@@ -51,7 +32,6 @@ clean();
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'snak' => 'bad',
 	);
 };
@@ -62,7 +42,6 @@ clean();
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'rank' => 'bad',
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
@@ -80,7 +59,6 @@ clean();
 
 # Test.
 $obj = Wikidata::Datatype::Statement->new(
-	'entity' => 'Q42',
 	'rank' => 'preferred',
 	'snak' => Wikidata::Datatype::Snak->new(
 		'datavalue' => Wikidata::Datatype::Value::String->new(
@@ -95,7 +73,6 @@ isa_ok($obj, 'Wikidata::Datatype::Statement');
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'property_snaks' => 'bad',
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
@@ -113,7 +90,6 @@ clean();
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'property_snaks' => ['bad'],
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
@@ -131,7 +107,6 @@ clean();
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'references' => 'bad',
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(
@@ -149,7 +124,6 @@ clean();
 # Test.
 eval {
 	Wikidata::Datatype::Statement->new(
-		'entity' => 'Q42',
 		'references' => ['bad'],
 		'snak' => Wikidata::Datatype::Snak->new(
 			'datavalue' => Wikidata::Datatype::Value::String->new(

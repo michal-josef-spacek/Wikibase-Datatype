@@ -13,10 +13,6 @@ Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
 our $VERSION = 0.01;
 
-has entity => (
-	is => 'ro',
-);
-
 has property_snaks => (
 	default => [],
 	is => 'ro',
@@ -40,7 +36,6 @@ sub BUILD {
 	my $self = shift;
 
 	# Check requirements.
-	check_required($self, 'entity');
 	check_required($self, 'snak');
 
 	# Check rank.
@@ -80,7 +75,6 @@ Wikidata::Datatype::Statement - Wikidata statement datatype.
  use Wikidata::Datatype::Statement;
 
  my $obj = Wikidata::Datatype::Statement->new(%params);
- my $entity = $obj->entity;
  my $property_snaks_ar = $obj->property_snaks;
  my $rank = $obj->rank;
  my $referenes_ar = $obj->references;
@@ -101,11 +95,6 @@ Constructor.
 Returns instance of object.
 
 =over 8
-
-=item * C<entity>
-
-Entity title.
-Parameter is required.
 
 =item * C<property_snaks>
 
@@ -134,14 +123,6 @@ Parameter is Wikidata::Datatype::Snak instance.
 Parameter is required.
 
 =back
-
-=head2 C<entity>
-
- my $entity = $obj->entity;
-
-Get entity title.
-
-Returns string.
 
 =head2 C<property_snaks>
 
@@ -177,7 +158,6 @@ Returns Wikidata::Datatype::Snak instance.
 
  new():
          From Wikidata::Datatype::Utils::check_required():
-                 Parameter 'entity' is required.
                  Parameter 'snak' is required.
          From Wikidata::Datatype::Utils::check_array_object():
                  Parameter 'property_snaks' must be a array.
@@ -203,9 +183,6 @@ Returns Wikidata::Datatype::Snak instance.
 
  # Object.
  my $obj = Wikidata::Datatype::Statement->new(
-
-         # Douglas Adams
-         'entity' => 'Q42',
 
          # instance of (P31) human (Q5)
          'snak' => Wikidata::Datatype::Snak->new(
@@ -260,7 +237,6 @@ Returns Wikidata::Datatype::Snak instance.
  );
 
  # Print out.
- print 'Entity: '.$obj->entity."\n";
  print 'Claim: '.$obj->snak->property.' -> '.$obj->snak->datavalue->value."\n";
  print "Qualifiers:\n";
  foreach my $property_snak (@{$obj->property_snaks}) {
@@ -278,7 +254,6 @@ Returns Wikidata::Datatype::Snak instance.
  print 'Rank: '.$obj->rank."\n";
 
  # Output:
- # Entity: Q42
  # Claim: P31 -> Q5
  # Qualifiers:
  #         P642 -> Q474741
