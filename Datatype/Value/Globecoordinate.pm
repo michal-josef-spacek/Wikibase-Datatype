@@ -48,6 +48,13 @@ sub BUILD {
 		err "Parameter 'value' array must have two fields ".
 			"(latitude and longitude).";
 	}
+	my ($lat, $lon) = @{$self->{'value'}};
+	if ($lat !~ m/^\d+\.?\d*$/ms) {
+		err "Parameter 'value' has bad first parameter (latitude).";
+	}
+	if ($lon !~ m/^\d+\.?\d*$/ms) {
+		err "Parameter 'value' has bad first parameter (longitude).";
+	}
 
 	if (! defined $self->{'globe'}) {
 		$self->{'globe'} = 'Q2',
@@ -193,6 +200,8 @@ Returns string.
                  Parameter 'value' is required.
          Parameter 'globe' is bad. Possible value is /^Q\d+$/.
          Parameter 'value' array must have two fields (latitude and longitude).
+         Parameter 'value' has bad first parameter (latitude).
+         Parameter 'value' has bad first parameter (longitude).
          Parameter 'value' must be a array.
 
 =head1 EXAMPLE
