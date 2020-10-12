@@ -25,6 +25,8 @@ examples/ex18.pl
 examples/ex19.pl
 examples/ex2.pl
 examples/ex20.pl
+examples/ex21.pl
+examples/ex22.pl
 examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
@@ -76,9 +78,10 @@ t/Wikidata-Datatype-Statement/08-snak.t
 t/Wikidata-Datatype-Utils/01-use.t
 t/Wikidata-Datatype-Utils/02-version.t
 t/Wikidata-Datatype-Utils/03-check_array_object.t
-t/Wikidata-Datatype-Utils/04-check_isa.t
-t/Wikidata-Datatype-Utils/05-check_number.t
-t/Wikidata-Datatype-Utils/06-check_required.t
+t/Wikidata-Datatype-Utils/04-check_entity.t
+t/Wikidata-Datatype-Utils/05-check_isa.t
+t/Wikidata-Datatype-Utils/06-check_number.t
+t/Wikidata-Datatype-Utils/07-check_required.t
 t/Wikidata-Datatype-Value-Globecoordinate/01-use.t
 t/Wikidata-Datatype-Value-Globecoordinate/02-version.t
 t/Wikidata-Datatype-Value-Item/01-use.t

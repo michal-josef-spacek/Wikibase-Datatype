@@ -3,29 +3,23 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Quantity;
+use Wikidata::Datatype::Value::Item;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Quantity->new(
-        'unit' => 'Q190900',
-        'value' => '10',
+my $obj = Wikidata::Datatype::Value::Item->new(
+        'value' => 'Q123',
 );
-
-# Get type.
-my $type = $obj->type;
-
-# Get unit.
-my $unit = $obj->unit;
 
 # Get value.
 my $value = $obj->value;
 
+# Get type.
+my $type = $obj->type;
+
 # Print out.
 print "Type: $type\n";
-print "Unit: $unit\n";
 print "Value: $value\n";
 
 # Output:
-# Type: quantity
-# Unit: Q190900
-# Value: 10
+# Type: item
+# Value: Q123

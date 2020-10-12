@@ -3,15 +3,12 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_isa);
-use Wikidata::Datatype::Value;
+use Wikidata::Datatype::Utils qw(check_entity);
 
 my $self = {
-        'key' => Wikidata::Datatype::Value->new(
-                'value' => 'foo',
-        ),
+        'key' => 'Q123',
 };
-check_isa($self, 'key', 'Wikidata::Datatype::Value');
+check_entity($self, 'key');
 
 # Print out.
 print "ok\n";

@@ -7,7 +7,8 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(check_array_object check_isa check_number check_required);
+Readonly::Array our @EXPORT_OK => qw(check_array_object check_entity check_isa
+	check_number check_required);
 
 our $VERSION = 0.01;
 
@@ -24,6 +25,16 @@ sub check_array_object {
 				}
 			}
 		}
+	}
+
+	return;
+}
+
+sub check_entity {
+	my ($self, $key) = @_;
+
+	if ($self->{$key} !~ m/^Q\d+$/ms) {
+		err "Parameter '$key' must begin with 'Q' and number after it.";
 	}
 
 	return;
@@ -76,6 +87,7 @@ Wikidata::Datatype::Utils - Wikidata datatype utilities.
  use Wikidata::Datatype::Utils qw(check_array_object check_isa check_number check_required);
 
  check_array_object($self, $key, $class, $class_name);
+ check_entity($self, $key);
  check_isa($self, $key, $class);
  check_number($self, $key);
  check_required($self, $key);
@@ -94,6 +106,14 @@ Check parameter defined by C<$key> which is reference to array with instances
 of some object type (C<$class>). C<$class_name> is used to error message.
 
 Put error if check isn't ok.
+
+Returns undef.
+
+=head2 C<check_entity>
+
+ check_entity($self, $key);
+
+Check parameter defined by C<$key> whith is entity (/^Q\d+/).
 
 Returns undef.
 
@@ -132,6 +152,9 @@ Returns undef.
  check_array_object():
          Parameter '%s' must be a array.
          %s isn't '%s' object.
+
+ check_entity():
+         Parameter '%s' must begin with 'Q' and number after it.";
 
  check_isa():
          Parameter '%s' must be a '%s' object.
@@ -196,6 +219,45 @@ Returns undef.
  use strict;
  use warnings;
 
+ use Wikidata::Datatype::Utils qw(check_entity);
+
+ my $self = {
+         'key' => 'Q123',
+ };
+ check_entity($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output:
+ # ok
+
+=head1 EXAMPLE4
+
+ use strict;
+ use warnings;
+
+ use Error::Pure;
+ use Wikidata::Datatype::Utils qw(check_entity);
+
+ $Error::Pure::TYPE = 'Error';
+
+ my $self = {
+         'key' => 'bad_entity',
+ };
+ check_entity($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output like:
+ # #Error [/../Wikidata/Datatype/Utils.pm:36] Parameter 'key' must begin with 'Q' and number after it.
+
+=head1 EXAMPLE5
+
+ use strict;
+ use warnings;
+
  use Wikidata::Datatype::Utils qw(check_isa);
  use Wikidata::Datatype::Value;
 
@@ -212,7 +274,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE4
+=head1 EXAMPLE6
 
  use strict;
  use warnings;
@@ -233,7 +295,7 @@ Returns undef.
  # Output like:
  # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikidata::Datatype::Value' object.
 
-=head1 EXAMPLE5
+=head1 EXAMPLE7
 
  use strict;
  use warnings;
@@ -251,7 +313,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE6
+=head1 EXAMPLE8
 
  use strict;
  use warnings;
@@ -271,7 +333,7 @@ Returns undef.
  # Output like:
  # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a number.
 
-=head1 EXAMPLE7
+=head1 EXAMPLE9
 
  use strict;
  use warnings;
@@ -289,7 +351,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE8
+=head1 EXAMPLE10
 
  use strict;
  use warnings;
