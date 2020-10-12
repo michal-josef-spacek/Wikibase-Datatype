@@ -24,6 +24,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'time' => 'time',
 	'url' => 'string',
 	'wikibase-item' => 'wikibase-entityid',
+	'wikibase-property' => 'wikibase-entityid',
 );
 Readonly::Array our @SNAK_TYPES => qw(
 	novalue

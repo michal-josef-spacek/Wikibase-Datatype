@@ -4,7 +4,6 @@ TODO
 23. Do Snak pridat form.
 24. Do Snak pridat lexem.
 28. Do Snak pridat sense.
-29. Do Snak pridat property.
 30.
 
 Applied
@@ -83,4 +82,7 @@ Pridan typ globecoordinate
 OK [20201012] skim
 
 26. Do Snak pridat Math expression
+OK [20201012] skim
+
+29. Do Snak pridat property.
 OK [20201012] skim
