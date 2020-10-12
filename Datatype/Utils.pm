@@ -84,7 +84,7 @@ Wikidata::Datatype::Utils - Wikidata datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Utils qw(check_array_object check_isa check_number check_required);
+ use Wikidata::Datatype::Utils qw(check_array_object check_entity check_isa check_number check_required);
 
  check_array_object($self, $key, $class, $class_name);
  check_entity($self, $key);
