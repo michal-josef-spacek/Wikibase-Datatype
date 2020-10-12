@@ -106,8 +106,8 @@ eval {
 		'property' => 'bad',
 	);
 };
-is($EVAL_ERROR, "Parameter 'property' has bad value.\n",
-	"Parameter 'property' has bad value.");
+is($EVAL_ERROR, "Parameter 'property' must begin with 'P' and number after it.\n",
+	"Parameter 'property' must begin with 'P' and number after it.");
 clean();
 
 # Test.

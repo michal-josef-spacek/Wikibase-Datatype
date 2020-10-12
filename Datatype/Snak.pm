@@ -7,7 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build is);
 use Readonly;
-use Wikidata::Datatype::Utils qw(check_isa check_required);
+use Wikidata::Datatype::Utils qw(check_isa check_property check_required);
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
@@ -80,9 +80,7 @@ sub BUILD {
 		check_isa($self, 'datavalue', $DATA_TYPES{$self->{'datatype'}});
 	}
 
-	if ($self->{'property'} !~ m/^P\d+$/ms) {
-		err "Parameter 'property' has bad value.";
-	}
+	check_property($self, 'property');
 
 	return;
 }
@@ -191,7 +189,7 @@ Returns string.
          From Wikidata::Datatype::Utils::check_isa():
                  Parameter 'datavalue' must be a 'Wikidata::Datatype::Value::%s' object.
          Parameter 'datatype' = '%s' isn't supported.
-         Parameter 'property' has bad value.
+         Parameter 'property' must begin with 'P' and number after it.
          Parameter 'snaktype' = '%s' isn't supported.
 
 =head1 EXAMPLE
