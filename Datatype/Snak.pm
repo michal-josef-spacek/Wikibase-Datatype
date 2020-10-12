@@ -17,6 +17,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'monolingualtext' => 'monolingualtext',
 	'quantity' => 'quantity',
 	'string' => 'string',
+	'tabular-data' => 'string',
 	'time' => 'time',
 	'url' => 'string',
 	'wikibase-item' => 'wikibase-entityid',
