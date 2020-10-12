@@ -9,6 +9,7 @@ Datatype/Value.pm
 Datatype/Value/Globecoordinate.pm
 Datatype/Value/Item.pm
 Datatype/Value/Monolingual.pm
+Datatype/Value/Property.pm
 Datatype/Value/Quantity.pm
 Datatype/Value/String.pm
 Datatype/Value/Time.pm
@@ -98,6 +99,11 @@ t/Wikidata-Datatype-Value-Monolingual/03-new.t
 t/Wikidata-Datatype-Value-Monolingual/04-language.t
 t/Wikidata-Datatype-Value-Monolingual/05-type.t
 t/Wikidata-Datatype-Value-Monolingual/06-value.t
+t/Wikidata-Datatype-Value-Property/01-use.t
+t/Wikidata-Datatype-Value-Property/02-version.t
+t/Wikidata-Datatype-Value-Property/03-new.t
+t/Wikidata-Datatype-Value-Property/04-type.t
+t/Wikidata-Datatype-Value-Property/05-value.t
 t/Wikidata-Datatype-Value-Quantity/01-use.t
 t/Wikidata-Datatype-Value-Quantity/02-version.t
 t/Wikidata-Datatype-Value-Quantity/03-new.t
@@ -144,6 +150,8 @@ xt/Wikidata-Datatype-Value-Item/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Item/02-pod.t
 xt/Wikidata-Datatype-Value-Monolingual/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Monolingual/02-pod.t
+xt/Wikidata-Datatype-Value-Property/01-pod_coverage.t
+xt/Wikidata-Datatype-Value-Property/02-pod.t
 xt/Wikidata-Datatype-Value-Quantity/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Quantity/02-pod.t
 xt/Wikidata-Datatype-Value-String/01-pod_coverage.t
