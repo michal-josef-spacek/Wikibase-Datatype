@@ -5,6 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build);
+use Wikidata::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
@@ -17,9 +18,7 @@ sub type {
 sub BUILD {
 	my $self = shift;
 
-	if ($self->{'value'} !~ m/^Q\d+$/ms) {
-		err "Parameter 'value' must begin with 'Q' and number after it.";
-	}
+	check_entity($self, 'value');
 
 	return;
 }
@@ -121,6 +120,7 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
+L<Wikidata::Datatype::Utils>,
 L<Wikidata::Datatype::Value>.
 
 =head1 SEE ALSO
