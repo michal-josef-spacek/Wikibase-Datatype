@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Wikidata::Datatype::Value::Time;
 
@@ -19,4 +19,15 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'value' is required.\n",
 	"Parameter 'value' is required.");
+clean();
+
+# Test.
+eval {
+	Wikidata::Datatype::Value::Time->new(
+		'calendarmodel' => 'foo',
+		'value' => '+2020-09-01T00:00:00Z',
+	);
+};
+is($EVAL_ERROR, "Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/.\n",
+	"Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/.");
 clean();

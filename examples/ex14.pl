@@ -11,6 +11,9 @@ my $obj = Wikidata::Datatype::Value::Time->new(
         'value' => '+2020-09-01T00:00:00Z',
 );
 
+# Get calendar model.
+my $calendarmodel = $obj->calendarmodel;
+
 # Get precision.
 my $precision = $obj->precision;
 
@@ -21,11 +24,13 @@ my $type = $obj->type;
 my $value = $obj->value;
 
 # Print out.
+print "Calendar model: $calendarmodel\n";
 print "Precision: $precision\n";
 print "Type: $type\n";
 print "Value: $value\n";
 
 # Output:
+# Calendar model: Q1985727
 # Precision: 10
 # Type: time
 # Value: +2020-09-01T00:00:00Z

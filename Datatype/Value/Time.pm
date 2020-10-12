@@ -3,7 +3,8 @@ package Wikidata::Datatype::Value::Time;
 use strict;
 use warnings;
 
-use Mo qw(default is);
+use Error::Pure qw(err);
+use Mo qw(build default is);
 
 our $VERSION = 0.01;
 
@@ -21,7 +22,6 @@ has before => (
 
 has calendarmodel => (
 	is => 'ro',
-	default => 'http://www.wikidata.org/entity/Q1985727',
 );
 
 has precision => (
@@ -36,6 +36,20 @@ has timezone => (
 
 sub type {
 	return 'time';
+}
+
+sub BUILD {
+	my $self = shift;
+
+	if (! defined $self->{'calendarmodel'}) {
+		$self->{'calendarmodel'} = 'Q1985727';
+	}
+
+	if ($self->{'calendarmodel'} !~ m/^Q\d+$/ms) {
+		err "Parameter 'calendarmodel' is bad. Possible value is /^Q\\d+\$/."
+	}
+
+	return;
 }
 
 1;
@@ -92,7 +106,7 @@ Default value is 0.
 =item * C<calendarmodel>
 
 Calendar model.
-Default value is 'http://www.wikidata.org/entity/Q1985727' (proleptic Gregorian
+Default value is 'Q1985727' (proleptic Gregorian
 calendar).
 
 =item * C<precision>
@@ -132,9 +146,9 @@ Returns number.
 
  my $calendarmodel = $obj->calendarmodel;
 
-Get calendar model.
+Get calendar model. Unit is entity (e.g. /^Q\d+$/).
 
-Returns URL with Wikidata item.
+Returns string.
 
 =head2 C<precision>
 
@@ -173,6 +187,7 @@ Returns string.
  new():
          From Wikidata::Datatype::Value::new():
                  Parameter 'value' is required.
+         Parameter 'calendarmodel' is bad. Possible value is /^Q\d+$/.
 
 =head1 EXAMPLE
 
@@ -187,6 +202,9 @@ Returns string.
          'value' => '+2020-09-01T00:00:00Z',
  );
 
+ # Get calendar model.
+ my $calendarmodel = $obj->calendarmodel;
+
  # Get precision.
  my $precision = $obj->precision;
 
@@ -197,17 +215,20 @@ Returns string.
  my $value = $obj->value;
 
  # Print out.
+ print "Calendar model: $calendarmodel\n";
  print "Precision: $precision\n";
  print "Type: $type\n";
  print "Value: $value\n";
 
  # Output:
+ # Calendar model: Q1985727
  # Precision: 10
  # Type: time
  # Value: +2020-09-01T00:00:00Z
 
 =head1 DEPENDENCIES
 
+L<Error::Pure>,
 L<Mo>,
 L<Wikidata::Datatype::Value>.
 
