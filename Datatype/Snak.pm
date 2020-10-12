@@ -13,6 +13,7 @@ use Wikidata::Datatype::Utils qw(check_isa check_required);
 Readonly::Hash our %DATA_TYPES => (
 	'commonsMedia' => 'string',
 	'external-id' => 'string',
+	'geo-shape' => 'string',
 	'monolingualtext' => 'monolingualtext',
 	'quantity' => 'quantity',
 	'string' => 'string',
