@@ -6,7 +6,6 @@ TODO
 24. Do Snak pridat lexem.
 25. Do Snak pridat Musical Notation.
 26. Do Snak pridat Math expression
-27. Do Snak pridat Point in time.
 28. Do Snak pridat sense.
 29.
 
@@ -73,3 +72,7 @@ OK [20201012] skim
 
 15. Do Snak pridat tabular-data
 OK [20201012] skim
+
+27. Do Snak pridat Point in time.
+That's time
+NONE [20201012] skim
