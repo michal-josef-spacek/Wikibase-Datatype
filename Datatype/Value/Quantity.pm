@@ -140,7 +140,7 @@ Returns string.
 
  my $unit = $obj->unit;
 
-Get unit. Unit could be 1 or url to entity.
+Get unit. Unit is entity (e.g. /^Q\d+$/).
 
 Returns string.
 
