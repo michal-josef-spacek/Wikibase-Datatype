@@ -88,6 +88,14 @@ t/Wikidata-Datatype-Utils/07-check_property.t
 t/Wikidata-Datatype-Utils/08-check_required.t
 t/Wikidata-Datatype-Value-Globecoordinate/01-use.t
 t/Wikidata-Datatype-Value-Globecoordinate/02-version.t
+t/Wikidata-Datatype-Value-Globecoordinate/03-new.t
+t/Wikidata-Datatype-Value-Globecoordinate/04-altitude.t
+t/Wikidata-Datatype-Value-Globecoordinate/05-globe.t
+t/Wikidata-Datatype-Value-Globecoordinate/06-latitude.t
+t/Wikidata-Datatype-Value-Globecoordinate/07-longitude.t
+t/Wikidata-Datatype-Value-Globecoordinate/08-precision.t
+t/Wikidata-Datatype-Value-Globecoordinate/09-type.t
+t/Wikidata-Datatype-Value-Globecoordinate/10-value.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t
