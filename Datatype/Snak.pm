@@ -14,6 +14,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'commonsMedia' => 'string',
 	'external-id' => 'string',
 	'geo-shape' => 'string',
+	'globe-coordinate' => 'globecoordinate',
 	'monolingualtext' => 'monolingualtext',
 	'musical-notation' => 'string',
 	'quantity' => 'quantity',

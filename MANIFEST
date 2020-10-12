@@ -6,6 +6,7 @@ Datatype/Snak.pm
 Datatype/Statement.pm
 Datatype/Utils.pm
 Datatype/Value.pm
+Datatype/Value/Globecoordinate.pm
 Datatype/Value/Item.pm
 Datatype/Value/Monolingual.pm
 Datatype/Value/Quantity.pm
@@ -23,6 +24,7 @@ examples/ex17.pl
 examples/ex18.pl
 examples/ex19.pl
 examples/ex2.pl
+examples/ex20.pl
 examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
@@ -77,6 +79,8 @@ t/Wikidata-Datatype-Utils/03-check_array_object.t
 t/Wikidata-Datatype-Utils/04-check_isa.t
 t/Wikidata-Datatype-Utils/05-check_number.t
 t/Wikidata-Datatype-Utils/06-check_required.t
+t/Wikidata-Datatype-Value-Globecoordinate/01-use.t
+t/Wikidata-Datatype-Value-Globecoordinate/02-version.t
 t/Wikidata-Datatype-Value-Item/01-use.t
 t/Wikidata-Datatype-Value-Item/02-version.t
 t/Wikidata-Datatype-Value-Item/03-new.t
@@ -128,6 +132,8 @@ xt/Wikidata-Datatype-Statement/01-pod_coverage.t
 xt/Wikidata-Datatype-Statement/02-pod.t
 xt/Wikidata-Datatype-Utils/01-pod_coverage.t
 xt/Wikidata-Datatype-Utils/02-pod.t
+xt/Wikidata-Datatype-Value-Globecoordinate/01-pod_coverage.t
+xt/Wikidata-Datatype-Value-Globecoordinate/02-pod.t
 xt/Wikidata-Datatype-Value-Item/01-pod_coverage.t
 xt/Wikidata-Datatype-Value-Item/02-pod.t
 xt/Wikidata-Datatype-Value-Monolingual/01-pod_coverage.t
