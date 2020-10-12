@@ -15,6 +15,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'external-id' => 'string',
 	'geo-shape' => 'string',
 	'monolingualtext' => 'monolingualtext',
+	'musical-notation' => 'string',
 	'quantity' => 'quantity',
 	'string' => 'string',
 	'tabular-data' => 'string',
