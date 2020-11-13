@@ -5,4 +5,6 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('Wikidata::Datatype::Value::Property', 'Wikidata::Datatype::Value::Property is covered.');
+pod_coverage_ok('Wikidata::Datatype::Value::Property',
+	{ 'also_private' => ['BUILD'] },
+	'Wikidata::Datatype::Value::Property is covered.');
