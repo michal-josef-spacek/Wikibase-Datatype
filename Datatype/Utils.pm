@@ -445,7 +445,7 @@ L<Readonly>.
 
 =item L<Wikidata::Datatype>
 
-Wikidata datatypes
+Wikidata datatypes.
 
 =back
 

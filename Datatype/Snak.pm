@@ -242,7 +242,7 @@ L<Wikidata::Datatype::Utils>.
 
 =item L<Wikidata::Datatype>
 
-Wikidata datatypes
+Wikidata datatypes.
 
 =back
 

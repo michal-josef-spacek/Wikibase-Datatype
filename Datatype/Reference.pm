@@ -125,11 +125,11 @@ L<Wikidata::Datatype::Utils>.
 
 =item L<Wikidata::Datatype>
 
-Wikidata datatypes
+Wikidata datatypes.
 
 =item L<Wikidata::Datatype::Snak>
 
-Wikidata snak datatype
+Wikidata snak datatype.
 
 =back
 
