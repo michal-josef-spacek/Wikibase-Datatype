@@ -21,10 +21,10 @@ my $obj = Wikidata::Datatype::Reference->new(
 );
 
 # Get value.
-my @snaks = $obj->snaks;
+my $snaks_ar = $obj->snaks;
 
 # Print out number of snaks.
-print "Number of snaks: ".@snaks."\n";
+print "Number of snaks: ".@{$snaks_ar}."\n";
 
 # Output:
 # Number of snaks: 1
