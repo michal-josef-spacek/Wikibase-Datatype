@@ -4,11 +4,8 @@ TODO
 23. Do Snak pridat form.
 24. Do Snak pridat lexem.
 28. Do Snak pridat sense.
-31. Implementovat Page, jako celou stranku.
-32. Implementovat Label
-33. Implementovat Description
-34. Implementovat Alias
-36.
+36. V Statement prikladu je prazdny radek navic a slovo arrat.
+37.
 
 Applied
 =======
@@ -97,3 +94,18 @@ OK [20201012] skim
 35. Implementovat Sitelink
 Uz je.
 NONE [20201114] skim
+
+32. Implementovat Label
+Neni potreba.
+NONE [20201114] skim
+
+33. Implementovat Description
+Neni potreba.
+NONE [20201114] skim
+
+34. Implementovat Alias
+Neni potreba.
+NONE [20201114] skim
+
+31. Implementovat Page, jako celou stranku.
+OK [20201114] skim
