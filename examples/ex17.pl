@@ -13,7 +13,6 @@ use Wikidata::Datatype::Value::Time;
 
 # Object.
 my $obj = Wikidata::Datatype::Statement->new(
-
         # instance of (P31) human (Q5)
         'snak' => Wikidata::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
