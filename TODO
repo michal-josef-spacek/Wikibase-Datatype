@@ -8,7 +8,6 @@ TODO
 32. Implementovat Label
 33. Implementovat Description
 34. Implementovat Alias
-35. Implementovat Sitelink
 36.
 
 Applied
@@ -94,3 +93,7 @@ OK [20201012] skim
 
 30. Ve Snak by sem mel kontrolovat objekt podle datatype.
 OK [20201012] skim
+
+35. Implementovat Sitelink
+Uz je.
+NONE [20201114] skim
