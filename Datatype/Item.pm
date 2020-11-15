@@ -264,7 +264,7 @@ Returns reference to array with Wikidata::Datatype::Sitelink instances.
 
 Get statements.
 
-Returns reference to arrat with Wikidata::Datatype::Statement instances.
+Returns reference to array with Wikidata::Datatype::Statement instances.
 
 =head2 C<title>
 

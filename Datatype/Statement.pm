@@ -130,7 +130,7 @@ Parameter is required.
 
 Get property snaks.
 
-Returns reference to arrat with Wikidata::Datatype::Snak instances.
+Returns reference to array with Wikidata::Datatype::Snak instances.
 
 =head2 C<rank>
 
@@ -179,7 +179,6 @@ Returns Wikidata::Datatype::Snak instance.
  use Wikidata::Datatype::Value::Item;
  use Wikidata::Datatype::Value::String;
  use Wikidata::Datatype::Value::Time;
-
 
  # Object.
  my $obj = Wikidata::Datatype::Statement->new(
