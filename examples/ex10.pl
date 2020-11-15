@@ -5,7 +5,7 @@ use warnings;
 
 $Error::Pure::TYPE = 'Error';
 
-use Wikidata::Datatype::Utils qw(check_number);
+use Wikibase::Datatype::Utils qw(check_number);
 
 my $self = {
         'key' => 'foo',
@@ -16,4 +16,4 @@ check_number($self, 'key');
 print "ok\n";
 
 # Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a number.
+# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must be a number.

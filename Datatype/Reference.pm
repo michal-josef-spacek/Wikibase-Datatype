@@ -1,11 +1,11 @@
-package Wikidata::Datatype::Reference;
+package Wikibase::Datatype::Reference;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikidata::Datatype::Utils qw(check_array_object check_required);
+use Wikibase::Datatype::Utils qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -18,7 +18,7 @@ sub BUILD {
 
 	check_required($self, 'snaks');
 
-	check_array_object($self, 'snaks', 'Wikidata::Datatype::Snak', 'Snak');
+	check_array_object($self, 'snaks', 'Wikibase::Datatype::Snak', 'Snak');
 
 	return;
 }
@@ -33,13 +33,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Reference - Wikidata reference datatype.
+Wikibase::Datatype::Reference - Wikibase reference datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Reference;
+ use Wikibase::Datatype::Reference;
 
- my $obj = Wikidata::Datatype::Reference->new(%params);
+ my $obj = Wikibase::Datatype::Reference->new(%params);
  my $snaks_ar = $obj->snaks;
 
 =head1 DESCRIPTION
@@ -50,7 +50,7 @@ This datatype is reference class for all references in claim.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Reference->new(%params);
+ my $obj = Wikibase::Datatype::Reference->new(%params);
 
 Constructor.
 
@@ -60,7 +60,7 @@ Returns instance of object.
 
 =item * C<snaks>
 
-Reference to array with Wikidata::Datatype::Snak instances.
+Reference to array with Wikibase::Datatype::Snak instances.
 Parameter is required.
 
 =back
@@ -71,32 +71,32 @@ Parameter is required.
 
 Get snaks.
 
-Returns reference to array of Wikidata::Datatype::Snak instances.
+Returns reference to array of Wikibase::Datatype::Snak instances.
 
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_required():
+         From Wikibase::Datatype::Utils::check_required():
                  Parameter 'snaks' is required.
-         From Wikidata::Datatype::Utils::check_array_object():
+         From Wikibase::Datatype::Utils::check_array_object():
                  Parameter 'snaks' must be a array.
-                 Snak isn't 'Wikidata::Datatype::Snak' object.
+                 Snak isn't 'Wikibase::Datatype::Snak' object.
 
 =head1 EXAMPLE
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Reference;
- use Wikidata::Datatype::Snak;
- use Wikidata::Datatype::Value::String;
+ use Wikibase::Datatype::Reference;
+ use Wikibase::Datatype::Snak;
+ use Wikibase::Datatype::Value::String;
 
  # Object.
- my $obj = Wikidata::Datatype::Reference->new(
+ my $obj = Wikibase::Datatype::Reference->new(
          'snaks' => [
-                 Wikidata::Datatype::Snak->new(
+                 Wikibase::Datatype::Snak->new(
                          'datatype' => 'string',
-                         'datavalue' => Wikidata::Datatype::Value::String->new(
+                         'datavalue' => Wikibase::Datatype::Value::String->new(
                                  'value' => 'text',
                          ),
                          'property' => 'P11',
@@ -117,25 +117,25 @@ Returns reference to array of Wikidata::Datatype::Snak instances.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
-=item L<Wikidata::Datatype::Snak>
+=item L<Wikibase::Datatype::Snak>
 
-Wikidata snak datatype.
+Wikibase snak datatype.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

@@ -1,15 +1,15 @@
-package Wikidata::Datatype::Value::Globecoordinate;
+package Wikibase::Datatype::Value::Globecoordinate;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikidata::Datatype::Utils qw(check_entity);
+use Wikibase::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 has altitude => (
 	'is' => 'ro',
@@ -79,13 +79,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::Globecoordinate - Wikidata globe coordinate value datatype.
+Wikibase::Datatype::Value::Globecoordinate - Wikibase globe coordinate value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::Globecoordinate;
+ use Wikibase::Datatype::Value::Globecoordinate;
 
- my $obj = Wikidata::Datatype::Value::Globecoordinate->new(%params);
+ my $obj = Wikibase::Datatype::Value::Globecoordinate->new(%params);
  my $altitude = $obj->altitude;
  my $globe = $obj->globe;
  my $latitude = $obj->latitude;
@@ -102,7 +102,7 @@ This datatype is globecoordinate class for representation of coordinate.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::Globecoordinate->new(%params);
+ my $obj = Wikibase::Datatype::Value::Globecoordinate->new(%params);
 
 Constructor.
 
@@ -194,9 +194,9 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_entity():
+         From Wikibase::Datatype::Utils::check_entity():
                  Parameter 'globe' must begin with 'Q' and number after it.
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
          Parameter 'value' array must have two fields (latitude and longitude).
          Parameter 'value' has bad first parameter (latitude).
@@ -208,10 +208,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Globecoordinate;
+ use Wikibase::Datatype::Value::Globecoordinate;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Globecoordinate->new(
+ my $obj = Wikibase::Datatype::Value::Globecoordinate->new(
          'value' => [49.6398383, 18.1484031],
  );
 
@@ -253,22 +253,22 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Utils>,
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

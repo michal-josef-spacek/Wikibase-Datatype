@@ -1,15 +1,15 @@
-package Wikidata::Datatype::Value::Quantity;
+package Wikibase::Datatype::Value::Quantity;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikidata::Datatype::Utils qw(check_entity check_number);
+use Wikibase::Datatype::Utils qw(check_entity check_number);
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 has lower_bound => (
 	is => 'ro',
@@ -62,13 +62,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::Quantity - Wikidata quantity value datatype.
+Wikibase::Datatype::Value::Quantity - Wikibase quantity value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::Quantity;
+ use Wikibase::Datatype::Value::Quantity;
 
- my $obj = Wikidata::Datatype::Value::Quantity->new(%params);
+ my $obj = Wikibase::Datatype::Value::Quantity->new(%params);
  my $lower_bound = $obj->lower_bound;
  my $type = $obj->type;
  my $unit = $obj->unit;
@@ -84,7 +84,7 @@ define unit of quantity.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::Quantity->new(%params);
+ my $obj = Wikibase::Datatype::Value::Quantity->new(%params);
 
 Constructor.
 
@@ -163,13 +163,13 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_entity():
+         From Wikibase::Datatype::Utils::check_entity():
                  Parameter 'unit' must begin with 'Q' and number after it.
-         From Wikidata::Datatype::Utils::check_number():
+         From Wikibase::Datatype::Utils::check_number():
                  Parameter 'lower_bound' must be a number.
                  Parameter 'upper_bound' must be a number.
                  Parameter 'value' must be a number.
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
          Parameter 'lower_bound' must be less than value.
          Parameter 'upper_bound' must be greater than value.
@@ -179,10 +179,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Quantity;
+ use Wikibase::Datatype::Value::Quantity;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Quantity->new(
+ my $obj = Wikibase::Datatype::Value::Quantity->new(
          'value' => '10',
  );
 
@@ -211,10 +211,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Quantity;
+ use Wikibase::Datatype::Value::Quantity;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Quantity->new(
+ my $obj = Wikibase::Datatype::Value::Quantity->new(
          'unit' => 'Q190900',
          'value' => '10',
  );
@@ -242,22 +242,22 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Utils>,
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

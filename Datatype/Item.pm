@@ -1,11 +1,11 @@
-package Wikidata::Datatype::Item;
+package Wikibase::Datatype::Item;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Wikidata::Datatype::Utils qw(check_array_object);
+use Wikibase::Datatype::Utils qw(check_array_object);
 
 our $VERSION = 0.01;
 
@@ -55,26 +55,26 @@ sub BUILD {
 	my $self = shift;
 
 	# Check aliases.
-	check_array_object($self, 'aliases', 'Wikidata::Datatype::Value::Monolingual',
+	check_array_object($self, 'aliases', 'Wikibase::Datatype::Value::Monolingual',
 		'Alias');
 
 	# Check descriptions.
-	check_array_object($self, 'descriptions', 'Wikidata::Datatype::Value::Monolingual',
+	check_array_object($self, 'descriptions', 'Wikibase::Datatype::Value::Monolingual',
 		'Decsription');
 	$self->_check_number_of_lang_items('descriptions', 'Description');
 
 	# Check labels.
-	check_array_object($self, 'labels', 'Wikidata::Datatype::Value::Monolingual',
+	check_array_object($self, 'labels', 'Wikibase::Datatype::Value::Monolingual',
 		'Label');
 	$self->_check_number_of_lang_items('labels', 'Label');
 
 	# Check sitelinks.
-	check_array_object($self, 'sitelinks', 'Wikidata::Datatype::Sitelink',
+	check_array_object($self, 'sitelinks', 'Wikibase::Datatype::Sitelink',
 		'Sitelink');
 	$self->_check_number_of_site_items;
 
 	# Check statements.
-	check_array_object($self, 'statements', 'Wikidata::Datatype::Statement',
+	check_array_object($self, 'statements', 'Wikibase::Datatype::Statement',
 		'Statement');
 
 	return;
@@ -125,13 +125,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Item - Wikidata page datatype.
+Wikibase::Datatype::Item - Wikibase page datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Item;
+ use Wikibase::Datatype::Item;
 
- my $obj = Wikidata::Datatype::Item->new(%params);
+ my $obj = Wikibase::Datatype::Item->new(%params);
  my $aliases_ar = $obj->aliases;
  my $descriptions_ar = $obj->descriptions;
  my $labels_ar = $obj->labels;
@@ -150,7 +150,7 @@ This datatype is item class for representing claim.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Item->new(%params);
+ my $obj = Wikibase::Datatype::Item->new(%params);
 
 Constructor.
 
@@ -161,19 +161,19 @@ Returns instance of object.
 =item * C<aliases>
 
 Item aliases. Multiple per language.
-Reference to array with Wikidata::Datatype::Value::Monolingual instances.
+Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
 =item * C<descriptions>
 
 Item descriptions. One per language.
-Reference to array with Wikidata::Datatype::Value::Monolingual instances.
+Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
 =item * C<labels>
 
 Item descriptions. One per language.
-Reference to array with Wikidata::Datatype::Value::Monolingual instances.
+Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
 =item * C<lastrevid>
@@ -194,13 +194,13 @@ Default value is 0.
 =item * C<sitelinks>
 
 Item sitelinks. One per site.
-Reference to array with Wikidata::Datatype::Sitelink instances.
+Reference to array with Wikibase::Datatype::Sitelink instances.
 Parameter is optional.
 
 =item * C<statements>
 
 Item statements.
-Reference to array with Wikidata::Datatype::Statement instances.
+Reference to array with Wikibase::Datatype::Statement instances.
 Parameter is optional.
 
 =item * C<title>
@@ -216,7 +216,7 @@ Parameter is optional.
 
 Get aliases.
 
-Returns reference to array with Wikidata::Datatype::Value::Monolingual instances.
+Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
 
 =head2 C<descriptions>
 
@@ -224,7 +224,7 @@ Returns reference to array with Wikidata::Datatype::Value::Monolingual instances
 
 Get descriptions.
 
-Returns reference to array with Wikidata::Datatype::Value::Monolingual instances.
+Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
 
 =head2 C<lastrevid>
 
@@ -256,7 +256,7 @@ Returns number.
 
 Get sitelinks.
 
-Returns reference to array with Wikidata::Datatype::Sitelink instances.
+Returns reference to array with Wikibase::Datatype::Sitelink instances.
 
 =head2 C<statements>
 
@@ -264,7 +264,7 @@ Returns reference to array with Wikidata::Datatype::Sitelink instances.
 
 Get statements.
 
-Returns reference to array with Wikidata::Datatype::Statement instances.
+Returns reference to array with Wikibase::Datatype::Statement instances.
 
 =head2 C<title>
 
@@ -277,17 +277,17 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_array_object():
-                 Alias isn't 'Wikidata::Datatype::Value::Monolingual' object.
-                 Description isn't 'Wikidata::Datatype::Value::Monolingual' object.
-                 Label isn't 'Wikidata::Datatype::Value::Monolingual' object.
+         From Wikibase::Datatype::Utils::check_array_object():
+                 Alias isn't 'Wikibase::Datatype::Value::Monolingual' object.
+                 Description isn't 'Wikibase::Datatype::Value::Monolingual' object.
+                 Label isn't 'Wikibase::Datatype::Value::Monolingual' object.
                  Parameter 'aliases' must be a array.
                  Parameter 'descriptions' must be a array.
                  Parameter 'labels' must be a array.
                  Parameter 'sitelinks' must be a array.
                  Parameter 'statements' must be a array.
-                 Sitelink isn't 'Wikidata::Datatype::Sitelink' object.
-                 Statement isn't 'Wikidata::Datatype::Statement' object.
+                 Sitelink isn't 'Wikibase::Datatype::Sitelink' object.
+                 Statement isn't 'Wikibase::Datatype::Statement' object.
          Sitelink for site '%s' has multiple values.
          Description for language '%s' has multiple values.
          Label for language '%s' has multiple values.
@@ -297,61 +297,61 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Item;
- use Wikidata::Datatype::Reference;
- use Wikidata::Datatype::Sitelink;
- use Wikidata::Datatype::Snak;
- use Wikidata::Datatype::Statement;
- use Wikidata::Datatype::Value::Item;
- use Wikidata::Datatype::Value::Monolingual;
- use Wikidata::Datatype::Value::String;
- use Wikidata::Datatype::Value::Time;
+ use Wikibase::Datatype::Item;
+ use Wikibase::Datatype::Reference;
+ use Wikibase::Datatype::Sitelink;
+ use Wikibase::Datatype::Snak;
+ use Wikibase::Datatype::Statement;
+ use Wikibase::Datatype::Value::Item;
+ use Wikibase::Datatype::Value::Monolingual;
+ use Wikibase::Datatype::Value::String;
+ use Wikibase::Datatype::Value::Time;
 
  # Object.
- my $statement1 = Wikidata::Datatype::Statement->new(
+ my $statement1 = Wikibase::Datatype::Statement->new(
          # instance of (P31) human (Q5)
-         'snak' => Wikidata::Datatype::Snak->new(
+         'snak' => Wikibase::Datatype::Snak->new(
                   'datatype' => 'wikibase-item',
-                  'datavalue' => Wikidata::Datatype::Value::Item->new(
+                  'datavalue' => Wikibase::Datatype::Value::Item->new(
                           'value' => 'Q5',
                   ),
                   'property' => 'P31',
          ),
          'property_snaks' => [
                  # of (P642) alien (Q474741)
-                 Wikidata::Datatype::Snak->new(
+                 Wikibase::Datatype::Snak->new(
                           'datatype' => 'wikibase-item',
-                          'datavalue' => Wikidata::Datatype::Value::Item->new(
+                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                   'value' => 'Q474741',
                           ),
                           'property' => 'P642',
                  ),
          ],
          'references' => [
-                  Wikidata::Datatype::Reference->new(
+                  Wikibase::Datatype::Reference->new(
                           'snaks' => [
                                   # stated in (P248) Virtual International Authority File (Q53919)
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'wikibase-item',
-                                           'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                    'value' => 'Q53919',
                                            ),
                                            'property' => 'P248',
                                   ),
 
                                   # VIAF ID (P214) 113230702
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'external-id',
-                                           'datavalue' => Wikidata::Datatype::Value::String->new(
+                                           'datavalue' => Wikibase::Datatype::Value::String->new(
                                                    'value' => '113230702',
                                            ),
                                            'property' => 'P214',
                                   ),
 
                                   # retrieved (P813) 7 December 2013
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'time',
-                                           'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                    'value' => '+2013-12-07T00:00:00Z',
                                            ),
                                            'property' => 'P813',
@@ -360,40 +360,40 @@ Returns string.
                   ),
          ],
  );
- my $statement2 = Wikidata::Datatype::Statement->new(
+ my $statement2 = Wikibase::Datatype::Statement->new(
          # sex or gender (P21) male (Q6581097)
-         'snak' => Wikidata::Datatype::Snak->new(
+         'snak' => Wikibase::Datatype::Snak->new(
                   'datatype' => 'wikibase-item',
-                  'datavalue' => Wikidata::Datatype::Value::Item->new(
+                  'datavalue' => Wikibase::Datatype::Value::Item->new(
                           'value' => 'Q6581097',
                   ),
                   'property' => 'P21',
          ),
          'references' => [
-                  Wikidata::Datatype::Reference->new(
+                  Wikibase::Datatype::Reference->new(
                           'snaks' => [
                                   # stated in (P248) Virtual International Authority File (Q53919)
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'wikibase-item',
-                                           'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                    'value' => 'Q53919',
                                            ),
                                            'property' => 'P248',
                                   ),
 
                                   # VIAF ID (P214) 113230702
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'external-id',
-                                           'datavalue' => Wikidata::Datatype::Value::String->new(
+                                           'datavalue' => Wikibase::Datatype::Value::String->new(
                                                    'value' => '113230702',
                                            ),
                                            'property' => 'P214',
                                   ),
 
                                   # retrieved (P813) 7 December 2013
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'time',
-                                           'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                    'value' => '+2013-12-07T00:00:00Z',
                                            ),
                                            'property' => 'P813',
@@ -404,59 +404,59 @@ Returns string.
  );
 
  # Main item.
- my $obj = Wikidata::Datatype::Item->new(
+ my $obj = Wikibase::Datatype::Item->new(
          'aliases' => [
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
                          'value' => 'Douglas Noël Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
                          'value' => 'Douglas Noel Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
                          'value' => 'Douglas N. Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
                          'value' => 'Douglas Noel Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
                          'value' => 'Douglas Noël Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
                          'value' => 'Douglas N. Adams',
                  ),
          ],
          'descriptions' => [
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
                          'value' => 'anglický spisovatel, humorista a dramatik',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
                          'value' => 'English writer and humorist',
                  ),
          ],
          'labels' => [
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
                          'value' => 'Douglas Adams',
                  ),
-                 Wikidata::Datatype::Value::Monolingual->new(
+                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
                          'value' => 'Douglas Adams',
                  ),
          ],
          'sitelinks' => [
-                 Wikidata::Datatype::Sitelink->new(
+                 Wikibase::Datatype::Sitelink->new(
                          'site' => 'cswiki',
                          'title' => 'Douglas Adams',
                  ),
-                 Wikidata::Datatype::Sitelink->new(
+                 Wikibase::Datatype::Sitelink->new(
                          'site' => 'enwiki',
                          'title' => 'Douglas Adams',
                  ),
@@ -546,21 +546,21 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

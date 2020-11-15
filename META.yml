@@ -1,5 +1,5 @@
 ---
-abstract: 'Wikidata data types.'
+abstract: 'Wikibase data types.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
@@ -18,7 +18,7 @@ license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Wikidata-Datatype
+name: Wikibase-Datatype
 no_index:
   directory:
     - examples
@@ -35,8 +35,8 @@ requires:
   Unicode::UTF8: 0
   perl: 5.6.2
 resources:
-  bugtracker: https://github.com/michal-josef-spacek/Wikidata-Datatype/issues
-  homepage: https://github.com/michal-josef-spacek/Wikidata-Datatype
+  bugtracker: https://github.com/michal-josef-spacek/Wikibase-Datatype/issues
+  homepage: https://github.com/michal-josef-spacek/Wikibase-Datatype
   license: http://opensource.org/licenses/bsd-license.php
-  repository: git://github.com/michal-josef-spacek/Wikidata-Datatype
+  repository: git://github.com/michal-josef-spacek/Wikibase-Datatype
 version: '0.01'

@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Statement;
+package Wikibase::Datatype::Statement;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
 use Readonly;
-use Wikidata::Datatype::Utils qw(check_array_object check_isa check_required);
+use Wikibase::Datatype::Utils qw(check_array_object check_isa check_required);
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
@@ -45,14 +45,14 @@ sub BUILD {
 	}
 
 	# Check snak.
-	check_isa($self, 'snak', 'Wikidata::Datatype::Snak');
+	check_isa($self, 'snak', 'Wikibase::Datatype::Snak');
 
 	# Check property snaks.
-	check_array_object($self, 'property_snaks', 'Wikidata::Datatype::Snak',
+	check_array_object($self, 'property_snaks', 'Wikibase::Datatype::Snak',
 		'Property snak');
 
 	# Check references.
-	check_array_object($self, 'references', 'Wikidata::Datatype::Reference',
+	check_array_object($self, 'references', 'Wikibase::Datatype::Reference',
 		'Reference');
 
 	return;
@@ -68,13 +68,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Statement - Wikidata statement datatype.
+Wikibase::Datatype::Statement - Wikibase statement datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Statement;
+ use Wikibase::Datatype::Statement;
 
- my $obj = Wikidata::Datatype::Statement->new(%params);
+ my $obj = Wikibase::Datatype::Statement->new(%params);
  my $property_snaks_ar = $obj->property_snaks;
  my $rank = $obj->rank;
  my $referenes_ar = $obj->references;
@@ -88,7 +88,7 @@ This datatype is statement class for representing claim.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Statement->new(%params);
+ my $obj = Wikibase::Datatype::Statement->new(%params);
 
 Constructor.
 
@@ -99,7 +99,7 @@ Returns instance of object.
 =item * C<property_snaks>
 
 Property snaks.
-Parameter is reference to hash with Wikidata::Datatype::Snak instances.
+Parameter is reference to hash with Wikibase::Datatype::Snak instances.
 Parameter is optional.
 Default value is [].
 
@@ -112,14 +112,14 @@ Default value is 'normal'.
 =item * C<references>
 
 List of references.
-Parameter is reference to hash with Wikidata::Datatype::Reference instances.
+Parameter is reference to hash with Wikibase::Datatype::Reference instances.
 Parameter is optional.
 Default value is [].
 
 =item * C<snak>
 
 Main snak.
-Parameter is Wikidata::Datatype::Snak instance.
+Parameter is Wikibase::Datatype::Snak instance.
 Parameter is required.
 
 =back
@@ -130,7 +130,7 @@ Parameter is required.
 
 Get property snaks.
 
-Returns reference to array with Wikidata::Datatype::Snak instances.
+Returns reference to array with Wikibase::Datatype::Snak instances.
 
 =head2 C<rank>
 
@@ -144,7 +144,7 @@ Get rank value.
 
 Get references.
 
-Returns reference to array with Wikidata::Datatype::Reference instance.
+Returns reference to array with Wikibase::Datatype::Reference instance.
 
 =head2 C<snak>
 
@@ -152,20 +152,20 @@ Returns reference to array with Wikidata::Datatype::Reference instance.
 
 Get main snak.
 
-Returns Wikidata::Datatype::Snak instance.
+Returns Wikibase::Datatype::Snak instance.
 
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_required():
+         From Wikibase::Datatype::Utils::check_required():
                  Parameter 'snak' is required.
-         From Wikidata::Datatype::Utils::check_array_object():
+         From Wikibase::Datatype::Utils::check_array_object():
                  Parameter 'property_snaks' must be a array.
                  Parameter 'references' must be a array.
-                 Property snak isn't 'Wikidata::Datatype::Snak' object.
-                 Reference isn't 'Wikidata::Datatype::Reference' object.
-         From Wikidata::Datatype::Utils::check_isa():
-                 Parameter 'snak' must be a 'Wikidata::Datatype::Snak' object.
+                 Property snak isn't 'Wikibase::Datatype::Snak' object.
+                 Reference isn't 'Wikibase::Datatype::Reference' object.
+         From Wikibase::Datatype::Utils::check_isa():
+                 Parameter 'snak' must be a 'Wikibase::Datatype::Snak' object.
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
 
 =head1 EXAMPLE
@@ -173,58 +173,58 @@ Returns Wikidata::Datatype::Snak instance.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Reference;
- use Wikidata::Datatype::Statement;
- use Wikidata::Datatype::Snak;
- use Wikidata::Datatype::Value::Item;
- use Wikidata::Datatype::Value::String;
- use Wikidata::Datatype::Value::Time;
+ use Wikibase::Datatype::Reference;
+ use Wikibase::Datatype::Statement;
+ use Wikibase::Datatype::Snak;
+ use Wikibase::Datatype::Value::Item;
+ use Wikibase::Datatype::Value::String;
+ use Wikibase::Datatype::Value::Time;
 
  # Object.
- my $obj = Wikidata::Datatype::Statement->new(
+ my $obj = Wikibase::Datatype::Statement->new(
          # instance of (P31) human (Q5)
-         'snak' => Wikidata::Datatype::Snak->new(
+         'snak' => Wikibase::Datatype::Snak->new(
                   'datatype' => 'wikibase-item',
-                  'datavalue' => Wikidata::Datatype::Value::Item->new(
+                  'datavalue' => Wikibase::Datatype::Value::Item->new(
                           'value' => 'Q5',
                   ),
                   'property' => 'P31',
          ),
          'property_snaks' => [
                  # of (P642) alien (Q474741)
-                 Wikidata::Datatype::Snak->new(
+                 Wikibase::Datatype::Snak->new(
                           'datatype' => 'wikibase-item',
-                          'datavalue' => Wikidata::Datatype::Value::Item->new(
+                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                   'value' => 'Q474741',
                           ),
                           'property' => 'P642',
                  ),
          ],
          'references' => [
-                  Wikidata::Datatype::Reference->new(
+                  Wikibase::Datatype::Reference->new(
                           'snaks' => [
                                   # stated in (P248) Virtual International Authority File (Q53919)
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'wikibase-item',
-                                           'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                    'value' => 'Q53919',
                                            ),
                                            'property' => 'P248',
                                   ),
 
                                   # VIAF ID (P214) 113230702
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'external-id',
-                                           'datavalue' => Wikidata::Datatype::Value::String->new(
+                                           'datavalue' => Wikibase::Datatype::Value::String->new(
                                                    'value' => '113230702',
                                            ),
                                            'property' => 'P214',
                                   ),
 
                                   # retrieved (P813) 7 December 2013
-                                  Wikidata::Datatype::Snak->new(
+                                  Wikibase::Datatype::Snak->new(
                                            'datatype' => 'time',
-                                           'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                           'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                    'value' => '+2013-12-07T00:00:00Z',
                                            ),
                                            'property' => 'P813',
@@ -268,21 +268,21 @@ L<Error::Pure>,
 L<List::MoreUtils>,
 L<Mo>,
 L<Readonly>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

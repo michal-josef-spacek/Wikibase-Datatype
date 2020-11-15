@@ -1,15 +1,15 @@
-package Wikidata::Datatype::Value::Time;
+package Wikibase::Datatype::Value::Time;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Wikidata::Datatype::Utils qw(check_entity);
+use Wikibase::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 has after => (
 	is => 'ro',
@@ -61,13 +61,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::Time - Wikidata time value datatype.
+Wikibase::Datatype::Value::Time - Wikibase time value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::Time;
+ use Wikibase::Datatype::Value::Time;
 
- my $obj = Wikidata::Datatype::Value::Time->new(%params);
+ my $obj = Wikibase::Datatype::Value::Time->new(%params);
  my $after = $obj->after;
  my $before = $obj->before;
  my $calendarmodel = $obj->calendarmodel;
@@ -84,7 +84,7 @@ This datatype is item class for representation of time.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::Time->new(%params);
+ my $obj = Wikibase::Datatype::Value::Time->new(%params);
 
 Constructor.
 
@@ -184,9 +184,9 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_entity():
+         From Wikibase::Datatype::Utils::check_entity():
                  Parameter 'calendarmodel' must begin with 'Q' and number after it.
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
 
 =head1 EXAMPLE
@@ -194,10 +194,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Time;
+ use Wikibase::Datatype::Value::Time;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Time->new(
+ my $obj = Wikibase::Datatype::Value::Time->new(
          'precision' => 10,
          'value' => '+2020-09-01T00:00:00Z',
  );
@@ -230,22 +230,22 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Utils>,
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

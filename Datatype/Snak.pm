@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Snak;
+package Wikibase::Datatype::Snak;
 
 use strict;
 use warnings;
@@ -7,24 +7,24 @@ use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build is);
 use Readonly;
-use Wikidata::Datatype::Utils qw(check_isa check_property check_required);
+use Wikibase::Datatype::Utils qw(check_isa check_property check_required);
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
-	'commonsMedia' => 'Wikidata::Datatype::Value::String',
-	'external-id' => 'Wikidata::Datatype::Value::String',
-	'geo-shape' => 'Wikidata::Datatype::Value::String',
-	'globe-coordinate' => 'Wikidata::Datatype::Value::Globecoordinate',
-	'math' => 'Wikidata::Datatype::Value::String',
-	'monolingualtext' => 'Wikidata::Datatype::Value::Monolingual',
-	'musical-notation' => 'Wikidata::Datatype::Value::String',
-	'quantity' => 'Wikidata::Datatype::Value::Quantity',
-	'string' => 'Wikidata::Datatype::Value::String',
-	'tabular-data' => 'Wikidata::Datatype::Value::String',
-	'time' => 'Wikidata::Datatype::Value::Time',
-	'url' => 'Wikidata::Datatype::Value::String',
-	'wikibase-item' => 'Wikidata::Datatype::Value::Item',
-	'wikibase-property' => 'Wikidata::Datatype::Value::Property',
+	'commonsMedia' => 'Wikibase::Datatype::Value::String',
+	'external-id' => 'Wikibase::Datatype::Value::String',
+	'geo-shape' => 'Wikibase::Datatype::Value::String',
+	'globe-coordinate' => 'Wikibase::Datatype::Value::Globecoordinate',
+	'math' => 'Wikibase::Datatype::Value::String',
+	'monolingualtext' => 'Wikibase::Datatype::Value::Monolingual',
+	'musical-notation' => 'Wikibase::Datatype::Value::String',
+	'quantity' => 'Wikibase::Datatype::Value::Quantity',
+	'string' => 'Wikibase::Datatype::Value::String',
+	'tabular-data' => 'Wikibase::Datatype::Value::String',
+	'time' => 'Wikibase::Datatype::Value::Time',
+	'url' => 'Wikibase::Datatype::Value::String',
+	'wikibase-item' => 'Wikibase::Datatype::Value::Item',
+	'wikibase-property' => 'Wikibase::Datatype::Value::Property',
 );
 Readonly::Array our @SNAK_TYPES => qw(
 	novalue
@@ -95,13 +95,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Snak - Wikidata snak datatype.
+Wikibase::Datatype::Snak - Wikibase snak datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Snak;
+ use Wikibase::Datatype::Snak;
 
- my $obj = Wikidata::Datatype::Snak->new(%params);
+ my $obj = Wikibase::Datatype::Snak->new(%params);
  my $datatype = $obj->datatype;
  my $datavalue = $obj->datavalue;
  my $property = $obj->property;
@@ -115,7 +115,7 @@ This datatype is snak class for representing relation between property and value
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Snak->new(%params);
+ my $obj = Wikibase::Datatype::Snak->new(%params);
 
 Constructor.
 
@@ -161,7 +161,7 @@ Returns string.
 
 Get data value.
 
-Returns instance of Wikidata::Datatype::Value.
+Returns instance of Wikibase::Datatype::Value.
 
 =head2 C<property>
 
@@ -182,12 +182,12 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_required():
+         From Wikibase::Datatype::Utils::check_required():
                  Parameter 'datatype' is required.
                  Parameter 'datavalue' is required.
                  Parameter 'property' is required.
-         From Wikidata::Datatype::Utils::check_isa():
-                 Parameter 'datavalue' must be a 'Wikidata::Datatype::Value::%s' object.
+         From Wikibase::Datatype::Utils::check_isa():
+                 Parameter 'datavalue' must be a 'Wikibase::Datatype::Value::%s' object.
          Parameter 'datatype' = '%s' isn't supported.
          Parameter 'property' must begin with 'P' and number after it.
          Parameter 'snaktype' = '%s' isn't supported.
@@ -197,13 +197,13 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Snak;
- use Wikidata::Datatype::Value::Item;
+ use Wikibase::Datatype::Snak;
+ use Wikibase::Datatype::Value::Item;
 
  # Object.
- my $obj = Wikidata::Datatype::Snak->new(
+ my $obj = Wikibase::Datatype::Snak->new(
          'datatype' => 'wikibase-item',
-         'datavalue' => Wikidata::Datatype::Value::Item->new(
+         'datavalue' => Wikibase::Datatype::Value::Item->new(
                  'value' => 'Q5',
          ),
          'property' => 'P31',
@@ -234,21 +234,21 @@ L<Error::Pure>,
 L<List::MoreUtils>,
 L<Mo>,
 L<Readonly>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

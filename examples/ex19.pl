@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Time;
+use Wikibase::Datatype::Value::Time;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Time->new(
+my $obj = Wikibase::Datatype::Value::Time->new(
         'precision' => 10,
         'value' => '+2020-09-01T00:00:00Z',
 );

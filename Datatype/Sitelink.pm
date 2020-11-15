@@ -1,10 +1,10 @@
-package Wikidata::Datatype::Sitelink;
+package Wikibase::Datatype::Sitelink;
 
 use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Wikidata::Datatype::Utils qw(check_array_object check_required);
+use Wikibase::Datatype::Utils qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -27,7 +27,7 @@ sub BUILD {
 	check_required($self, 'site');
 	check_required($self, 'title');
 
-	check_array_object($self, 'badges', 'Wikidata::Datatype::Value::Item', 'Badge');
+	check_array_object($self, 'badges', 'Wikibase::Datatype::Value::Item', 'Badge');
 
 	return;
 }
@@ -42,13 +42,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Sitelink - Wikidata sitelink datatype.
+Wikibase::Datatype::Sitelink - Wikibase sitelink datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Sitelink;
+ use Wikibase::Datatype::Sitelink;
 
- my $obj = Wikidata::Datatype::Sitelink->new(%params);
+ my $obj = Wikibase::Datatype::Sitelink->new(%params);
  my $badges_ar = $obj->badges;
  my $site = $obj->site;
  my $title = $obj->title;
@@ -62,7 +62,7 @@ This datatype is sitelink class for representing link to wikimedia projects
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Sitelink->new(%params);
+ my $obj = Wikibase::Datatype::Sitelink->new(%params);
 
 Constructor.
 
@@ -114,11 +114,11 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_required():
+         From Wikibase::Datatype::Utils::check_required():
                  Parameter 'site' is required.
                  Parameter 'title' is required.
-         From Wikidata::Datatype::Utils::check_array_object():
-                 Badge isn't 'Wikidata::Datatype::Value::Item' object.
+         From Wikibase::Datatype::Utils::check_array_object():
+                 Badge isn't 'Wikibase::Datatype::Value::Item' object.
                  Parameter 'badges' must be a array.
 
 =head1 EXAMPLE
@@ -127,13 +127,13 @@ Returns string.
  use warnings;
 
  use Unicode::UTF8 qw(decode_utf8 encode_utf8);
- use Wikidata::Datatype::Sitelink;
- use Wikidata::Datatype::Value::Item;
+ use Wikibase::Datatype::Sitelink;
+ use Wikibase::Datatype::Value::Item;
 
  # Object.
- my $obj = Wikidata::Datatype::Sitelink->new(
+ my $obj = Wikibase::Datatype::Sitelink->new(
          'badges' => [
-                  Wikidata::Datatype::Value::Item->new(
+                  Wikibase::Datatype::Value::Item->new(
                           'value' => 'Q123',
                   ),
          ],
@@ -163,21 +163,21 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

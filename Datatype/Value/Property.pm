@@ -1,15 +1,15 @@
-package Wikidata::Datatype::Value::Property;
+package Wikibase::Datatype::Value::Property;
 
 use strict;
 use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build);
-use Wikidata::Datatype::Utils qw(check_property);
+use Wikibase::Datatype::Utils qw(check_property);
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 sub type {
 	return 'property';
@@ -33,13 +33,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::Property - Wikidata property value datatype.
+Wikibase::Datatype::Value::Property - Wikibase property value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::Property;
+ use Wikibase::Datatype::Value::Property;
 
- my $obj = Wikidata::Datatype::Value::Property->new(%params);
+ my $obj = Wikibase::Datatype::Value::Property->new(%params);
  my $type = $obj->type;
  my $value = $obj->value;
 
@@ -51,7 +51,7 @@ This datatype is item class for representation of wikibase item (e.g. Q123).
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::Property->new(%params);
+ my $obj = Wikibase::Datatype::Value::Property->new(%params);
 
 Constructor.
 
@@ -86,7 +86,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
          Parameter 'value' must begin with 'P' and number after it.
 
@@ -95,10 +95,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Property;
+ use Wikibase::Datatype::Value::Property;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Property->new(
+ my $obj = Wikibase::Datatype::Value::Property->new(
          'value' => 'P123',
  );
 
@@ -120,22 +120,22 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikidata::Datatype::Utils>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Utils>,
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

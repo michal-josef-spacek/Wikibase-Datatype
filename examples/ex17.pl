@@ -3,13 +3,13 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Value::Item;
+use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Value::Item;
 
 # Object.
-my $obj = Wikidata::Datatype::Snak->new(
+my $obj = Wikibase::Datatype::Snak->new(
         'datatype' => 'wikibase-item',
-        'datavalue' => Wikidata::Datatype::Value::Item->new(
+        'datavalue' => Wikibase::Datatype::Value::Item->new(
                 'value' => 'Q5',
         ),
         'property' => 'P31',

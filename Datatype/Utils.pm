@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Utils;
+package Wikibase::Datatype::Utils;
 
 use base qw(Exporter);
 use strict;
@@ -90,11 +90,11 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Utils - Wikidata datatype utilities.
+Wikibase::Datatype::Utils - Wikibase datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Utils qw(check_array_object check_entity check_isa check_number check_required);
+ use Wikibase::Datatype::Utils qw(check_array_object check_entity check_isa check_number check_required);
 
  check_array_object($self, $key, $class, $class_name);
  check_entity($self, $key);
@@ -192,17 +192,17 @@ Returns undef.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_array_object);
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Utils qw(check_array_object);
+ use Wikibase::Datatype::Value;
 
  my $self = {
          'key' => [
-                 Wikidata::Datatype::Value->new(
+                 Wikibase::Datatype::Value->new(
                          'value' => 'Text value',
                  ),
          ],
  };
- check_array_object($self, 'key', 'Wikidata::Datatype::Value', 'Value');
+ check_array_object($self, 'key', 'Wikibase::Datatype::Value', 'Value');
 
  # Print out.
  print "ok\n";
@@ -216,32 +216,32 @@ Returns undef.
  use warnings;
 
  use Error::Pure;
- use Wikidata::Datatype::Utils qw(check_array_object);
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Utils qw(check_array_object);
+ use Wikibase::Datatype::Value;
 
  $Error::Pure::TYPE = 'Error';
 
  my $self = {
          'key' => [
-                 Wikidata::Datatype::Value->new(
+                 Wikibase::Datatype::Value->new(
                          'value' => 'Text value',
                  ),
          ],
  };
- check_array_object($self, 'key', 'Wikidata::Datatype::Snak', 'Snak');
+ check_array_object($self, 'key', 'Wikibase::Datatype::Snak', 'Snak');
 
  # Print out.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Snak isn't 'Wikidata::Datatype::Snak' object.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Snak isn't 'Wikibase::Datatype::Snak' object.
 
 =head1 EXAMPLE3
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_entity);
+ use Wikibase::Datatype::Utils qw(check_entity);
 
  my $self = {
          'key' => 'Q123',
@@ -260,7 +260,7 @@ Returns undef.
  use warnings;
 
  use Error::Pure;
- use Wikidata::Datatype::Utils qw(check_entity);
+ use Wikibase::Datatype::Utils qw(check_entity);
 
  $Error::Pure::TYPE = 'Error';
 
@@ -273,22 +273,22 @@ Returns undef.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
 
 =head1 EXAMPLE5
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_isa);
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Utils qw(check_isa);
+ use Wikibase::Datatype::Value;
 
  my $self = {
-         'key' => Wikidata::Datatype::Value->new(
+         'key' => Wikibase::Datatype::Value->new(
                  'value' => 'foo',
          ),
  };
- check_isa($self, 'key', 'Wikidata::Datatype::Value');
+ check_isa($self, 'key', 'Wikibase::Datatype::Value');
 
  # Print out.
  print "ok\n";
@@ -303,26 +303,26 @@ Returns undef.
 
  $Error::Pure::TYPE = 'Error';
 
- use Wikidata::Datatype::Utils qw(check_isa);
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Utils qw(check_isa);
+ use Wikibase::Datatype::Value;
 
  my $self = {
          'key' => 'foo',
  };
- check_isa($self, 'key', 'Wikidata::Datatype::Value');
+ check_isa($self, 'key', 'Wikibase::Datatype::Value');
 
  # Print out.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikidata::Datatype::Value' object.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikibase::Datatype::Value' object.
 
 =head1 EXAMPLE7
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_number);
+ use Wikibase::Datatype::Utils qw(check_number);
 
  my $self = {
          'key' => '10',
@@ -342,7 +342,7 @@ Returns undef.
 
  $Error::Pure::TYPE = 'Error';
 
- use Wikidata::Datatype::Utils qw(check_number);
+ use Wikibase::Datatype::Utils qw(check_number);
 
  my $self = {
          'key' => 'foo',
@@ -353,14 +353,14 @@ Returns undef.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must be a number.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must be a number.
 
 =head1 EXAMPLE9
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_property);
+ use Wikibase::Datatype::Utils qw(check_property);
 
  my $self = {
          'key' => 'P123',
@@ -379,7 +379,7 @@ Returns undef.
  use warnings;
 
  use Error::Pure;
- use Wikidata::Datatype::Utils qw(check_property);
+ use Wikibase::Datatype::Utils qw(check_property);
 
  $Error::Pure::TYPE = 'Error';
 
@@ -392,14 +392,14 @@ Returns undef.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'P' and number after it.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'P' and number after it.
 
 =head1 EXAMPLE11
 
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Utils qw(check_required);
+ use Wikibase::Datatype::Utils qw(check_required);
 
  my $self = {
          'key' => 'value',
@@ -418,7 +418,7 @@ Returns undef.
  use warnings;
 
  use Error::Pure;
- use Wikidata::Datatype::Utils qw(check_required);
+ use Wikibase::Datatype::Utils qw(check_required);
 
  $Error::Pure::TYPE = 'Error';
 
@@ -431,7 +431,7 @@ Returns undef.
  print "ok\n";
 
  # Output like:
- # #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' is required.
 
 =head1 DEPENDENCIES
 
@@ -443,15 +443,15 @@ L<Readonly>.
 
 =over
 
-=item L<Wikidata::Datatype>
+=item L<Wikibase::Datatype>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

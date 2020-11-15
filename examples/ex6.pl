@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Error::Pure;
-use Wikidata::Datatype::Utils qw(check_entity);
+use Wikibase::Datatype::Utils qw(check_entity);
 
 $Error::Pure::TYPE = 'Error';
 
@@ -17,4 +17,4 @@ check_entity($self, 'key');
 print "ok\n";
 
 # Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
+# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.

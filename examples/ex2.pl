@@ -4,13 +4,13 @@ use strict;
 use warnings;
 
 use Unicode::UTF8 qw(decode_utf8 encode_utf8);
-use Wikidata::Datatype::Sitelink;
-use Wikidata::Datatype::Value::Item;
+use Wikibase::Datatype::Sitelink;
+use Wikibase::Datatype::Value::Item;
 
 # Object.
-my $obj = Wikidata::Datatype::Sitelink->new(
+my $obj = Wikibase::Datatype::Sitelink->new(
         'badges' => [
-                 Wikidata::Datatype::Value::Item->new(
+                 Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q123',
                  ),
         ],

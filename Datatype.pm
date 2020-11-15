@@ -1,4 +1,4 @@
-package Wikidata::Datatype;
+package Wikibase::Datatype;
 
 use strict;
 use warnings;
@@ -15,77 +15,77 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype - Wikidata datatypes.
+Wikibase::Datatype - Wikibase datatypes.
 
 =head1 DESCRIPTION
 
-This distributions is set of datatypes for Wikidata.
+This distributions is set of datatypes for Wikibase.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Item>
+=item L<Wikibase::Datatype::Item>
 
-Wikidata item datatype.
+Wikibase item datatype.
 
-=item L<Wikidata::Datatype::Reference>
+=item L<Wikibase::Datatype::Reference>
 
-Wikidata reference datatype.
+Wikibase reference datatype.
 
-=item L<Wikidata::Datatype::Sitelink>
+=item L<Wikibase::Datatype::Sitelink>
 
-Wikidata sitelink datatype.
+Wikibase sitelink datatype.
 
-=item L<Wikidata::Datatype::Snak>
+=item L<Wikibase::Datatype::Snak>
 
-Wikidata snak datatype.
+Wikibase snak datatype.
 
-=item L<Wikidata::Datatype::Statement>
+=item L<Wikibase::Datatype::Statement>
 
-Wikidata statement datatype.
+Wikibase statement datatype.
 
-=item L<Wikidata::Datatype::Utils>
+=item L<Wikibase::Datatype::Utils>
 
-Wikidata datatype utilities.
+Wikibase datatype utilities.
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata value datatype.
+Wikibase value datatype.
 
-=item L<Wikidata::Datatype::Value::Globecoordinate>
+=item L<Wikibase::Datatype::Value::Globecoordinate>
 
-Wikidata globe coordinate value datatype.
+Wikibase globe coordinate value datatype.
 
-=item L<Wikidata::Datatype::Value::Item>
+=item L<Wikibase::Datatype::Value::Item>
 
-Wikidata item value datatype.
+Wikibase item value datatype.
 
-=item L<Wikidata::Datatype::Value::Monolingual>
+=item L<Wikibase::Datatype::Value::Monolingual>
 
-Wikidata monolingual value datatype.
+Wikibase monolingual value datatype.
 
-=item L<Wikidata::Datatype::Value::Property>
+=item L<Wikibase::Datatype::Value::Property>
 
-Wikidata property value datatype.
+Wikibase property value datatype.
 
-=item L<Wikidata::Datatype::Value::Quantity>
+=item L<Wikibase::Datatype::Value::Quantity>
 
-Wikidata quantity value datatype.
+Wikibase quantity value datatype.
 
-=item L<Wikidata::Datatype::Value::String>
+=item L<Wikibase::Datatype::Value::String>
 
-Wikidata string value datatype.
+Wikibase string value datatype.
 
-=item L<Wikidata::Datatype::Value::Time>
+=item L<Wikibase::Datatype::Value::Time>
 
-Wikidata time value datatype.
+Wikibase time value datatype.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

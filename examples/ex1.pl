@@ -3,16 +3,16 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Reference;
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Value::String;
+use Wikibase::Datatype::Reference;
+use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Value::String;
 
 # Object.
-my $obj = Wikidata::Datatype::Reference->new(
+my $obj = Wikibase::Datatype::Reference->new(
         'snaks' => [
-                Wikidata::Datatype::Snak->new(
+                Wikibase::Datatype::Snak->new(
                         'datatype' => 'string',
-                        'datavalue' => Wikidata::Datatype::Value::String->new(
+                        'datavalue' => Wikibase::Datatype::Value::String->new(
                                 'value' => 'text',
                         ),
                         'property' => 'P11',

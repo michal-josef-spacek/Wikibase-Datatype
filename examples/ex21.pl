@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Monolingual;
+use Wikibase::Datatype::Value::Monolingual;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Monolingual->new(
+my $obj = Wikibase::Datatype::Value::Monolingual->new(
         'language' => 'en',
         'value' => 'English text',
 );

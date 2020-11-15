@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value;
+use Wikibase::Datatype::Value;
 
 # Object.
-my $obj = Wikidata::Datatype::Value->new(
+my $obj = Wikibase::Datatype::Value->new(
         'value' => 'foo',
         'type' => 'string',
 );

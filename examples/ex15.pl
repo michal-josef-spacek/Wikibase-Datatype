@@ -3,61 +3,61 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Item;
-use Wikidata::Datatype::Reference;
-use Wikidata::Datatype::Sitelink;
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Statement;
-use Wikidata::Datatype::Value::Item;
-use Wikidata::Datatype::Value::Monolingual;
-use Wikidata::Datatype::Value::String;
-use Wikidata::Datatype::Value::Time;
+use Wikibase::Datatype::Item;
+use Wikibase::Datatype::Reference;
+use Wikibase::Datatype::Sitelink;
+use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Statement;
+use Wikibase::Datatype::Value::Item;
+use Wikibase::Datatype::Value::Monolingual;
+use Wikibase::Datatype::Value::String;
+use Wikibase::Datatype::Value::Time;
 
 # Object.
-my $statement1 = Wikidata::Datatype::Statement->new(
+my $statement1 = Wikibase::Datatype::Statement->new(
         # instance of (P31) human (Q5)
-        'snak' => Wikidata::Datatype::Snak->new(
+        'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
-                 'datavalue' => Wikidata::Datatype::Value::Item->new(
+                 'datavalue' => Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q5',
                  ),
                  'property' => 'P31',
         ),
         'property_snaks' => [
                 # of (P642) alien (Q474741)
-                Wikidata::Datatype::Snak->new(
+                Wikibase::Datatype::Snak->new(
                          'datatype' => 'wikibase-item',
-                         'datavalue' => Wikidata::Datatype::Value::Item->new(
+                         'datavalue' => Wikibase::Datatype::Value::Item->new(
                                  'value' => 'Q474741',
                          ),
                          'property' => 'P642',
                 ),
         ],
         'references' => [
-                 Wikidata::Datatype::Reference->new(
+                 Wikibase::Datatype::Reference->new(
                          'snaks' => [
                                  # stated in (P248) Virtual International Authority File (Q53919)
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'wikibase-item',
-                                          'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                   'value' => 'Q53919',
                                           ),
                                           'property' => 'P248',
                                  ),
 
                                  # VIAF ID (P214) 113230702
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'external-id',
-                                          'datavalue' => Wikidata::Datatype::Value::String->new(
+                                          'datavalue' => Wikibase::Datatype::Value::String->new(
                                                   'value' => '113230702',
                                           ),
                                           'property' => 'P214',
                                  ),
 
                                  # retrieved (P813) 7 December 2013
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'time',
-                                          'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                   'value' => '+2013-12-07T00:00:00Z',
                                           ),
                                           'property' => 'P813',
@@ -66,40 +66,40 @@ my $statement1 = Wikidata::Datatype::Statement->new(
                  ),
         ],
 );
-my $statement2 = Wikidata::Datatype::Statement->new(
+my $statement2 = Wikibase::Datatype::Statement->new(
         # sex or gender (P21) male (Q6581097)
-        'snak' => Wikidata::Datatype::Snak->new(
+        'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
-                 'datavalue' => Wikidata::Datatype::Value::Item->new(
+                 'datavalue' => Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q6581097',
                  ),
                  'property' => 'P21',
         ),
         'references' => [
-                 Wikidata::Datatype::Reference->new(
+                 Wikibase::Datatype::Reference->new(
                          'snaks' => [
                                  # stated in (P248) Virtual International Authority File (Q53919)
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'wikibase-item',
-                                          'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                   'value' => 'Q53919',
                                           ),
                                           'property' => 'P248',
                                  ),
 
                                  # VIAF ID (P214) 113230702
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'external-id',
-                                          'datavalue' => Wikidata::Datatype::Value::String->new(
+                                          'datavalue' => Wikibase::Datatype::Value::String->new(
                                                   'value' => '113230702',
                                           ),
                                           'property' => 'P214',
                                  ),
 
                                  # retrieved (P813) 7 December 2013
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'time',
-                                          'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                   'value' => '+2013-12-07T00:00:00Z',
                                           ),
                                           'property' => 'P813',
@@ -110,59 +110,59 @@ my $statement2 = Wikidata::Datatype::Statement->new(
 );
 
 # Main item.
-my $obj = Wikidata::Datatype::Item->new(
+my $obj = Wikibase::Datatype::Item->new(
         'aliases' => [
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
                         'value' => 'Douglas Noël Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
                         'value' => 'Douglas Noel Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
                         'value' => 'Douglas N. Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
                         'value' => 'Douglas Noel Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
                         'value' => 'Douglas Noël Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
                         'value' => 'Douglas N. Adams',
                 ),
         ],
         'descriptions' => [
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
                         'value' => 'anglický spisovatel, humorista a dramatik',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
                         'value' => 'English writer and humorist',
                 ),
         ],
         'labels' => [
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
                         'value' => 'Douglas Adams',
                 ),
-                Wikidata::Datatype::Value::Monolingual->new(
+                Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
                         'value' => 'Douglas Adams',
                 ),
         ],
         'sitelinks' => [
-                Wikidata::Datatype::Sitelink->new(
+                Wikibase::Datatype::Sitelink->new(
                         'site' => 'cswiki',
                         'title' => 'Douglas Adams',
                 ),
-                Wikidata::Datatype::Sitelink->new(
+                Wikibase::Datatype::Sitelink->new(
                         'site' => 'enwiki',
                         'title' => 'Douglas Adams',
                 ),

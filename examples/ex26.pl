@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Value::Quantity;
+use Wikibase::Datatype::Value::Quantity;
 
 # Object.
-my $obj = Wikidata::Datatype::Value::Quantity->new(
+my $obj = Wikibase::Datatype::Value::Quantity->new(
         'unit' => 'Q190900',
         'value' => '10',
 );

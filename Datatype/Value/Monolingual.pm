@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Value::Monolingual;
+package Wikibase::Datatype::Value::Monolingual;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use Mo qw(default is);
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 has language => (
 	is => 'ro',
@@ -28,13 +28,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::Monolingual - Wikidata monolingual value datatype.
+Wikibase::Datatype::Value::Monolingual - Wikibase monolingual value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::Monolingual;
+ use Wikibase::Datatype::Value::Monolingual;
 
- my $obj = Wikidata::Datatype::Value::Monolingual->new(%params);
+ my $obj = Wikibase::Datatype::Value::Monolingual->new(%params);
  my $language = $obj->language;
  my $type = $obj->type;
  my $value = $obj->value;
@@ -47,7 +47,7 @@ This datatype is string class for representation of translatable string.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::Monolingual->new(%params);
+ my $obj = Wikibase::Datatype::Value::Monolingual->new(%params);
 
 Constructor.
 
@@ -95,7 +95,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
 
 =head1 EXAMPLE
@@ -103,10 +103,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::Monolingual;
+ use Wikibase::Datatype::Value::Monolingual;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::Monolingual->new(
+ my $obj = Wikibase::Datatype::Value::Monolingual->new(
          'language' => 'en',
          'value' => 'English text',
  );
@@ -133,21 +133,21 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

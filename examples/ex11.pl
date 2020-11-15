@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_property);
+use Wikibase::Datatype::Utils qw(check_property);
 
 my $self = {
         'key' => 'P123',

@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Value::String;
+package Wikibase::Datatype::Value::String;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use Mo;
 
 our $VERSION = 0.01;
 
-extends 'Wikidata::Datatype::Value';
+extends 'Wikibase::Datatype::Value';
 
 sub type {
 	return 'string';
@@ -23,13 +23,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value::String - Wikidata string value datatype.
+Wikibase::Datatype::Value::String - Wikibase string value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value::String;
+ use Wikibase::Datatype::Value::String;
 
- my $obj = Wikidata::Datatype::Value::String->new(%params);
+ my $obj = Wikibase::Datatype::Value::String->new(%params);
  my $type = $obj->type;
  my $value = $obj->value;
 
@@ -43,7 +43,7 @@ string, tabular-data and url, which uses this data type.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value::String->new(%params);
+ my $obj = Wikibase::Datatype::Value::String->new(%params);
 
 Constructor.
 
@@ -77,7 +77,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Value::new():
+         From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
 
 =head1 EXAMPLE
@@ -85,10 +85,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value::String;
+ use Wikibase::Datatype::Value::String;
 
  # Object.
- my $obj = Wikidata::Datatype::Value::String->new(
+ my $obj = Wikibase::Datatype::Value::String->new(
          'value' => 'foo',
  );
 
@@ -109,21 +109,21 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikidata::Datatype::Value>.
+L<Wikibase::Datatype::Value>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value>
+=item L<Wikibase::Datatype::Value>
 
-Wikidata datatypes.
+Wikibase datatypes.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 

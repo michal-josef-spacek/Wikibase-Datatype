@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Utils qw(check_number);
+use Wikibase::Datatype::Utils qw(check_number);
 
 my $self = {
         'key' => '10',

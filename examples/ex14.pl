@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Error::Pure;
-use Wikidata::Datatype::Utils qw(check_required);
+use Wikibase::Datatype::Utils qw(check_required);
 
 $Error::Pure::TYPE = 'Error';
 
@@ -17,4 +17,4 @@ check_required($self, 'key');
 print "ok\n";
 
 # Output like:
-# #Error [/../Wikidata/Datatype/Utils.pm:?] Parameter 'key' is required.
+# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' is required.

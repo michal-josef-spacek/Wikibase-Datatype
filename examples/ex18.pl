@@ -3,58 +3,58 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Reference;
-use Wikidata::Datatype::Statement;
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Value::Item;
-use Wikidata::Datatype::Value::String;
-use Wikidata::Datatype::Value::Time;
+use Wikibase::Datatype::Reference;
+use Wikibase::Datatype::Statement;
+use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Value::Item;
+use Wikibase::Datatype::Value::String;
+use Wikibase::Datatype::Value::Time;
 
 # Object.
-my $obj = Wikidata::Datatype::Statement->new(
+my $obj = Wikibase::Datatype::Statement->new(
         # instance of (P31) human (Q5)
-        'snak' => Wikidata::Datatype::Snak->new(
+        'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
-                 'datavalue' => Wikidata::Datatype::Value::Item->new(
+                 'datavalue' => Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q5',
                  ),
                  'property' => 'P31',
         ),
         'property_snaks' => [
                 # of (P642) alien (Q474741)
-                Wikidata::Datatype::Snak->new(
+                Wikibase::Datatype::Snak->new(
                          'datatype' => 'wikibase-item',
-                         'datavalue' => Wikidata::Datatype::Value::Item->new(
+                         'datavalue' => Wikibase::Datatype::Value::Item->new(
                                  'value' => 'Q474741',
                          ),
                          'property' => 'P642',
                 ),
         ],
         'references' => [
-                 Wikidata::Datatype::Reference->new(
+                 Wikibase::Datatype::Reference->new(
                          'snaks' => [
                                  # stated in (P248) Virtual International Authority File (Q53919)
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'wikibase-item',
-                                          'datavalue' => Wikidata::Datatype::Value::Item->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                                   'value' => 'Q53919',
                                           ),
                                           'property' => 'P248',
                                  ),
 
                                  # VIAF ID (P214) 113230702
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'external-id',
-                                          'datavalue' => Wikidata::Datatype::Value::String->new(
+                                          'datavalue' => Wikibase::Datatype::Value::String->new(
                                                   'value' => '113230702',
                                           ),
                                           'property' => 'P214',
                                  ),
 
                                  # retrieved (P813) 7 December 2013
-                                 Wikidata::Datatype::Snak->new(
+                                 Wikibase::Datatype::Snak->new(
                                           'datatype' => 'time',
-                                          'datavalue' => Wikidata::Datatype::Value::Time->new(
+                                          'datavalue' => Wikibase::Datatype::Value::Time->new(
                                                   'value' => '+2013-12-07T00:00:00Z',
                                           ),
                                           'property' => 'P813',

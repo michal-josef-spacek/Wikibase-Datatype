@@ -1,54 +1,54 @@
 NAME
-    Wikidata::Datatype - Wikidata datatypes.
+    Wikibase::Datatype - Wikibase datatypes.
 
 DESCRIPTION
-    This distributions is set of datatypes for Wikidata.
+    This distributions is set of datatypes for Wikibase.
 
 SEE ALSO
-    Wikidata::Datatype::Item
-        Wikidata item datatype.
+    Wikibase::Datatype::Item
+        Wikibase item datatype.
 
-    Wikidata::Datatype::Reference
-        Wikidata reference datatype.
+    Wikibase::Datatype::Reference
+        Wikibase reference datatype.
 
-    Wikidata::Datatype::Sitelink
-        Wikidata sitelink datatype.
+    Wikibase::Datatype::Sitelink
+        Wikibase sitelink datatype.
 
-    Wikidata::Datatype::Snak
-        Wikidata snak datatype.
+    Wikibase::Datatype::Snak
+        Wikibase snak datatype.
 
-    Wikidata::Datatype::Statement
-        Wikidata statement datatype.
+    Wikibase::Datatype::Statement
+        Wikibase statement datatype.
 
-    Wikidata::Datatype::Utils
-        Wikidata datatype utilities.
+    Wikibase::Datatype::Utils
+        Wikibase datatype utilities.
 
-    Wikidata::Datatype::Value
-        Wikidata value datatype.
+    Wikibase::Datatype::Value
+        Wikibase value datatype.
 
-    Wikidata::Datatype::Value::Globecoordinate
-        Wikidata globe coordinate value datatype.
+    Wikibase::Datatype::Value::Globecoordinate
+        Wikibase globe coordinate value datatype.
 
-    Wikidata::Datatype::Value::Item
-        Wikidata item value datatype.
+    Wikibase::Datatype::Value::Item
+        Wikibase item value datatype.
 
-    Wikidata::Datatype::Value::Monolingual
-        Wikidata monolingual value datatype.
+    Wikibase::Datatype::Value::Monolingual
+        Wikibase monolingual value datatype.
 
-    Wikidata::Datatype::Value::Property
-        Wikidata property value datatype.
+    Wikibase::Datatype::Value::Property
+        Wikibase property value datatype.
 
-    Wikidata::Datatype::Value::Quantity
-        Wikidata quantity value datatype.
+    Wikibase::Datatype::Value::Quantity
+        Wikibase quantity value datatype.
 
-    Wikidata::Datatype::Value::String
-        Wikidata string value datatype.
+    Wikibase::Datatype::Value::String
+        Wikibase string value datatype.
 
-    Wikidata::Datatype::Value::Time
-        Wikidata time value datatype.
+    Wikibase::Datatype::Value::Time
+        Wikibase time value datatype.
 
 REPOSITORY
-    <https://github.com/michal-josef-spacek/Wikidata-Datatype>
+    <https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 AUTHOR
     Michal Josef Špaček <mailto:skim@cpan.org>

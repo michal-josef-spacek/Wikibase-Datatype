@@ -1,10 +1,10 @@
-package Wikidata::Datatype::Value;
+package Wikibase::Datatype::Value;
 
 use strict;
 use warnings;
 
 use Mo qw(build is);
-use Wikidata::Datatype::Utils qw(check_required);
+use Wikibase::Datatype::Utils qw(check_required);
 
 our $VERSION = 0.01;
 
@@ -34,13 +34,13 @@ __END__
 
 =head1 NAME
 
-Wikidata::Datatype::Value - Wikidata value datatype.
+Wikibase::Datatype::Value - Wikibase value datatype.
 
 =head1 SYNOPSIS
 
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Value;
 
- my $obj = Wikidata::Datatype::Value->new(%params);
+ my $obj = Wikibase::Datatype::Value->new(%params);
  my $type = $obj->type;
  my $value = $obj->value;
 
@@ -52,7 +52,7 @@ This datatype is base class for all Value datatypes.
 
 =head2 C<new>
 
- my $obj = Wikidata::Datatype::Value->new(%params);
+ my $obj = Wikibase::Datatype::Value->new(%params);
 
 Constructor.
 
@@ -91,7 +91,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikidata::Datatype::Utils::check_required():
+         From Wikibase::Datatype::Utils::check_required():
                  Parameter 'value' is required.
                  Parameter 'type' is required.
 
@@ -100,10 +100,10 @@ Returns string.
  use strict;
  use warnings;
 
- use Wikidata::Datatype::Value;
+ use Wikibase::Datatype::Value;
 
  # Object.
- my $obj = Wikidata::Datatype::Value->new(
+ my $obj = Wikibase::Datatype::Value->new(
          'value' => 'foo',
          'type' => 'string',
  );
@@ -125,33 +125,33 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikidata::Datatype::Utils>.
+L<Wikibase::Datatype::Utils>.
 
 =head1 SEE ALSO
 
 =over
 
-=item L<Wikidata::Datatype::Value::Item>
+=item L<Wikibase::Datatype::Value::Item>
 
-Wikidata item value datatype.
+Wikibase item value datatype.
 
-=item L<Wikidata::Datatype::Value::Monolingual>
+=item L<Wikibase::Datatype::Value::Monolingual>
 
-Wikidata monolingual value datatype.
+Wikibase monolingual value datatype.
 
-=item L<Wikidata::Datatype::Value::String>
+=item L<Wikibase::Datatype::Value::String>
 
-Wikidata string value datatype.
+Wikibase string value datatype.
 
-=item L<Wikidata::Datatype::Value::Time>
+=item L<Wikibase::Datatype::Value::Time>
 
-Wikidata time value datatype.
+Wikibase time value datatype.
 
 =back
 
 =head1 REPOSITORY
 
-L<https://github.com/michal-josef-spacek/Wikidata-Datatype>
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype>
 
 =head1 AUTHOR
 
