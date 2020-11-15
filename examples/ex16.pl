@@ -3,33 +3,24 @@
 use strict;
 use warnings;
 
-use Wikidata::Datatype::Snak;
-use Wikidata::Datatype::Value::Item;
+use Wikidata::Datatype::Value;
 
 # Object.
-my $obj = Wikidata::Datatype::Snak->new(
-        'datatype' => 'wikibase-item',
-        'datavalue' => Wikidata::Datatype::Value::Item->new(
-                'value' => 'Q5',
-        ),
-        'property' => 'P31',
+my $obj = Wikidata::Datatype::Value->new(
+        'value' => 'foo',
+        'type' => 'string',
 );
 
 # Get value.
-my $datavalue = $obj->datavalue->value;
+my $value = $obj->value;
 
-# Get datatype.
-my $datatype = $obj->datatype;
-
-# Get property.
-my $property = $obj->property;
+# Get type.
+my $type = $obj->type;
 
 # Print out.
-print "Property: $property\n";
-print "Type: $datatype\n";
-print "Value: $datavalue\n";
+print "Value: $value\n";
+print "Type: $type\n";
 
 # Output:
-# Property: P31
-# Type: wikibase-item
-# Value: Q5
+# Value: foo
+# Type: string

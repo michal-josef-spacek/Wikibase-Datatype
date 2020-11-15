@@ -5,6 +5,9 @@ DESCRIPTION
     This distributions is set of datatypes for Wikidata.
 
 SEE ALSO
+    Wikidata::Datatype::Item
+        Wikidata item datatype.
+
     Wikidata::Datatype::Reference
         Wikidata reference datatype.
 

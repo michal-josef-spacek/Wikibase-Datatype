@@ -25,6 +25,10 @@ This distributions is set of datatypes for Wikidata.
 
 =over
 
+=item L<Wikidata::Datatype::Item>
+
+Wikidata item datatype.
+
 =item L<Wikidata::Datatype::Reference>
 
 Wikidata reference datatype.
