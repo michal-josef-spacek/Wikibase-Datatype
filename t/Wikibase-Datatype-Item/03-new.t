@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 13;
 use Test::NoWarnings;
 use Wikibase::Datatype::Item;
 use Wikibase::Datatype::Sitelink;
@@ -41,6 +41,17 @@ eval {
 is($EVAL_ERROR, "Description for language 'en' has multiple values.\n",
 	"Description for language 'en' has multiple values.");
 clean();
+
+# Test.
+$obj = Wikibase::Datatype::Item->new(
+	'descriptions' => [
+		Wikibase::Datatype::Value::Monolingual->new(
+			'language' => 'en',
+			'value' => 'Description 1',
+		),
+	],
+);
+isa_ok($obj, 'Wikibase::Datatype::Item', 'One en description.');
 
 # Test.
 eval {
@@ -82,6 +93,17 @@ is($EVAL_ERROR, "Label isn't 'Wikibase::Datatype::Value::Monolingual' object.\n"
 clean();
 
 # Test.
+$obj = Wikibase::Datatype::Item->new(
+	'labels' => [
+		Wikibase::Datatype::Value::Monolingual->new(
+			'language' => 'en',
+			'value' => 'Label 1',
+		),
+	],
+);
+isa_ok($obj, 'Wikibase::Datatype::Item', 'One en label.');
+
+# Test.
 eval {
 	Wikibase::Datatype::Item->new(
 		'sitelinks' => ['foo'],
@@ -109,6 +131,17 @@ eval {
 is($EVAL_ERROR, "Sitelink for site 'enwiki' has multiple values.\n",
 	"Sitelink for site 'enwiki' has multiple values.");
 clean();
+
+# Test.
+$obj = Wikibase::Datatype::Item->new(
+	'sitelinks' => [
+		Wikibase::Datatype::Sitelink->new(
+			'site' => 'enwiki',
+			'title' => 'Main page',
+		),
+	],
+);
+isa_ok($obj, 'Wikibase::Datatype::Item', 'One enwiki sitelink.');
 
 # Test.
 eval {
