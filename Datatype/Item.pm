@@ -60,7 +60,7 @@ sub BUILD {
 
 	# Check descriptions.
 	check_array_object($self, 'descriptions', 'Wikibase::Datatype::Value::Monolingual',
-		'Decsription');
+		'Description');
 	$self->_check_number_of_lang_items('descriptions', 'Description');
 
 	# Check labels.
