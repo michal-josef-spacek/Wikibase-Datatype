@@ -226,6 +226,14 @@ Get descriptions.
 
 Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
 
+=head2 C<labels>
+
+ my $labels_ar = $obj->labels;
+
+Get labels.
+
+Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
+
 =head2 C<lastrevid>
 
  my $lastrevid = $obj->lastrevid;
