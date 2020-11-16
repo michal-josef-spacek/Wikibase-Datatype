@@ -125,7 +125,7 @@ __END__
 
 =head1 NAME
 
-Wikibase::Datatype::Item - Wikibase page datatype.
+Wikibase::Datatype::Item - Wikibase item datatype.
 
 =head1 SYNOPSIS
 
