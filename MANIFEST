@@ -2,6 +2,7 @@ Changes
 Datatype.pm
 Datatype/Item.pm
 Datatype/Reference.pm
+Datatype/Sense.pm
 Datatype/Sitelink.pm
 Datatype/Snak.pm
 Datatype/Statement.pm
@@ -33,6 +34,7 @@ examples/ex23.pl
 examples/ex24.pl
 examples/ex25.pl
 examples/ex26.pl
+examples/ex27.pl
 examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
@@ -72,6 +74,12 @@ t/Wikibase-Datatype-Reference/01-use.t
 t/Wikibase-Datatype-Reference/02-version.t
 t/Wikibase-Datatype-Reference/03-new.t
 t/Wikibase-Datatype-Reference/04-snaks.t
+t/Wikibase-Datatype-Sense/01-use.t
+t/Wikibase-Datatype-Sense/02-version.t
+t/Wikibase-Datatype-Sense/03-new.t
+t/Wikibase-Datatype-Sense/04-glosses.t
+t/Wikibase-Datatype-Sense/05-id.t
+t/Wikibase-Datatype-Sense/06-statements.t
 t/Wikibase-Datatype-Sitelink/01-use.t
 t/Wikibase-Datatype-Sitelink/02-version.t
 t/Wikibase-Datatype-Sitelink/03-new.t
@@ -160,6 +168,8 @@ xt/Wikibase-Datatype-Item/01-pod_coverage.t
 xt/Wikibase-Datatype-Item/02-pod.t
 xt/Wikibase-Datatype-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Reference/02-pod.t
+xt/Wikibase-Datatype-Sense/01-pod_coverage.t
+xt/Wikibase-Datatype-Sense/02-pod.t
 xt/Wikibase-Datatype-Sitelink/01-pod_coverage.t
 xt/Wikibase-Datatype-Sitelink/02-pod.t
 xt/Wikibase-Datatype-Snak/01-pod_coverage.t
