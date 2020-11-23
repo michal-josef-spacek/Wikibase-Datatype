@@ -166,7 +166,7 @@ Put error if check isn't ok.
 
 Returns undef.
 
-=head2 C<check_number_of_items)
+=head2 C<check_number_of_items>
 
  check_number_of_items($self, $list_method, $item_method, $object_name, $item_name);
 
