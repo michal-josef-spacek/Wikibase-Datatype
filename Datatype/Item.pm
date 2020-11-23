@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Wikibase::Datatype::Utils qw(check_array_object);
+use Wikibase::Datatype::Utils qw(check_array_object check_number_of_items);
 
 our $VERSION = 0.01;
 
@@ -61,56 +61,21 @@ sub BUILD {
 	# Check descriptions.
 	check_array_object($self, 'descriptions', 'Wikibase::Datatype::Value::Monolingual',
 		'Description');
-	$self->_check_number_of_lang_items('descriptions', 'Description');
+	check_number_of_items($self, 'descriptions', 'language', 'Description', 'language');
 
 	# Check labels.
 	check_array_object($self, 'labels', 'Wikibase::Datatype::Value::Monolingual',
 		'Label');
-	$self->_check_number_of_lang_items('labels', 'Label');
+	check_number_of_items($self, 'labels', 'language', 'Label', 'language');
 
 	# Check sitelinks.
 	check_array_object($self, 'sitelinks', 'Wikibase::Datatype::Sitelink',
 		'Sitelink');
-	$self->_check_number_of_site_items;
+	check_number_of_items($self, 'sitelinks', 'site', 'Sitelink', 'site');
 
 	# Check statements.
 	check_array_object($self, 'statements', 'Wikibase::Datatype::Statement',
 		'Statement');
-
-	return;
-}
-
-# TODO Nasledujici dve routines sjednotit do jedne. Po testech.
-sub _check_number_of_lang_items {
-	my ($self, $method, $object_name) = @_;
-
-	my $lang_hr = {};
-	foreach my $lang_item (@{$self->$method}) {
-		$lang_hr->{$lang_item->language} += 1;
-	}
-
-	foreach my $lang (keys %{$lang_hr}) {
-		if ($lang_hr->{$lang} > 1) {
-			err "$object_name for language '$lang' has multiple values."
-		}
-	}
-
-	return;
-}
-
-sub _check_number_of_site_items {
-	my ($self, $object_name) = @_;
-
-	my $site_hr = {};
-	foreach my $site_item (@{$self->sitelinks}) {
-		$site_hr->{$site_item->site} += 1;
-	}
-
-	foreach my $site (keys %{$site_hr}) {
-		if ($site_hr->{$site} > 1) {
-			err "Sitelink for site '$site' has multiple values.";
-		}
-	}
 
 	return;
 }
