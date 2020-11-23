@@ -4,5 +4,6 @@ blib/
 pm_to_blib
 MANIFEST.bak
 MYMETA.json
+MYMETA.json.lock
 MYMETA.yml
 cover_db/
