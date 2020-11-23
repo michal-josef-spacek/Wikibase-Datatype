@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(check_array_object check_entity check_isa
-	check_number check_property check_required);
+	check_number check_number_of_items check_property check_required);
 
 our $VERSION = 0.01;
 
@@ -60,6 +60,23 @@ sub check_number {
 	return;
 }
 
+sub check_number_of_items {
+	my ($self, $list_method, $item_method, $object_name, $item_name) = @_;
+
+	my $item_hr = {};
+	foreach my $item (@{$self->$list_method}) {
+		$item_hr->{$item->$item_method} += 1;
+	}
+
+	foreach my $item (keys %{$item_hr}) {
+		if ($item_hr->{$item} > 1) {
+			err "$object_name for $item_name '$item' has multiple values."
+		}
+	}
+
+	return;
+}
+
 sub check_property {
 	my ($self, $key) = @_;
 
@@ -100,6 +117,7 @@ Wikibase::Datatype::Utils - Wikibase datatype utilities.
  check_entity($self, $key);
  check_isa($self, $key, $class);
  check_number($self, $key);
+ check_number_of_items($self, $list_method, $item_method, $object_name, $item_name);
  check_property($self, $key);
  check_required($self, $key);
 
@@ -148,6 +166,18 @@ Put error if check isn't ok.
 
 Returns undef.
 
+=head2 C<check_number_of_items)
+
+ check_number_of_items($self, $list_method, $item_method, $object_name, $item_name);
+
+Check number of items. Must be 0 or 1. List items via C<$list_method> and get
+value via C<$item_method> method. C<$object_name> and C<$item_name> are
+variables for error output.
+
+Put error if check isn't ok.
+
+Returns undef.
+
 =head2 C<check_property>
 
  check_property($self, $key);
@@ -180,6 +210,9 @@ Returns undef.
 
  check_number():
          Parameter '%s' must a number.
+
+ check_number_of_items():
+         %s for %s '%s' has multiple values.
 
  check_property():
          Parameter '%s' must begin with 'P' and number after it.";
