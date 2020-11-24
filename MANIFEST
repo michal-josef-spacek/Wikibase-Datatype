@@ -1,5 +1,6 @@
 Changes
 Datatype.pm
+Datatype/Form.pm
 Datatype/Item.pm
 Datatype/Reference.pm
 Datatype/Sense.pm
@@ -35,6 +36,7 @@ examples/ex24.pl
 examples/ex25.pl
 examples/ex26.pl
 examples/ex27.pl
+examples/ex28.pl
 examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
@@ -58,6 +60,13 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+t/Wikibase-Datatype-Form/01-use.t
+t/Wikibase-Datatype-Form/02-version.t
+t/Wikibase-Datatype-Form/03-new.t
+t/Wikibase-Datatype-Form/04-grammatical_features.t
+t/Wikibase-Datatype-Form/05-id.t
+t/Wikibase-Datatype-Form/06-representations.t
+t/Wikibase-Datatype-Form/07-statements.t
 t/Wikibase-Datatype-Item/01-use.t
 t/Wikibase-Datatype-Item/02-version.t
 t/Wikibase-Datatype-Item/03-new.t
@@ -164,6 +173,8 @@ t/Wikibase-Datatype-Value/04-type.t
 t/Wikibase-Datatype-Value/05-value.t
 t/Wikibase-Datatype/01-use.t
 t/Wikibase-Datatype/02-version.t
+xt/Wikibase-Datatype-Form/01-pod_coverage.t
+xt/Wikibase-Datatype-Form/02-pod.t
 xt/Wikibase-Datatype-Item/01-pod_coverage.t
 xt/Wikibase-Datatype-Item/02-pod.t
 xt/Wikibase-Datatype-Reference/01-pod_coverage.t

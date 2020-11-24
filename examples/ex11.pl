@@ -3,15 +3,17 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_property);
+$Error::Pure::TYPE = 'Error';
+
+use Wikibase::Datatype::Utils qw(check_number);
 
 my $self = {
-        'key' => 'P123',
+        'key' => 'foo',
 };
-check_property($self, 'key');
+check_number($self, 'key');
 
 # Print out.
 print "ok\n";
 
-# Output:
-# ok
+# Output like:
+# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must be a number.

@@ -3,20 +3,36 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_array_object);
-use Wikibase::Datatype::Value;
+use Unicode::UTF8 qw(decode_utf8 encode_utf8);
+use Wikibase::Datatype::Sitelink;
+use Wikibase::Datatype::Value::Item;
 
-my $self = {
-        'key' => [
-                Wikibase::Datatype::Value->new(
-                        'value' => 'Text value',
-                ),
+# Object.
+my $obj = Wikibase::Datatype::Sitelink->new(
+        'badges' => [
+                 Wikibase::Datatype::Value::Item->new(
+                         'value' => 'Q123',
+                 ),
         ],
-};
-check_array_object($self, 'key', 'Wikibase::Datatype::Value', 'Value');
+        'site' => 'cswiki',
+        'title' => decode_utf8('Hlavní strana'),
+);
+
+# Get badges.
+my $badges_ar = [map { $_->value } @{$obj->badges}];
+
+# Get site.
+my $site = $obj->site;
+
+# Get title.
+my $title = $obj->title;
 
 # Print out.
-print "ok\n";
+print 'Badges: '.(join ', ', @{$badges_ar})."\n";
+print "Site: $site\n";
+print 'Title: '.encode_utf8($title)."\n";
 
 # Output:
-# ok
+# Badges: Q123
+# Site: cswiki
+# Title: Hlavní strana

@@ -3,18 +3,18 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_isa);
-use Wikibase::Datatype::Value;
+use Error::Pure;
+use Wikibase::Datatype::Utils qw(check_entity);
+
+$Error::Pure::TYPE = 'Error';
 
 my $self = {
-        'key' => Wikibase::Datatype::Value->new(
-                'value' => 'foo',
-        ),
+        'key' => 'bad_entity',
 };
-check_isa($self, 'key', 'Wikibase::Datatype::Value');
+check_entity($self, 'key');
 
 # Print out.
 print "ok\n";
 
-# Output:
-# ok
+# Output like:
+# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'Q' and number after it.
