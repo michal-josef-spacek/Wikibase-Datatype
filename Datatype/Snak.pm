@@ -34,11 +34,11 @@ Readonly::Array our @SNAK_TYPES => qw(
 
 our $VERSION = 0.01;
 
-has datavalue => (
+has datatype => (
 	is => 'ro',
 );
 
-has datatype => (
+has datavalue => (
 	is => 'ro',
 );
 
@@ -123,7 +123,7 @@ Retruns instance of object.
 
 =over 8
 
-=item * C<type>
+=item * C<datatype>
 
 Type of data.
 Parameter is required.
