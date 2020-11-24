@@ -5,11 +5,17 @@ DESCRIPTION
     This distributions is set of datatypes for Wikibase.
 
 SEE ALSO
+    Wikibase::Datatype::Form
+        Wikibase form datatype.
+
     Wikibase::Datatype::Item
         Wikibase item datatype.
 
     Wikibase::Datatype::Reference
         Wikibase reference datatype.
+
+    Wikibase::Datatype::Sense
+        Wikibase sense datatype.
 
     Wikibase::Datatype::Sitelink
         Wikibase sitelink datatype.

@@ -25,6 +25,10 @@ This distributions is set of datatypes for Wikibase.
 
 =over
 
+=item L<Wikibase::Datatype::Form>
+
+Wikibase form datatype.
+
 =item L<Wikibase::Datatype::Item>
 
 Wikibase item datatype.
@@ -32,6 +36,10 @@ Wikibase item datatype.
 =item L<Wikibase::Datatype::Reference>
 
 Wikibase reference datatype.
+
+=item L<Wikibase::Datatype::Sense>
+
+Wikibase sense datatype.
 
 =item L<Wikibase::Datatype::Sitelink>
 
