@@ -4,7 +4,6 @@ use warnings;
 use Test::More 'tests' => 3;
 use Test::NoWarnings;
 use Wikibase::Datatype::Sense;
-use Wikibase::Datatype::Value::Monolingual;
 
 # Test.
 my $obj = Wikibase::Datatype::Sense->new;
