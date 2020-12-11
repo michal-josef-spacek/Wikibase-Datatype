@@ -70,7 +70,6 @@ sub BUILD {
 	check_required($self, 'datatype');
 	check_required($self, 'property');
 
-
 	# Check data type.
 	if (none { $self->{'datatype'} eq $_ } keys %DATA_TYPES) {
 		err "Parameter 'datatype' = '$self->{'datatype'}' isn't supported.";
@@ -81,6 +80,7 @@ sub BUILD {
 		check_isa($self, 'datavalue', $DATA_TYPES{$self->{'datatype'}});
 	}
 
+	# Check property.
 	check_property($self, 'property');
 
 	return;
