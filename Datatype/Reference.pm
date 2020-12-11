@@ -76,11 +76,11 @@ Returns reference to array of Wikibase::Datatype::Snak instances.
 =head1 ERRORS
 
  new():
-         From Mo::utils::check_required():
-                 Parameter 'snaks' is required.
          From Mo::utils::check_array_object():
                  Parameter 'snaks' must be a array.
                  Snak isn't 'Wikibase::Datatype::Snak' object.
+         From Mo::utils::check_required():
+                 Parameter 'snaks' is required.
 
 =head1 EXAMPLE
 

@@ -189,8 +189,9 @@ Returns string.
                  Parameter 'property' is required.
          From Mo::utils::check_isa():
                  Parameter 'datavalue' must be a 'Wikibase::Datatype::Value::%s' object.
+         From Wikibase::Datatype::Utils::check_property():
+                 Parameter 'property' must begin with 'P' and number after it.
          Parameter 'datatype' = '%s' isn't supported.
-         Parameter 'property' must begin with 'P' and number after it.
          Parameter 'snaktype' = '%s' isn't supported.
 
 =head1 EXAMPLE

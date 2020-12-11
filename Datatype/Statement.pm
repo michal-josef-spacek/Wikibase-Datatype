@@ -157,8 +157,6 @@ Returns Wikibase::Datatype::Snak instance.
 =head1 ERRORS
 
  new():
-         From Mo::utils::check_required():
-                 Parameter 'snak' is required.
          From Mo::utils::check_array_object():
                  Parameter 'property_snaks' must be a array.
                  Parameter 'references' must be a array.
@@ -166,6 +164,8 @@ Returns Wikibase::Datatype::Snak instance.
                  Reference isn't 'Wikibase::Datatype::Reference' object.
          From Mo::utils::check_isa():
                  Parameter 'snak' must be a 'Wikibase::Datatype::Snak' object.
+         From Mo::utils::check_required():
+                 Parameter 'snak' is required.
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
 
 =head1 EXAMPLE

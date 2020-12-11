@@ -261,9 +261,10 @@ Returns string.
                  Parameter 'statements' must be a array.
                  Sitelink isn't 'Wikibase::Datatype::Sitelink' object.
                  Statement isn't 'Wikibase::Datatype::Statement' object.
-         Sitelink for site '%s' has multiple values.
-         Description for language '%s' has multiple values.
-         Label for language '%s' has multiple values.
+         From Mo::utils::check_number_of_items():
+                 Sitelink for site '%s' has multiple values.
+                 Description for language '%s' has multiple values.
+                 Label for language '%s' has multiple values.
 
 =head1 EXAMPLE
 

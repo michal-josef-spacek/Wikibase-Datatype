@@ -120,11 +120,13 @@ Returns reference to array with Wikibase::Datatype::Statement instances.
 =head1 ERRORS
 
  new():
-         Glosse for language '%s' has multiple values.
-         Glosse isn't 'Wikibase::Datatype::Value::Monolingual' object.
-         Parameter 'glosses' must be a array.
-         Parameter 'statements' must be a array.
-         Statement isn't 'Wikibase::Datatype::Statement' object.
+         From Mo::utils::check_array_object():
+                Glosse isn't 'Wikibase::Datatype::Value::Monolingual' object.
+                Parameter 'glosses' must be a array.
+                Parameter 'statements' must be a array.
+                Statement isn't 'Wikibase::Datatype::Statement' object.
+         From Mo::utils::check_number_of_items():
+                Glosse for language '%s' has multiple values.
 
 =head1 EXAMPLE
 

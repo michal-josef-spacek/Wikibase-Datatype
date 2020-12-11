@@ -3,7 +3,6 @@ TODO
 22. Badges jsou presny seznam. Kde ho ziskam, jak ho zkontroluji?
 24. Do Snak pridat lexem.
 37. Priklad pro check_number_of_items() do dokumentace.
-39. Projit ERRORS section. Myslim, ze tam jsou chyby v pouziti Utils a Mo::utils.
 40.
 
 Applied
@@ -119,4 +118,7 @@ OK [20201124] skim
 OK [20201124] skim
 
 38. Prepsat na Mo::utils
+OK [20201211] skim
+
+39. Projit ERRORS section. Myslim, ze tam jsou chyby v pouziti Utils a Mo::utils.
 OK [20201211] skim

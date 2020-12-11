@@ -88,7 +88,8 @@ Returns string.
  new():
          From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
-         Parameter 'value' must begin with 'P' and number after it.
+         From Wikibase::Datatype::Utils::check_property():
+                 Parameter 'value' must begin with 'P' and number after it.
 
 =head1 EXAMPLE
 

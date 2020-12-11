@@ -139,12 +139,13 @@ Returns reference to array of Wikibase::Datatype::Statemnet items.
 =head1 ERRORS
 
  new():
-         Grammatical feature isn't 'Wikibase::Datatype::Value::Item' object.
-         Parameter 'grammatical_features' must be a array.
-         Parameter 'representations' must be a array.
-         Parameter 'statements' must be a array.
-         Representation isn't 'Wikibase::Datatype::Value::Monolingual' object.
-         Statement isn't 'Wikibase::Datatype::Statement' object.
+         From Mo::utils::check_array_object():
+                 Grammatical feature isn't 'Wikibase::Datatype::Value::Item' object.
+                 Parameter 'grammatical_features' must be a array.
+                 Parameter 'representations' must be a array.
+                 Parameter 'statements' must be a array.
+                 Representation isn't 'Wikibase::Datatype::Value::Monolingual' object.
+                 Statement isn't 'Wikibase::Datatype::Statement' object.
 
 =head1 EXAMPLE
 
