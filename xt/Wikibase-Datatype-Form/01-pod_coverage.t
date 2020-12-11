@@ -5,4 +5,6 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('Wikibase::Datatype::Form', 'Wikibase::Datatype::Form is covered.');
+pod_coverage_ok('Wikibase::Datatype::Form',
+	{ 'also_private' => ['BUILD'] },
+	'Wikibase::Datatype::Form is covered.');
