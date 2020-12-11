@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Wikibase::Datatype::Utils qw(check_property);
 
@@ -24,3 +24,8 @@ $self = {
 };
 my $ret = check_property($self, 'key');
 is($ret, undef, 'Right object is present.');
+
+# Test.
+$self = {};
+$ret = check_property($self, 'key');
+is($ret, undef, 'No key.');

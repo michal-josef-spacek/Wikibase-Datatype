@@ -1,4 +1,5 @@
 0.03
+ - Add test for check_property().
  - Update dependency to Mo::utils 0.03, because i need support of floating
    numbers in quantity.
 
