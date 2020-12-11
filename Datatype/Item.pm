@@ -19,6 +19,10 @@ has descriptions => (
 	is => 'ro',
 );
 
+has id => (
+	is => 'ro',
+);
+
 has labels => (
 	default => [],
 	is => 'ro',
@@ -99,6 +103,7 @@ Wikibase::Datatype::Item - Wikibase item datatype.
  my $obj = Wikibase::Datatype::Item->new(%params);
  my $aliases_ar = $obj->aliases;
  my $descriptions_ar = $obj->descriptions;
+ my $id = $obj->id;
  my $labels_ar = $obj->labels;
  my $lastrevid = $obj->lastrevid;
  my $modified = $obj->modified;
@@ -133,6 +138,11 @@ Parameter is optional.
 
 Item descriptions. One per language.
 Reference to array with Wikibase::Datatype::Value::Monolingual instances.
+Parameter is optional.
+
+=item * C<id>
+
+Id.
 Parameter is optional.
 
 =item * C<labels>
@@ -190,6 +200,14 @@ Returns reference to array with Wikibase::Datatype::Value::Monolingual instances
 Get descriptions.
 
 Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
+
+=head2 C<id>
+
+ my $id = $obj->id;
+
+Get id.
+
+Returns string.
 
 =head2 C<labels>
 
@@ -415,6 +433,7 @@ Returns string.
                          'value' => 'English writer and humorist',
                  ),
          ],
+         'id' => 'Q42',
          'labels' => [
                  Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
@@ -444,6 +463,7 @@ Returns string.
 
  # Print out.
  print "Title: ".$obj->title."\n";
+ print 'Id: '.$obj->id."\n";
  print "Labels:\n";
  foreach my $label (sort { $a->language cmp $b->language } @{$obj->labels}) {
          print "\t".$label->value.' ('.$label->language.")\n";
@@ -481,6 +501,7 @@ Returns string.
 
  # Output:
  # Title: Q42
+ # Id: Q42
  # Labels:
  #         Douglas Adams (cs)
  #         Douglas Adams (en)

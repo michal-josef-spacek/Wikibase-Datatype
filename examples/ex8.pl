@@ -147,6 +147,7 @@ my $obj = Wikibase::Datatype::Item->new(
                         'value' => 'English writer and humorist',
                 ),
         ],
+        'id' => 'Q42',
         'labels' => [
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
@@ -176,6 +177,7 @@ my $obj = Wikibase::Datatype::Item->new(
 
 # Print out.
 print "Title: ".$obj->title."\n";
+print 'Id: '.$obj->id."\n";
 print "Labels:\n";
 foreach my $label (sort { $a->language cmp $b->language } @{$obj->labels}) {
         print "\t".$label->value.' ('.$label->language.")\n";
@@ -213,6 +215,7 @@ foreach my $statement (@{$obj->statements}) {
 
 # Output:
 # Title: Q42
+# Id: Q42
 # Labels:
 #         Douglas Adams (cs)
 #         Douglas Adams (en)

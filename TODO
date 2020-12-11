@@ -7,7 +7,6 @@ TODO
     tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
     Wikidata upresnoval.
 41. Do Item pridat pageid.
-42. Do Item pridat id.
 43.
 
 Applied
@@ -126,4 +125,7 @@ OK [20201124] skim
 OK [20201211] skim
 
 39. Projit ERRORS section. Myslim, ze tam jsou chyby v pouziti Utils a Mo::utils.
+OK [20201211] skim
+
+42. Do Item pridat id.
 OK [20201211] skim
