@@ -3,33 +3,23 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Snak;
 use Wikibase::Datatype::Value::Item;
 
 # Object.
-my $obj = Wikibase::Datatype::Snak->new(
-        'datatype' => 'wikibase-item',
-        'datavalue' => Wikibase::Datatype::Value::Item->new(
-                'value' => 'Q5',
-        ),
-        'property' => 'P31',
+my $obj = Wikibase::Datatype::Value::Item->new(
+        'value' => 'Q123',
 );
 
 # Get value.
-my $datavalue = $obj->datavalue->value;
+my $value = $obj->value;
 
-# Get datatype.
-my $datatype = $obj->datatype;
-
-# Get property.
-my $property = $obj->property;
+# Get type.
+my $type = $obj->type;
 
 # Print out.
-print "Property: $property\n";
-print "Type: $datatype\n";
-print "Value: $datavalue\n";
+print "Type: $type\n";
+print "Value: $value\n";
 
 # Output:
-# Property: P31
-# Type: wikibase-item
-# Value: Q5
+# Type: item
+# Value: Q123

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Wikibase::Datatype::Utils qw(check_array_object check_required);
+use Mo::utils qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -114,10 +114,10 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_required():
+         From Mo::utils::check_required():
                  Parameter 'site' is required.
                  Parameter 'title' is required.
-         From Wikibase::Datatype::Utils::check_array_object():
+         From Mo::utils::check_array_object():
                  Badge isn't 'Wikibase::Datatype::Value::Item' object.
                  Parameter 'badges' must be a array.
 
@@ -163,7 +163,7 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikibase::Datatype::Utils>.
+L<Mo::utils>.
 
 =head1 SEE ALSO
 

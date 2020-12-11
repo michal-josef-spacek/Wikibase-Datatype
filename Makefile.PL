@@ -22,6 +22,7 @@ requires 'Class::Utils' => 0.03;
 requires 'Error::Pure' => 0.15;
 requires 'Exporter' => 0;
 requires 'Mo' => 0;
+requires 'Mo::utils' => 0.01;
 requires 'List::MoreUtils' => 0;
 requires 'Readonly' => 0;
 requires 'Unicode::UTF8' => 0;

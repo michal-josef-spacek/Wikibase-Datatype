@@ -6,8 +6,8 @@ use warnings;
 use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build default is);
+use Mo::utils qw(check_array_object check_isa check_required);
 use Readonly;
-use Wikibase::Datatype::Utils qw(check_array_object check_isa check_required);
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
 
@@ -157,14 +157,14 @@ Returns Wikibase::Datatype::Snak instance.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_required():
+         From Mo::utils::check_required():
                  Parameter 'snak' is required.
-         From Wikibase::Datatype::Utils::check_array_object():
+         From Mo::utils::check_array_object():
                  Parameter 'property_snaks' must be a array.
                  Parameter 'references' must be a array.
                  Property snak isn't 'Wikibase::Datatype::Snak' object.
                  Reference isn't 'Wikibase::Datatype::Reference' object.
-         From Wikibase::Datatype::Utils::check_isa():
+         From Mo::utils::check_isa():
                  Parameter 'snak' must be a 'Wikibase::Datatype::Snak' object.
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
 
@@ -267,8 +267,8 @@ Returns Wikibase::Datatype::Snak instance.
 L<Error::Pure>,
 L<List::MoreUtils>,
 L<Mo>,
-L<Readonly>,
-L<Wikibase::Datatype::Utils>.
+L<Mo::utils>.
+L<Readonly>.
 
 =head1 SEE ALSO
 

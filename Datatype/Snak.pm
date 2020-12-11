@@ -6,8 +6,9 @@ use warnings;
 use Error::Pure qw(err);
 use List::MoreUtils qw(none);
 use Mo qw(build is);
+use Mo::utils qw(check_isa check_required);
 use Readonly;
-use Wikibase::Datatype::Utils qw(check_isa check_property check_required);
+use Wikibase::Datatype::Utils qw(check_property);
 
 # Pairs data type and datatype.
 Readonly::Hash our %DATA_TYPES => (
@@ -182,11 +183,11 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_required():
+         From Mo::utils::check_required():
                  Parameter 'datatype' is required.
                  Parameter 'datavalue' is required.
                  Parameter 'property' is required.
-         From Wikibase::Datatype::Utils::check_isa():
+         From Mo::utils::check_isa():
                  Parameter 'datavalue' must be a 'Wikibase::Datatype::Value::%s' object.
          Parameter 'datatype' = '%s' isn't supported.
          Parameter 'property' must begin with 'P' and number after it.
@@ -233,6 +234,7 @@ Returns string.
 L<Error::Pure>,
 L<List::MoreUtils>,
 L<Mo>,
+L<Mo::utils>,
 L<Readonly>,
 L<Wikibase::Datatype::Utils>.
 

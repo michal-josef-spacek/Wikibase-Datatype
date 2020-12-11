@@ -3,15 +3,23 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_required);
+use Wikibase::Datatype::Value::String;
 
-my $self = {
-        'key' => 'value',
-};
-check_required($self, 'key');
+# Object.
+my $obj = Wikibase::Datatype::Value::String->new(
+        'value' => 'foo',
+);
+
+# Get type.
+my $type = $obj->type;
+
+# Get value.
+my $value = $obj->value;
 
 # Print out.
-print "ok\n";
+print "Type: $type\n";
+print "Value: $value\n";
 
 # Output:
-# ok
+# Type: string
+# Value: foo

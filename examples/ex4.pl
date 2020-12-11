@@ -3,17 +3,12 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_array_object);
-use Wikibase::Datatype::Value;
+use Wikibase::Datatype::Utils qw(check_entity);
 
 my $self = {
-        'key' => [
-                Wikibase::Datatype::Value->new(
-                        'value' => 'Text value',
-                ),
-        ],
+        'key' => 'Q123',
 };
-check_array_object($self, 'key', 'Wikibase::Datatype::Value', 'Value');
+check_entity($self, 'key');
 
 # Print out.
 print "ok\n";

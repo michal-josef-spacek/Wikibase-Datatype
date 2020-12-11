@@ -5,7 +5,8 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikibase::Datatype::Utils qw(check_entity check_number);
+use Mo::utils qw(check_number);
+use Wikibase::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.01;
 
@@ -163,12 +164,12 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_entity():
-                 Parameter 'unit' must begin with 'Q' and number after it.
-         From Wikibase::Datatype::Utils::check_number():
+         From Mo::utils::check_number():
                  Parameter 'lower_bound' must be a number.
                  Parameter 'upper_bound' must be a number.
                  Parameter 'value' must be a number.
+         From Wikibase::Datatype::Utils::check_entity():
+                 Parameter 'unit' must begin with 'Q' and number after it.
          From Wikibase::Datatype::Value::new():
                  Parameter 'value' is required.
          Parameter 'lower_bound' must be less than value.
@@ -242,6 +243,7 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
+L<Mo::utils>,
 L<Wikibase::Datatype::Utils>,
 L<Wikibase::Datatype::Value>.
 

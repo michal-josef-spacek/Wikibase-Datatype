@@ -3,60 +3,29 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Sense;
-use Wikibase::Datatype::Snak;
-use Wikibase::Datatype::Statement;
-use Wikibase::Datatype::Value::Item;
-use Wikibase::Datatype::Value::Monolingual;
-
-# Statement.
-my $statement = Wikibase::Datatype::Statement->new(
-        # instance of (P31) human (Q5)
-        'snak' => Wikibase::Datatype::Snak->new(
-                 'datatype' => 'wikibase-item',
-                 'datavalue' => Wikibase::Datatype::Value::Item->new(
-                         'value' => 'Q5',
-                 ),
-                 'property' => 'P31',
-        ),
-);
+use Wikibase::Datatype::Value::Quantity;
 
 # Object.
-my $obj = Wikibase::Datatype::Sense->new(
-        'glosses' => [
-                Wikibase::Datatype::Value::Monolingual->new(
-                         'language' => 'en',
-                         'value' => 'Glosse en',
-                ),
-                Wikibase::Datatype::Value::Monolingual->new(
-                         'language' => 'cs',
-                         'value' => 'Glosse cs',
-                ),
-        ],
-        'id' => 'ID',
-        'statements' => [
-                $statement,
-        ],
+my $obj = Wikibase::Datatype::Value::Quantity->new(
+        'unit' => 'Q190900',
+        'value' => '10',
 );
 
-# Get id.
-my $id = $obj->id;
+# Get type.
+my $type = $obj->type;
 
-# Get glosses.
-my @glosses = map { $_->value.' ('.$_->language.')' } @{$obj->glosses};
+# Get unit.
+my $unit = $obj->unit;
 
-# Get statements.
-my $statements_count = @{$obj->statements};
+# Get value.
+my $value = $obj->value;
 
 # Print out.
-print "Id: $id\n";
-print "Glosses:\n";
-map { print "\t$_\n"; } @glosses;
-print "Number of statements: $statements_count\n";
+print "Type: $type\n";
+print "Unit: $unit\n";
+print "Value: $value\n";
 
 # Output:
-# Id: ID
-# Glosses:
-#         Glosse en (en)
-#         Glosse cs (cs)
-# Number of statements: 1
+# Type: quantity
+# Unit: Q190900
+# Value: 10

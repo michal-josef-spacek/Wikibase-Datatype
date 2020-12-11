@@ -3,18 +3,24 @@
 use strict;
 use warnings;
 
-$Error::Pure::TYPE = 'Error';
-
-use Wikibase::Datatype::Utils qw(check_isa);
 use Wikibase::Datatype::Value;
 
-my $self = {
-        'key' => 'foo',
-};
-check_isa($self, 'key', 'Wikibase::Datatype::Value');
+# Object.
+my $obj = Wikibase::Datatype::Value->new(
+        'value' => 'foo',
+        'type' => 'string',
+);
+
+# Get value.
+my $value = $obj->value;
+
+# Get type.
+my $type = $obj->type;
 
 # Print out.
-print "ok\n";
+print "Value: $value\n";
+print "Type: $type\n";
 
-# Output like:
-# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must be a 'Wikibase::Datatype::Value' object.
+# Output:
+# Value: foo
+# Type: string

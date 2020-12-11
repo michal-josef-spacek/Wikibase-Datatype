@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Wikibase::Datatype::Utils qw(check_array_object check_number_of_items);
+use Mo::utils qw(check_array_object check_number_of_items);
 
 our $VERSION = 0.01;
 
@@ -192,7 +192,7 @@ Returns reference to array with Wikibase::Datatype::Statement instances.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikibase::Datatype::Utils>.
+L<Mo::utils>.
 
 =head1 SEE ALSO
 

@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Wikibase::Datatype::Utils qw(check_array_object check_number_of_items);
+use Mo::utils qw(check_array_object check_number_of_items);
 
 our $VERSION = 0.01;
 
@@ -250,7 +250,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_array_object():
+         From Mo::utils::check_array_object():
                  Alias isn't 'Wikibase::Datatype::Value::Monolingual' object.
                  Description isn't 'Wikibase::Datatype::Value::Monolingual' object.
                  Label isn't 'Wikibase::Datatype::Value::Monolingual' object.
@@ -519,7 +519,7 @@ Returns string.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikibase::Datatype::Utils>.
+L<Mo:utils>.
 
 =head1 SEE ALSO
 

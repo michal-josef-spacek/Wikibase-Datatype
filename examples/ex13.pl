@@ -3,18 +3,34 @@
 use strict;
 use warnings;
 
-use Error::Pure;
-use Wikibase::Datatype::Utils qw(check_property);
+use Wikibase::Datatype::Value::Time;
 
-$Error::Pure::TYPE = 'Error';
+# Object.
+my $obj = Wikibase::Datatype::Value::Time->new(
+        'precision' => 10,
+        'value' => '+2020-09-01T00:00:00Z',
+);
 
-my $self = {
-        'key' => 'bad_property',
-};
-check_property($self, 'key');
+# Get calendar model.
+my $calendarmodel = $obj->calendarmodel;
+
+# Get precision.
+my $precision = $obj->precision;
+
+# Get type.
+my $type = $obj->type;
+
+# Get value.
+my $value = $obj->value;
 
 # Print out.
-print "ok\n";
+print "Calendar model: $calendarmodel\n";
+print "Precision: $precision\n";
+print "Type: $type\n";
+print "Value: $value\n";
 
-# Output like:
-# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'P' and number after it.
+# Output:
+# Calendar model: Q1985727
+# Precision: 10
+# Type: time
+# Value: +2020-09-01T00:00:00Z

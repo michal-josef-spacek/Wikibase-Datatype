@@ -3,12 +3,12 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Utils qw(check_entity);
+use Wikibase::Datatype::Utils qw(check_property);
 
 my $self = {
-        'key' => 'Q123',
+        'key' => 'P123',
 };
-check_entity($self, 'key');
+check_property($self, 'key');
 
 # Print out.
 print "ok\n";

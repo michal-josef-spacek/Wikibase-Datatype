@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Wikibase::Datatype::Utils qw(check_array_object check_required);
+use Mo::utils qw(check_array_object check_required);
 
 our $VERSION = 0.01;
 
@@ -76,9 +76,9 @@ Returns reference to array of Wikibase::Datatype::Snak instances.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_required():
+         From Mo::utils::check_required():
                  Parameter 'snaks' is required.
-         From Wikibase::Datatype::Utils::check_array_object():
+         From Mo::utils::check_array_object():
                  Parameter 'snaks' must be a array.
                  Snak isn't 'Wikibase::Datatype::Snak' object.
 
@@ -117,7 +117,7 @@ Returns reference to array of Wikibase::Datatype::Snak instances.
 
 L<Error::Pure>,
 L<Mo>,
-L<Wikibase::Datatype::Utils>.
+L<Mo::utils>.
 
 =head1 SEE ALSO
 

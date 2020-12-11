@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Wikibase::Datatype::Utils qw(check_required);
+use Mo::utils qw(check_required);
 
 our $VERSION = 0.01;
 
@@ -91,7 +91,7 @@ Returns string.
 =head1 ERRORS
 
  new():
-         From Wikibase::Datatype::Utils::check_required():
+         From Mo::utils::check_required():
                  Parameter 'value' is required.
                  Parameter 'type' is required.
 
@@ -125,7 +125,7 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Wikibase::Datatype::Utils>.
+L<Mo::utils>.
 
 =head1 SEE ALSO
 

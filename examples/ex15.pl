@@ -3,18 +3,29 @@
 use strict;
 use warnings;
 
-use Error::Pure;
-use Wikibase::Datatype::Utils qw(check_required);
+use Wikibase::Datatype::Value::Monolingual;
 
-$Error::Pure::TYPE = 'Error';
+# Object.
+my $obj = Wikibase::Datatype::Value::Monolingual->new(
+        'language' => 'en',
+        'value' => 'English text',
+);
 
-my $self = {
-        'key' => undef,
-};
-check_required($self, 'key');
+# Get language.
+my $language = $obj->language;
+
+# Get type.
+my $type = $obj->type;
+
+# Get value.
+my $value = $obj->value;
 
 # Print out.
-print "ok\n";
+print "Language: $language\n";
+print "Type: $type\n";
+print "Value: $value\n";
 
-# Output like:
-# #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' is required.
+# Output:
+# Language: en
+# Type: monolingualtext
+# Value: English text

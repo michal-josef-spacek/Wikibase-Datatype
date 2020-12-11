@@ -58,4 +58,7 @@ print "Number of representations: $re_count\n";
 print "Number of statements: $st_count\n";
 
 # Output:
-# TODO
+# Id: identifier
+# Number of grammatical features: 2
+# Number of representations: 2
+# Number of statements: 1
