@@ -1,5 +1,6 @@
 0.02
  - Add id parameter and method for Item.
+ - Add page_id parameter and method for Item.
 
 0.01 2020-12-11T11:46:07+01:00
  - First version.

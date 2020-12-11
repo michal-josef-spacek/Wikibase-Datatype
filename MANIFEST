@@ -72,9 +72,10 @@ t/Wikibase-Datatype-Item/07-labels.t
 t/Wikibase-Datatype-Item/08-lastrevid.t
 t/Wikibase-Datatype-Item/09-modified.t
 t/Wikibase-Datatype-Item/10-ns.t
-t/Wikibase-Datatype-Item/11-sitelinks.t
-t/Wikibase-Datatype-Item/12-statements.t
-t/Wikibase-Datatype-Item/13-title.t
+t/Wikibase-Datatype-Item/11-page_id.t
+t/Wikibase-Datatype-Item/12-sitelinks.t
+t/Wikibase-Datatype-Item/13-statements.t
+t/Wikibase-Datatype-Item/14-title.t
 t/Wikibase-Datatype-Lexeme/01-use.t
 t/Wikibase-Datatype-Lexeme/02-version.t
 t/Wikibase-Datatype-Lexeme/03-new.t

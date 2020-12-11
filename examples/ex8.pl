@@ -158,6 +158,7 @@ my $obj = Wikibase::Datatype::Item->new(
                         'value' => 'Douglas Adams',
                 ),
         ],
+        'page_id' => 123,
         'sitelinks' => [
                 Wikibase::Datatype::Sitelink->new(
                         'site' => 'cswiki',
@@ -178,6 +179,7 @@ my $obj = Wikibase::Datatype::Item->new(
 # Print out.
 print "Title: ".$obj->title."\n";
 print 'Id: '.$obj->id."\n";
+print 'Page id: '.$obj->page_id."\n";
 print "Labels:\n";
 foreach my $label (sort { $a->language cmp $b->language } @{$obj->labels}) {
         print "\t".$label->value.' ('.$label->language.")\n";
@@ -216,6 +218,7 @@ foreach my $statement (@{$obj->statements}) {
 # Output:
 # Title: Q42
 # Id: Q42
+# Page id: 123
 # Labels:
 #         Douglas Adams (cs)
 #         Douglas Adams (en)

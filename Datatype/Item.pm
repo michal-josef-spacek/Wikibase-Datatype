@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Mo::utils qw(check_array_object check_number_of_items);
+use Mo::utils qw(check_array_object check_number check_number_of_items);
 
 our $VERSION = 0.02;
 
@@ -41,6 +41,10 @@ has ns => (
 	is => 'ro',
 );
 
+has page_id => (
+	is => 'ro',
+);
+
 has sitelinks => (
 	default => [],
 	is => 'ro',
@@ -71,6 +75,9 @@ sub BUILD {
 	check_array_object($self, 'labels', 'Wikibase::Datatype::Value::Monolingual',
 		'Label');
 	check_number_of_items($self, 'labels', 'language', 'Label', 'language');
+
+	# Check page id.
+	check_number($self, 'page_id');
 
 	# Check sitelinks.
 	check_array_object($self, 'sitelinks', 'Wikibase::Datatype::Sitelink',
@@ -108,6 +115,7 @@ Wikibase::Datatype::Item - Wikibase item datatype.
  my $lastrevid = $obj->lastrevid;
  my $modified = $obj->modified;
  my $ns = $obj->ns;
+ my $page_id = $obj->page_id;
  my $sitelinks_ar = $obj->sitelinks;
  my $statements_ar = $obj->statements;
  my $title = $obj->title;
@@ -165,6 +173,11 @@ Parameter is optional.
 
 Namespace.
 Default value is 0.
+
+=item * C<page_id>
+
+Page id. Numeric value.
+Parameter is optional.
 
 =item * C<sitelinks>
 
@@ -241,6 +254,14 @@ Get namespace.
 
 Returns number.
 
+=head2 C<page_id>
+
+ my $page_id = $obj->page_id;
+
+Get page id.
+
+Returns number.
+
 =head2 C<sitelinks>
 
  my $sitelinks_ar = $obj->sitelinks;
@@ -279,6 +300,8 @@ Returns string.
                  Parameter 'statements' must be a array.
                  Sitelink isn't 'Wikibase::Datatype::Sitelink' object.
                  Statement isn't 'Wikibase::Datatype::Statement' object.
+         From Mo::utils::check_page_id():
+                 Parameter 'page_id' must a number.
          From Mo::utils::check_number_of_items():
                  Sitelink for site '%s' has multiple values.
                  Description for language '%s' has multiple values.
@@ -444,6 +467,7 @@ Returns string.
                          'value' => 'Douglas Adams',
                  ),
          ],
+         'page_id' => 123,
          'sitelinks' => [
                  Wikibase::Datatype::Sitelink->new(
                          'site' => 'cswiki',
@@ -464,6 +488,7 @@ Returns string.
  # Print out.
  print "Title: ".$obj->title."\n";
  print 'Id: '.$obj->id."\n";
+ print 'Page id: '.$obj->page_id."\n";
  print "Labels:\n";
  foreach my $label (sort { $a->language cmp $b->language } @{$obj->labels}) {
          print "\t".$label->value.' ('.$label->language.")\n";
@@ -502,6 +527,7 @@ Returns string.
  # Output:
  # Title: Q42
  # Id: Q42
+ # Page id: 123
  # Labels:
  #         Douglas Adams (cs)
  #         Douglas Adams (en)

@@ -6,7 +6,6 @@ TODO
 40. V Lexemech parametery lexical_category a language jsou presne hodnoty. Co s
     tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
     Wikidata upresnoval.
-41. Do Item pridat pageid.
 43.
 
 Applied
@@ -128,4 +127,7 @@ OK [20201211] skim
 OK [20201211] skim
 
 42. Do Item pridat id.
+OK [20201211] skim
+
+41. Do Item pridat pageid.
 OK [20201211] skim
