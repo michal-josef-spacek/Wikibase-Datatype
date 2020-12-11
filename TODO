@@ -3,7 +3,10 @@ TODO
 22. Badges jsou presny seznam. Kde ho ziskam, jak ho zkontroluji?
 24. Do Snak pridat lexem.
 37. Priklad pro check_number_of_items() do dokumentace.
-40.
+40. V Lexemech parametery lexical_category a language jsou presne hodnoty. Co s
+    tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
+    Wikidata upresnoval.
+41.
 
 Applied
 =======
