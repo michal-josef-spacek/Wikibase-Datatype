@@ -7,7 +7,7 @@ use Error::Pure qw(err);
 use Mo qw(build default is);
 use Mo::utils qw(check_array_object check_number_of_items);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 has aliases => (
 	default => [],
@@ -550,6 +550,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
