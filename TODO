@@ -4,7 +4,8 @@ TODO
 24. Do Snak pridat lexem.
 37. Priklad pro check_number_of_items() do dokumentace.
 38. Prepsat na Mo::utils
-39.
+39. Projit ERRORS section. Myslim, ze tam jsou chyby v pouziti Utils a Mo::utils.
+40.
 
 Applied
 =======
