@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(check_entity check_property);
+Readonly::Array our @EXPORT_OK => qw(check_entity check_lexeme check_property);
 
 our $VERSION = 0.04;
 
@@ -15,6 +15,14 @@ sub check_entity {
 	my ($self, $key) = @_;
 
 	_check_item_with_char($self, $key, 'Q');
+
+	return;
+}
+
+sub check_lexeme {
+	my ($self, $key) = @_;
+
+	_check_item_with_char($self, $key, 'L');
 
 	return;
 }
@@ -55,9 +63,10 @@ Wikibase::Datatype::Utils - Wikibase datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikibase::Datatype::Utils qw(check_entity check_property);
+ use Wikibase::Datatype::Utils qw(check_entity check_lexeme check_property);
 
  check_entity($self, $key);
+ check_lexeme($self, $key);
  check_property($self, $key);
 
 =head1 DESCRIPTION
@@ -74,6 +83,14 @@ Check parameter defined by C<$key> whith is entity (/^Q\d+/).
 
 Returns undef.
 
+=head2 C<check_lexeme>
+
+ check_lexeme($self, $key);
+
+Check parameter defined by C<$key> whith is entity (/^L\d+/).
+
+Returns undef.
+
 =head2 C<check_property>
 
  check_property($self, $key);
@@ -86,6 +103,9 @@ Returns undef.
 
  check_entity():
          Parameter '%s' must begin with 'Q' and number after it.";
+
+ check_lexeme():
+         Parameter '%s' must begin with 'L' and number after it.";
 
  check_property():
          Parameter '%s' must begin with 'P' and number after it.";
@@ -134,6 +154,45 @@ Returns undef.
  use strict;
  use warnings;
 
+ use Wikibase::Datatype::Utils qw(check_lexeme);
+
+ my $self = {
+         'key' => 'L123',
+ };
+ check_lexeme($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output:
+ # ok
+
+=head1 EXAMPLE4
+
+ use strict;
+ use warnings;
+
+ use Error::Pure;
+ use Wikibase::Datatype::Utils qw(check_lexeme);
+
+ $Error::Pure::TYPE = 'Error';
+
+ my $self = {
+         'key' => 'bad_entity',
+ };
+ check_lexeme($self, 'key');
+
+ # Print out.
+ print "ok\n";
+
+ # Output like:
+ # #Error [/../Wikibase/Datatype/Utils.pm:?] Parameter 'key' must begin with 'L' and number after it.
+
+=head1 EXAMPLE5
+
+ use strict;
+ use warnings;
+
  use Wikibase::Datatype::Utils qw(check_property);
 
  my $self = {
@@ -147,7 +206,7 @@ Returns undef.
  # Output:
  # ok
 
-=head1 EXAMPLE4
+=head1 EXAMPLE6
 
  use strict;
  use warnings;

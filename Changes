@@ -1,4 +1,5 @@
 0.04
+ - Add check_lexeme() to Utils.
  - Add helper to Utils and rewrite to it.
  - Add link to Wikidata::Datatype::Struct in doc.
  - Fix SYNOPSIS section in doc of Utils.
