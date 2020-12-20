@@ -1,6 +1,7 @@
 0.04
  - Add helper to Utils and rewrite to it.
  - Add link to Wikidata::Datatype::Struct in doc.
+ - Fix SYNOPSIS section in doc of Utils.
  - Fix indentation in EXAMPLE in Item doc.
 
 0.03 2020-12-11T16:19:01+01:00

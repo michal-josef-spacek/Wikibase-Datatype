@@ -55,7 +55,7 @@ Wikibase::Datatype::Utils - Wikibase datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikibase::Datatype::Utils qw(check_entity);
+ use Wikibase::Datatype::Utils qw(check_entity check_property);
 
  check_entity($self, $key);
  check_property($self, $key);
