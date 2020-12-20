@@ -14,13 +14,7 @@ our $VERSION = 0.04;
 sub check_entity {
 	my ($self, $key) = @_;
 
-	if (! defined $self->{$key}) {
-		return;
-	}
-
-	if ($self->{$key} !~ m/^Q\d+$/ms) {
-		err "Parameter '$key' must begin with 'Q' and number after it.";
-	}
+	_check_item_with_char($self, $key, 'Q');
 
 	return;
 }
@@ -28,12 +22,20 @@ sub check_entity {
 sub check_property {
 	my ($self, $key) = @_;
 
+	_check_item_with_char($self, $key, 'P');
+
+	return;
+}
+
+sub _check_item_with_char {
+	my ($self, $key, $char) = @_;
+
 	if (! defined $self->{$key}) {
 		return;
 	}
 
-	if ($self->{$key} !~ m/^P\d+$/ms) {
-		err "Parameter '$key' must begin with 'P' and number after it.";
+	if ($self->{$key} !~ m/^$char\d+$/ms) {
+		err "Parameter '$key' must begin with '$char' and number after it.";
 	}
 
 	return;

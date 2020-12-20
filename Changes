@@ -1,4 +1,5 @@
 0.04
+ - Add helper to Utils and rewrite to it.
  - Add link to Wikidata::Datatype::Struct in doc.
  - Fix indentation in EXAMPLE in Item doc.
 
