@@ -1,4 +1,5 @@
 0.06
+ - Fix doc in Lexeme.
 
 0.05 2020-12-23T15:41:04+01:00
  - Improve doc for Lexeme.

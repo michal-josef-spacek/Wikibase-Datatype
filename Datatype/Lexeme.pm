@@ -213,7 +213,7 @@ Returns string.
 
 Get lemmas.
 
-Returns reference to array with Wikibase::Datatype::Monolingual instances.
+Returns reference to array with Wikibase::Datatype::Value::Monolingual instances.
 
 =head2 C<lexical_category>
 
