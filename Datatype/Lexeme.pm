@@ -130,6 +130,7 @@ Returns instance of object.
 =item * C<forms>
 
 Forms.
+Reference to array with Wikibase::Datatype::Form instances.
 Parameter is optional.
 
 =item * C<language>
@@ -145,6 +146,7 @@ Parameter is optional.
 =item * C<lemmas>
 
 Lemmas.
+Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
 =item * C<lexical_category>
@@ -165,6 +167,7 @@ Default value is 0.
 =item * C<senses>
 
 Senses.
+Reference to array with Wikibase::Datatype::Sense instances.
 Parameter is optional.
 
 =item * C<statements>
