@@ -129,6 +129,22 @@ Retruns instance of object.
 Type of data.
 Parameter is required.
 
+ Possible datatypes are (datavalue instance in parenthesis):
+ - commonsMedia (Wikibase::Datatype::Value::String)
+ - external-id (Wikibase::Datatype::Value::String)
+ - geo-shape (Wikibase::Datatype::Value::String)
+ - globe-coordinate (Wikibase::Datatype::Value::Globecoordinate)
+ - math (Wikibase::Datatype::Value::String)
+ - monolingualtext (Wikibase::Datatype::Value::Monolingual)
+ - musical-notation (Wikibase::Datatype::Value::String)
+ - quantity (Wikibase::Datatype::Value::Quantity)
+ - string (Wikibase::Datatype::Value::String)
+ - tabular-data (Wikibase::Datatype::Value::String)
+ - time (Wikibase::Datatype::Value::Time)
+ - url (Wikibase::Datatype::Value::String)
+ - wikibase-item (Wikibase::Datatype::Value::Item)
+ - wikibase-property (Wikibase::Datatype::Value::Property)
+
 =item * C<datavalue>
 
 Value of data.
