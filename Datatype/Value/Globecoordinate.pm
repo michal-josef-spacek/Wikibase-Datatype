@@ -50,10 +50,10 @@ sub BUILD {
 			"(latitude and longitude).";
 	}
 	my ($lat, $lon) = @{$self->{'value'}};
-	if ($lat !~ m/^\d+\.?\d*$/ms) {
+	if ($lat !~ m/^\-?\d+\.?\d*$/ms) {
 		err "Parameter 'value' has bad first parameter (latitude).";
 	}
-	if ($lon !~ m/^\d+\.?\d*$/ms) {
+	if ($lon !~ m/^\-?\d+\.?\d*$/ms) {
 		err "Parameter 'value' has bad first parameter (longitude).";
 	}
 

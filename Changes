@@ -1,5 +1,6 @@
 0.06
  - Fix doc in Lexeme.
+ - Fix negative coordinate.
  - Improve doc for Snak (added datatype values).
 
 0.05 2020-12-23T15:41:04+01:00
