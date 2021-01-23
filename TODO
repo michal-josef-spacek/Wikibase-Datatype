@@ -6,7 +6,9 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-44.
+44. Pridat MediaInfo
+https://commons.wikimedia.org/wiki/Special:EntityData/M72261258.json
+45.
 
 Applied
 =======
