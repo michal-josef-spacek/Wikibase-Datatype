@@ -66,8 +66,8 @@ sub BUILD {
 	check_number($self, 'page_id');
 
 	# Check statements.
-	check_array_object($self, 'statements', 'Wikibase::Datatype::Statement',
-		'Statement');
+	check_array_object($self, 'statements', 'Wikibase::Datatype::MediainfoStatement',
+		'MediainfoStatement');
 
 	return;
 }
@@ -155,7 +155,7 @@ Parameter is optional.
 =item * C<statements>
 
 Mediainfo statements.
-Reference to array with Wikibase::Datatype::Statement instances.
+Reference to array with Wikibase::Datatype::MediainfoStatement instances.
 Parameter is optional.
 
 =item * C<title>
@@ -227,7 +227,7 @@ Returns number.
 
 Get statements.
 
-Returns reference to array with Wikibase::Datatype::Statement instances.
+Returns reference to array with Wikibase::Datatype::MediainfoStatement instances.
 
 =head2 C<title>
 
@@ -246,7 +246,7 @@ Returns string.
                  Parameter 'descriptions' must be a array.
                  Parameter 'labels' must be a array.
                  Parameter 'statements' must be a array.
-                 Statement isn't 'Wikibase::Datatype::Statement' object.
+                 MediainfoStatement isn't 'Wikibase::Datatype::MediainfoStatement' object.
          From Mo::utils::check_page_id():
                  Parameter 'page_id' must a number.
          From Mo::utils::check_number_of_items():
@@ -261,19 +261,17 @@ Returns string.
 
  use Unicode::UTF8 qw(decode_utf8 encode_utf8);
  use Wikibase::Datatype::Mediainfo;
- use Wikibase::Datatype::Reference;
- use Wikibase::Datatype::Snak;
- use Wikibase::Datatype::Statement;
+ use Wikibase::Datatype::MediainfoSnak;
+ use Wikibase::Datatype::MediainfoStatement;
  use Wikibase::Datatype::Value::Item;
  use Wikibase::Datatype::Value::Monolingual;
  use Wikibase::Datatype::Value::String;
  use Wikibase::Datatype::Value::Time;
 
  # Object.
- my $statement1 = Wikibase::Datatype::Statement->new(
+ my $statement1 = Wikibase::Datatype::MediainfoStatement->new(
          # instance of (P31) human (Q5)
-         'snak' => Wikibase::Datatype::Snak->new(
-                 'datatype' => 'wikibase-item',
+         'snak' => Wikibase::Datatype::MediainfoSnak->new(
                  'datavalue' => Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q5',
                  ),
@@ -281,88 +279,22 @@ Returns string.
          ),
          'property_snaks' => [
                  # of (P642) alien (Q474741)
-                 Wikibase::Datatype::Snak->new(
-                         'datatype' => 'wikibase-item',
+                 Wikibase::Datatype::MediainfoSnak->new(
                          'datavalue' => Wikibase::Datatype::Value::Item->new(
                                  'value' => 'Q474741',
                          ),
                          'property' => 'P642',
                  ),
          ],
-         'references' => [
-                 Wikibase::Datatype::Reference->new(
-                         'snaks' => [
-                                 # stated in (P248) Virtual International Authority File (Q53919)
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'wikibase-item',
-                                         'datavalue' => Wikibase::Datatype::Value::Item->new(
-                                                 'value' => 'Q53919',
-                                         ),
-                                         'property' => 'P248',
-                                 ),
-
-                                 # VIAF ID (P214) 113230702
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'external-id',
-                                         'datavalue' => Wikibase::Datatype::Value::String->new(
-                                                 'value' => '113230702',
-                                         ),
-                                         'property' => 'P214',
-                                 ),
-
-                                 # retrieved (P813) 7 December 2013
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'time',
-                                         'datavalue' => Wikibase::Datatype::Value::Time->new(
-                                                 'value' => '+2013-12-07T00:00:00Z',
-                                         ),
-                                         'property' => 'P813',
-                                 ),
-                         ],
-                 ),
-         ],
  );
- my $statement2 = Wikibase::Datatype::Statement->new(
+ my $statement2 = Wikibase::Datatype::MediainfoStatement->new(
          # sex or gender (P21) male (Q6581097)
-         'snak' => Wikibase::Datatype::Snak->new(
-                 'datatype' => 'wikibase-item',
+         'snak' => Wikibase::Datatype::MediainfoSnak->new(
                  'datavalue' => Wikibase::Datatype::Value::Item->new(
                          'value' => 'Q6581097',
                  ),
                  'property' => 'P21',
          ),
-         'references' => [
-                 Wikibase::Datatype::Reference->new(
-                         'snaks' => [
-                                 # stated in (P248) Virtual International Authority File (Q53919)
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'wikibase-item',
-                                         'datavalue' => Wikibase::Datatype::Value::Item->new(
-                                                 'value' => 'Q53919',
-                                         ),
-                                         'property' => 'P248',
-                                 ),
-
-                                 # VIAF ID (P214) 113230702
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'external-id',
-                                         'datavalue' => Wikibase::Datatype::Value::String->new(
-                                                 'value' => '113230702',
-                                         ),
-                                         'property' => 'P214',
-                                 ),
-
-                                 # retrieved (P813) 7 December 2013
-                                 Wikibase::Datatype::Snak->new(
-                                         'datatype' => 'time',
-                                         'datavalue' => Wikibase::Datatype::Value::Time->new(
-                                                 'value' => '+2013-12-07T00:00:00Z',
-                                         ),
-                                         'property' => 'P813',
-                                 ),
-                         ],
-                 ),
-         ],
  );
 
  # Main mediainfo.
@@ -398,17 +330,11 @@ Returns string.
  foreach my $statement (@{$obj->statements}) {
          print "\tStatement:\n";
          print "\t\t".$statement->snak->property.' -> '.$statement->snak->datavalue->value."\n";
-         print "\t\tQualifers:\n";
-         foreach my $property_snak (@{$statement->property_snaks}) {
-                 print "\t\t\t".$property_snak->property.' -> '.
-                         $property_snak->datavalue->value."\n";
-         }
-         print "\t\tReferences:\n";
-         foreach my $reference (@{$statement->references}) {
-                 print "\t\t\tReference:\n";
-                 foreach my $reference_snak (@{$reference->snaks}) {
-                         print "\t\t\t".$reference_snak->property.' -> '.
-                                 $reference_snak->datavalue->value."\n";
+         if (@{$statement->property_snaks}) {
+                 print "\t\tQualifers:\n";
+                 foreach my $property_snak (@{$statement->property_snaks}) {
+                         print "\t\t\t".$property_snak->property.' -> '.
+                                 $property_snak->datavalue->value."\n";
                  }
          }
  }
@@ -426,19 +352,8 @@ Returns string.
  #                 P31 -> Q5
  #                 Qualifers:
  #                         P642 -> Q474741
- #                 References:
- #                         Reference:
- #                         P248 -> Q53919
- #                         P214 -> 113230702
- #                         P813 -> +2013-12-07T00:00:00Z
  #         Statement:
  #                 P21 -> Q6581097
- #                 Qualifers:
- #                 References:
- #                         Reference:
- #                         P248 -> Q53919
- #                         P214 -> 113230702
- #                         P813 -> +2013-12-07T00:00:00Z
 
 =head1 DEPENDENCIES
 

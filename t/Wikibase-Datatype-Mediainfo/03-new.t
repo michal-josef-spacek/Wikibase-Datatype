@@ -98,6 +98,6 @@ eval {
 		'statements' => ['foo'],
 	);
 };
-is($EVAL_ERROR, "Statement isn't 'Wikibase::Datatype::Statement' object.\n",
-	"Statement isn't 'Wikibase::Datatype::Statement' object.");
+is($EVAL_ERROR, "MediainfoStatement isn't 'Wikibase::Datatype::MediainfoStatement' object.\n",
+	"MediainfoStatement isn't 'Wikibase::Datatype::MediainfoStatement' object.");
 clean();
