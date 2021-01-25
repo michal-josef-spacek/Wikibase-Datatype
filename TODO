@@ -6,7 +6,8 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-45.
+45. Predelat priklad v dokumentaci Mediainfo na jeho realny obsah.
+46.
 
 Applied
 =======
