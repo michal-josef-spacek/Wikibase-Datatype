@@ -6,8 +6,6 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-44. Pridat MediaInfo
-https://commons.wikimedia.org/wiki/Special:EntityData/M72261258.json
 45.
 
 Applied
@@ -141,3 +139,7 @@ NONE [20201223] skim
 24. Do Snak pridat lexem.
 Tohle nepotrebuji.
 NONE [20201223] skim
+
+44. Pridat MediaInfo
+https://commons.wikimedia.org/wiki/Special:EntityData/M72261258.json
+OK [20210125] skim
