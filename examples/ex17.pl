@@ -3,14 +3,15 @@
 use strict;
 use warnings;
 
-use Wikibase::Datatype::Sense;
-use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Reference;
 use Wikibase::Datatype::Statement;
+use Wikibase::Datatype::Snak;
 use Wikibase::Datatype::Value::Item;
-use Wikibase::Datatype::Value::Monolingual;
+use Wikibase::Datatype::Value::String;
+use Wikibase::Datatype::Value::Time;
 
-# Statement.
-my $statement = Wikibase::Datatype::Statement->new(
+# Object.
+my $obj = Wikibase::Datatype::Statement->new(
         # instance of (P31) human (Q5)
         'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
@@ -19,44 +20,74 @@ my $statement = Wikibase::Datatype::Statement->new(
                  ),
                  'property' => 'P31',
         ),
-);
-
-# Object.
-my $obj = Wikibase::Datatype::Sense->new(
-        'glosses' => [
-                Wikibase::Datatype::Value::Monolingual->new(
-                         'language' => 'en',
-                         'value' => 'Glosse en',
-                ),
-                Wikibase::Datatype::Value::Monolingual->new(
-                         'language' => 'cs',
-                         'value' => 'Glosse cs',
+        'property_snaks' => [
+                # of (P642) alien (Q474741)
+                Wikibase::Datatype::Snak->new(
+                         'datatype' => 'wikibase-item',
+                         'datavalue' => Wikibase::Datatype::Value::Item->new(
+                                 'value' => 'Q474741',
+                         ),
+                         'property' => 'P642',
                 ),
         ],
-        'id' => 'ID',
-        'statements' => [
-                $statement,
+        'references' => [
+                 Wikibase::Datatype::Reference->new(
+                         'snaks' => [
+                                 # stated in (P248) Virtual International Authority File (Q53919)
+                                 Wikibase::Datatype::Snak->new(
+                                          'datatype' => 'wikibase-item',
+                                          'datavalue' => Wikibase::Datatype::Value::Item->new(
+                                                  'value' => 'Q53919',
+                                          ),
+                                          'property' => 'P248',
+                                 ),
+
+                                 # VIAF ID (P214) 113230702
+                                 Wikibase::Datatype::Snak->new(
+                                          'datatype' => 'external-id',
+                                          'datavalue' => Wikibase::Datatype::Value::String->new(
+                                                  'value' => '113230702',
+                                          ),
+                                          'property' => 'P214',
+                                 ),
+
+                                 # retrieved (P813) 7 December 2013
+                                 Wikibase::Datatype::Snak->new(
+                                          'datatype' => 'time',
+                                          'datavalue' => Wikibase::Datatype::Value::Time->new(
+                                                  'value' => '+2013-12-07T00:00:00Z',
+                                          ),
+                                          'property' => 'P813',
+                                 ),
+                         ],
+                 ),
         ],
 );
-
-# Get id.
-my $id = $obj->id;
-
-# Get glosses.
-my @glosses = map { $_->value.' ('.$_->language.')' } @{$obj->glosses};
-
-# Get statements.
-my $statements_count = @{$obj->statements};
 
 # Print out.
-print "Id: $id\n";
-print "Glosses:\n";
-map { print "\t$_\n"; } @glosses;
-print "Number of statements: $statements_count\n";
+print 'Claim: '.$obj->snak->property.' -> '.$obj->snak->datavalue->value."\n";
+print "Qualifiers:\n";
+foreach my $property_snak (@{$obj->property_snaks}) {
+        print "\t".$property_snak->property.' -> '.
+                $property_snak->datavalue->value."\n";
+}
+print "References:\n";
+foreach my $reference (@{$obj->references}) {
+        print "\tReference:\n";
+        foreach my $reference_snak (@{$reference->snaks}) {
+                print "\t\t".$reference_snak->property.' -> '.
+                        $reference_snak->datavalue->value."\n";
+        }
+}
+print 'Rank: '.$obj->rank."\n";
 
 # Output:
-# Id: ID
-# Glosses:
-#         Glosse en (en)
-#         Glosse cs (cs)
-# Number of statements: 1
+# Claim: P31 -> Q5
+# Qualifiers:
+#         P642 -> Q474741
+# References:
+#         Reference:
+#                 P248 -> Q53919
+#                 P214 -> 113230702
+#                 P813 -> +2013-12-07T00:00:00Z
+# Rank: normal

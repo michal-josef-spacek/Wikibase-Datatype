@@ -5,6 +5,7 @@ Datatype/Item.pm
 Datatype/Lexeme.pm
 Datatype/Mediainfo.pm
 Datatype/MediainfoSnak.pm
+Datatype/MediainfoStatement.pm
 Datatype/Reference.pm
 Datatype/Sense.pm
 Datatype/Sitelink.pm
@@ -37,6 +38,7 @@ examples/ex22.pl
 examples/ex23.pl
 examples/ex24.pl
 examples/ex25.pl
+examples/ex26.pl
 examples/ex3.pl
 examples/ex4.pl
 examples/ex5.pl
@@ -103,6 +105,12 @@ t/Wikibase-Datatype-MediainfoSnak/03-new.t
 t/Wikibase-Datatype-MediainfoSnak/04-datavalue.t
 t/Wikibase-Datatype-MediainfoSnak/05-property.t
 t/Wikibase-Datatype-MediainfoSnak/06-snaktype.t
+t/Wikibase-Datatype-MediainfoStatement/01-use.t
+t/Wikibase-Datatype-MediainfoStatement/02-version.t
+t/Wikibase-Datatype-MediainfoStatement/03-new.t
+t/Wikibase-Datatype-MediainfoStatement/04-property_snaks.t
+t/Wikibase-Datatype-MediainfoStatement/05-rank.t
+t/Wikibase-Datatype-MediainfoStatement/06-snak.t
 t/Wikibase-Datatype-Reference/01-use.t
 t/Wikibase-Datatype-Reference/02-version.t
 t/Wikibase-Datatype-Reference/03-new.t
@@ -204,6 +212,8 @@ xt/Wikibase-Datatype-Mediainfo/01-pod_coverage.t
 xt/Wikibase-Datatype-Mediainfo/02-pod.t
 xt/Wikibase-Datatype-MediainfoSnak/01-pod_coverage.t
 xt/Wikibase-Datatype-MediainfoSnak/02-pod.t
+xt/Wikibase-Datatype-MediainfoStatement/01-pod_coverage.t
+xt/Wikibase-Datatype-MediainfoStatement/02-pod.t
 xt/Wikibase-Datatype-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Reference/02-pod.t
 xt/Wikibase-Datatype-Sense/01-pod_coverage.t
