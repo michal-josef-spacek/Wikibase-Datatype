@@ -7,7 +7,9 @@ TODO
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
 45. Predelat priklad v dokumentaci Mediainfo na jeho realny obsah.
-46.
+46. Proverit dokumentaci snak, ze jsou povinnosti hodnot spravne. Kdyz je tam if
+    v checku, tak to je potreba upravit.
+47.
 
 Applied
 =======
