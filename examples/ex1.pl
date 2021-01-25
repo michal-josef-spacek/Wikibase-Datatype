@@ -6,7 +6,6 @@ use warnings;
 use Unicode::UTF8 qw(decode_utf8 encode_utf8);
 use Wikibase::Datatype::Mediainfo;
 use Wikibase::Datatype::Reference;
-use Wikibase::Datatype::Sitelink;
 use Wikibase::Datatype::Snak;
 use Wikibase::Datatype::Statement;
 use Wikibase::Datatype::Value::Item;
