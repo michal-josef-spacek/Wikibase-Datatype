@@ -33,6 +33,18 @@ Wikibase form datatype.
 
 Wikibase item datatype.
 
+=item L<Wikibase::Datatype::Lexeme>
+
+Wikibase lexeme datatype.
+
+=item L<Wikibase::Datatype::Mediainfo>
+
+Wikibase mediainfo datatype.
+
+=item L<Wikibase::Datatype::MediainfoSnak>
+
+Wikibase mediainfo snak datatype.
+
 =item L<Wikibase::Datatype::Reference>
 
 Wikibase reference datatype.

@@ -11,6 +11,15 @@ SEE ALSO
     Wikibase::Datatype::Item
         Wikibase item datatype.
 
+    Wikibase::Datatype::Lexeme
+        Wikibase lexeme datatype.
+
+    Wikibase::Datatype::Mediainfo
+        Wikibase mediainfo datatype.
+
+    Wikibase::Datatype::MediainfoSnak
+        Wikibase mediainfo snak datatype.
+
     Wikibase::Datatype::Reference
         Wikibase reference datatype.
 
