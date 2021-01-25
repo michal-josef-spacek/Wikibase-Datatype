@@ -1,5 +1,7 @@
 0.07
  - Add Mediainfo datatype.
+ - Add MediainfoSnak datatype. There is difference between normal Snak in
+   requirements of datatype.
  - Update copyright years.
 
 0.06 2021-01-14T18:43:21+01:00
