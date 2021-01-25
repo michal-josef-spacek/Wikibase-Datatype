@@ -3,6 +3,7 @@
  - Add MediainfoSnak datatype. There is difference between normal Snak in
    requirements of datatype.
  - Fix tests for Snak (there isn't datavalue for somevalue and novalue).
+ - Improve doc example for Snak by adding of snaktype.
  - Update copyright years.
 
 0.06 2021-01-14T18:43:21+01:00

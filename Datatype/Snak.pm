@@ -236,15 +236,20 @@ Returns string.
  # Get property.
  my $property = $obj->property;
 
+ # Get snak type.
+ my $snaktype = $obj->snaktype;
+
  # Print out.
  print "Property: $property\n";
  print "Type: $datatype\n";
  print "Value: $datavalue\n";
+ print "Snak type: $snaktype\n";
 
  # Output:
  # Property: P31
  # Type: wikibase-item
  # Value: Q5
+ # Snak type: value
 
 =head1 DEPENDENCIES
 
