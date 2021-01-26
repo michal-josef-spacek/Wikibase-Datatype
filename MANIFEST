@@ -137,10 +137,11 @@ t/Wikibase-Datatype-Snak/07-snaktype.t
 t/Wikibase-Datatype-Statement/01-use.t
 t/Wikibase-Datatype-Statement/02-version.t
 t/Wikibase-Datatype-Statement/03-new.t
-t/Wikibase-Datatype-Statement/04-property_snaks.t
-t/Wikibase-Datatype-Statement/05-rank.t
-t/Wikibase-Datatype-Statement/06-references.t
-t/Wikibase-Datatype-Statement/07-snak.t
+t/Wikibase-Datatype-Statement/04-id.t
+t/Wikibase-Datatype-Statement/05-property_snaks.t
+t/Wikibase-Datatype-Statement/06-rank.t
+t/Wikibase-Datatype-Statement/07-references.t
+t/Wikibase-Datatype-Statement/08-snak.t
 t/Wikibase-Datatype-Utils/01-use.t
 t/Wikibase-Datatype-Utils/02-version.t
 t/Wikibase-Datatype-Utils/03-check_entity.t

@@ -12,6 +12,8 @@ use Wikibase::Datatype::Value::Time;
 
 # Object.
 my $obj = Wikibase::Datatype::Statement->new(
+        'id' => 'Q123$00C04D2A-49AF-40C2-9930-C551916887E8',
+
         # instance of (P31) human (Q5)
         'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
@@ -65,6 +67,7 @@ my $obj = Wikibase::Datatype::Statement->new(
 );
 
 # Print out.
+print 'Id: '.$obj->id."\n";
 print 'Claim: '.$obj->snak->property.' -> '.$obj->snak->datavalue->value."\n";
 print "Qualifiers:\n";
 foreach my $property_snak (@{$obj->property_snaks}) {
@@ -82,6 +85,7 @@ foreach my $reference (@{$obj->references}) {
 print 'Rank: '.$obj->rank."\n";
 
 # Output:
+# Id: Q123$00C04D2A-49AF-40C2-9930-C551916887E8
 # Claim: P31 -> Q5
 # Qualifiers:
 #         P642 -> Q474741
