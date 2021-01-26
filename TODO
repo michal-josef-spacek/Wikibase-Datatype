@@ -6,7 +6,6 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-45. Predelat priklad v dokumentaci Mediainfo na jeho realny obsah.
 46. Proverit dokumentaci snak, ze jsou povinnosti hodnot spravne. Kdyz je tam if
     v checku, tak to je potreba upravit.
 48.
@@ -148,4 +147,7 @@ https://commons.wikimedia.org/wiki/Special:EntityData/M72261258.json
 OK [20210125] skim
 
 47. Predelat priklad v MediainfoStatement
+OK [20210126] skim
+
+45. Predelat priklad v dokumentaci Mediainfo na jeho realny obsah.
 OK [20210126] skim
