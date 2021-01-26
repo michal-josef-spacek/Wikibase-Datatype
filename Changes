@@ -1,4 +1,4 @@
-0.07
+0.07 2021-01-26T13:28:48+01:00
  - Add Mediainfo datatype.
  - Add MediainfoSnak datatype. There is difference between normal Snak in
    requirements of datatype.
