@@ -108,9 +108,10 @@ t/Wikibase-Datatype-MediainfoSnak/06-snaktype.t
 t/Wikibase-Datatype-MediainfoStatement/01-use.t
 t/Wikibase-Datatype-MediainfoStatement/02-version.t
 t/Wikibase-Datatype-MediainfoStatement/03-new.t
-t/Wikibase-Datatype-MediainfoStatement/04-property_snaks.t
-t/Wikibase-Datatype-MediainfoStatement/05-rank.t
-t/Wikibase-Datatype-MediainfoStatement/06-snak.t
+t/Wikibase-Datatype-MediainfoStatement/04-id.t
+t/Wikibase-Datatype-MediainfoStatement/05-property_snaks.t
+t/Wikibase-Datatype-MediainfoStatement/06-rank.t
+t/Wikibase-Datatype-MediainfoStatement/07-snak.t
 t/Wikibase-Datatype-Reference/01-use.t
 t/Wikibase-Datatype-Reference/02-version.t
 t/Wikibase-Datatype-Reference/03-new.t
