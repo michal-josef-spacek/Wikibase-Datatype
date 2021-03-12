@@ -1,4 +1,5 @@
 0.09
+ - Fix doc for Snak 'datavalue' parameter.
 
 0.08 2021-01-26T21:24:31+01:00
  - Rewrite example in doc for Mediainfo to some real.

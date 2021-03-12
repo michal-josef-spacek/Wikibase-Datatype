@@ -148,7 +148,7 @@ Parameter is required.
 =item * C<datavalue>
 
 Value of data.
-Parameter is required.
+Parameter is required in situation when snaktype = 'value'.
 
 =item * C<property>
 
