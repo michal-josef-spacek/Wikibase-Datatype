@@ -29,6 +29,7 @@ requires:
   Class::Utils: 0.03
   Error::Pure: 0.15
   Exporter: 0
+  ISO::639::3: 0
   List::MoreUtils: 0
   Mo: 0
   Mo::utils: 0.03

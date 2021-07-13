@@ -1,4 +1,5 @@
 0.09
+ - Add check_language() helper for check ISO 639-1 language code.
  - Fix doc for Snak 'datavalue' parameter.
  - Fix sentences in doc of Wikibase::Datatype::Utils.
 
