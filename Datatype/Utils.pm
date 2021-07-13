@@ -79,7 +79,7 @@ Datatype utilities for checking of data objects.
 
  check_entity($self, $key);
 
-Check parameter defined by C<$key> whith is entity (/^Q\d+/).
+Check parameter defined by C<$key> if it's entity (/^Q\d+/).
 
 Returns undef.
 
@@ -87,7 +87,7 @@ Returns undef.
 
  check_lexeme($self, $key);
 
-Check parameter defined by C<$key> whith is entity (/^L\d+/).
+Check parameter defined by C<$key> if it's entity (/^L\d+/).
 
 Returns undef.
 
@@ -95,7 +95,7 @@ Returns undef.
 
  check_property($self, $key);
 
-Check parameter defined by C<$key> whith is property (/^P\d+/).
+Check parameter defined by C<$key> if it's property (/^P\d+/).
 
 Returns undef.
 
