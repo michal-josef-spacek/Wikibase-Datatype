@@ -1,3 +1,5 @@
+0.10
+
 0.09 2021-07-13T14:06:21+02:00
  - Add check_language() helper for check ISO 639-1 language code.
  - Add check for ISO 639-1 language code to
