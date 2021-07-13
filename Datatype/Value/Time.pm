@@ -3,7 +3,6 @@ package Wikibase::Datatype::Value::Time;
 use strict;
 use warnings;
 
-use Error::Pure qw(err);
 use Mo qw(build default is);
 use Wikibase::Datatype::Utils qw(check_entity);
 

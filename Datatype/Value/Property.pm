@@ -3,7 +3,6 @@ package Wikibase::Datatype::Value::Property;
 use strict;
 use warnings;
 
-use Error::Pure qw(err);
 use Mo qw(build);
 use Wikibase::Datatype::Utils qw(check_property);
 

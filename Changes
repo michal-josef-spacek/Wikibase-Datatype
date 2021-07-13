@@ -2,6 +2,7 @@
  - Add check_language() helper for check ISO 639-1 language code.
  - Fix doc for Snak 'datavalue' parameter.
  - Fix sentences in doc of Wikibase::Datatype::Utils.
+ - Fix usage of Error::Pure::err in Value/* classes.
 
 0.08 2021-01-26T21:24:31+01:00
  - Rewrite example in doc for Mediainfo to some real.
