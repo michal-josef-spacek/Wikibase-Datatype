@@ -1,5 +1,6 @@
 0.10
  - Add test for Wikibase::Datatype::Value::Monolingual with utf8 text.
+ - Improve doc for Snak.
 
 0.09 2021-07-13T14:06:21+02:00
  - Add check_language() helper for check ISO 639-1 language code.

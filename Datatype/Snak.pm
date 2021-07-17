@@ -147,7 +147,7 @@ Parameter is required.
 
 =item * C<datavalue>
 
-Value of data.
+Value of data in form of Wikibase::Datatype::Value instance for concrete datatype.
 Parameter is required in situation when snaktype = 'value'.
 
 =item * C<property>
