@@ -7,7 +7,8 @@ TODO
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
 48. Testy pro Lexem
-49.
+49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
+50.
 
 Applied
 =======
