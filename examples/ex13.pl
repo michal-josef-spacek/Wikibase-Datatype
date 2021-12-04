@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 
+use Unicode::UTF8 qw(decode_utf8 encode_utf8);
 use Wikibase::Datatype::Item;
 use Wikibase::Datatype::Reference;
 use Wikibase::Datatype::Sitelink;
@@ -114,7 +115,7 @@ my $obj = Wikibase::Datatype::Item->new(
         'aliases' => [
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
-                        'value' => 'Douglas Noël Adams',
+                        'value' => decode_utf8('Douglas Noël Adams'),
                 ),
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
@@ -130,7 +131,7 @@ my $obj = Wikibase::Datatype::Item->new(
                 ),
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
-                        'value' => 'Douglas Noël Adams',
+                        'value' => decode_utf8('Douglas Noël Adams'),
                 ),
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
@@ -140,7 +141,7 @@ my $obj = Wikibase::Datatype::Item->new(
         'descriptions' => [
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
-                        'value' => 'anglický spisovatel, humorista a dramatik',
+                        'value' => decode_utf8('anglický spisovatel, humorista a dramatik'),
                 ),
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'en',
@@ -182,15 +183,15 @@ print 'Id: '.$obj->id."\n";
 print 'Page id: '.$obj->page_id."\n";
 print "Labels:\n";
 foreach my $label (sort { $a->language cmp $b->language } @{$obj->labels}) {
-        print "\t".$label->value.' ('.$label->language.")\n";
+        print "\t".encode_utf8($label->value).' ('.$label->language.")\n";
 }
 print "Descriptions:\n";
 foreach my $desc (sort { $a->language cmp $b->language } @{$obj->descriptions}) {
-        print "\t".$desc->value.' ('.$desc->language.")\n";
+        print "\t".encode_utf8($desc->value).' ('.$desc->language.")\n";
 }
 print "Aliases:\n";
 foreach my $alias (sort { $a->language cmp $b->language } @{$obj->aliases}) {
-        print "\t".$alias->value.' ('.$alias->language.")\n";
+        print "\t".encode_utf8($alias->value).' ('.$alias->language.")\n";
 }
 print "Sitelinks:\n";
 foreach my $sitelink (@{$obj->sitelinks}) {
