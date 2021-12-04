@@ -8,7 +8,6 @@ TODO
     in Item object.
 48. Testy pro Lexem
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
-51. Prepsat check_language() na neco jineho (ISO::639::3 vola primo use utf8, takze to pak cele nefuguje)
 52.
 
 Applied
@@ -158,4 +157,7 @@ OK [20210126] skim
 OK [20210717] skim
 
 50. Priklad pro Form predelat podobne jako 49)
+OK [20211204] skim
+
+51. Prepsat check_language() na neco jineho (ISO::639::3 vola primo use utf8, takze to pak cele nefuguje)
 OK [20211204] skim

@@ -5,7 +5,8 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use ISO::639::3 qw(convert_iso639);
+use List::Util qw(none);
+use Locale::Language;
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(check_entity check_language check_lexeme check_property);
@@ -23,12 +24,8 @@ sub check_entity {
 sub check_language {
 	my ($self, $key) = @_;
 
-	if (convert_iso639('iso639-1', $self->{$key}) ne $self->{$key}) {
+	if (none { $_ eq $self->{$key} } all_language_codes()) {
 		err "Language code '".$self->{$key}."' isn't ISO 639-1 code.";
-	}
-
-	if (convert_iso639('name', $self->{$key}) eq 'unknown') {
-		err "Language with ISO 639-1 code '".$self->{$key}."' doesn't exist.";
 	}
 
 	return;
@@ -259,7 +256,8 @@ Returns undef.
 
 L<Exporter>,
 L<Error::Pure>,
-L<ISO::639::3>,
+L<List::Util>,
+L<Locale::Language>,
 L<Readonly>.
 
 =head1 SEE ALSO
