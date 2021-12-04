@@ -3,21 +3,36 @@
 use strict;
 use warnings;
 
+use Unicode::UTF8 qw(decode_utf8);
 use Wikibase::Datatype::Sense;
 use Wikibase::Datatype::Snak;
 use Wikibase::Datatype::Statement;
 use Wikibase::Datatype::Value::Item;
 use Wikibase::Datatype::Value::Monolingual;
+use Wikibase::Datatype::Value::String;
 
-# Statement.
-my $statement = Wikibase::Datatype::Statement->new(
-        # instance of (P31) human (Q5)
+# One sense for Czech noun 'pes'.
+# https://www.wikidata.org/wiki/Lexeme:L469
+
+# Statements.
+my $statement_item = Wikibase::Datatype::Statement->new(
+        # item for this sense (P5137) dog (Q144)
         'snak' => Wikibase::Datatype::Snak->new(
                  'datatype' => 'wikibase-item',
                  'datavalue' => Wikibase::Datatype::Value::Item->new(
-                         'value' => 'Q5',
+                         'value' => 'Q144',
                  ),
-                 'property' => 'P31',
+                 'property' => 'P5137',
+        ),
+);
+my $statement_image = Wikibase::Datatype::Statement->new(
+        # image (P5137) 'Canadian Inuit Dog.jpg'
+        'snak' => Wikibase::Datatype::Snak->new(
+                 'datatype' => 'commonsMedia',
+                 'datavalue' => Wikibase::Datatype::Value::String->new(
+                         'value' => 'Canadian Inuit Dog.jpg',
+                 ),
+                 'property' => 'P18',
         ),
 );
 
@@ -26,16 +41,17 @@ my $obj = Wikibase::Datatype::Sense->new(
         'glosses' => [
                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'en',
-                         'value' => 'Glosse en',
+                         'value' => 'domesticated mammal related to the wolf',
                 ),
                 Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
-                         'value' => 'Glosse cs',
+                         'value' => decode_utf8('psovitá šelma chovaná jako domácí zvíře'),
                 ),
         ],
         'id' => 'ID',
         'statements' => [
-                $statement,
+                $statement_item,
+                $statement_image,
         ],
 );
 
@@ -57,6 +73,6 @@ print "Number of statements: $statements_count\n";
 # Output:
 # Id: ID
 # Glosses:
-#         Glosse en (en)
-#         Glosse cs (cs)
-# Number of statements: 1
+#         domesticated mammal related to the wolf (en)
+#         psovitá šelma chovaná jako domácí zvíře (cs)
+# Number of statements: 2
