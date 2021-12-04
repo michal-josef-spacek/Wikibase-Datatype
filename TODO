@@ -6,7 +6,8 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-48.
+48. Testy pro Lexem
+49.
 
 Applied
 =======
