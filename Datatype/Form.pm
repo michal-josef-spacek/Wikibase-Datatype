@@ -152,41 +152,41 @@ Returns reference to array of Wikibase::Datatype::Statemnet items.
  use strict;
  use warnings;
 
+ use Unicode::UTF8 qw(decode_utf8);
  use Wikibase::Datatype::Form;
  use Wikibase::Datatype::Snak;
  use Wikibase::Datatype::Statement;
  use Wikibase::Datatype::Value::Item;
+ use Wikibase::Datatype::Value::String;
  use Wikibase::Datatype::Value::Monolingual;
 
  # Object.
  my $obj = Wikibase::Datatype::Form->new(
          'grammatical_features' => [
+                 # singular
                  Wikibase::Datatype::Value::Item->new(
-                         'value' => 'Q123',
+                         'value' => 'Q110786',
                  ),
+                 # nominative case
                  Wikibase::Datatype::Value::Item->new(
-                         'value' => 'Q321',
+                         'value' => 'Q131105',
                  ),
          ],
-         'id' => 'identifier',
+         'id' => 'L469-F1',
          'representations' => [
                  Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
-                         'value' => 'Text',
-                 ),
-                 Wikibase::Datatype::Value::Monolingual->new(
-                         'language' => 'en',
-                         'value' => 'Text',
+                         'value' => 'pes',
                  ),
          ],
          'statements' => [
                  Wikibase::Datatype::Statement->new(
                          'snak' => Wikibase::Datatype::Snak->new(
-                                 'datatype' => 'wikibase-item',
-                                 'datavalue' => Wikibase::Datatype::Value::Item->new(
-                                        'value' => 'Q1',
+                                 'datatype' => 'string',
+                                 'datavalue' => Wikibase::Datatype::Value::String->new(
+                                        'value' => decode_utf8('pɛs'),
                                  ),
-                                 'property' => 'P1',
+                                 'property' => 'P898',
                          ),
                  ),
          ],
@@ -207,9 +207,9 @@ Returns reference to array of Wikibase::Datatype::Statemnet items.
  print "Number of statements: $st_count\n";
 
  # Output:
- # Id: identifier
+ # Id: L469-F1
  # Number of grammatical features: 2
- # Number of representations: 2
+ # Number of representations: 1
  # Number of statements: 1
 
 =head1 DEPENDENCIES

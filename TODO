@@ -8,7 +8,6 @@ TODO
     in Item object.
 48. Testy pro Lexem
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
-50. Priklad pro Form predelat podobne jako 49)
 51.
 
 Applied
@@ -156,3 +155,6 @@ OK [20210126] skim
 46. Proverit dokumentaci snak, ze jsou povinnosti hodnot spravne. Kdyz je tam if
     v checku, tak to je potreba upravit.
 OK [20210717] skim
+
+50. Priklad pro Form predelat podobne jako 49)
+OK [20211204] skim
