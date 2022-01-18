@@ -31,7 +31,10 @@ sub type {
 sub BUILD {
 	my $self = shift;
 
-	if (defined $self->{'unit'}) {
+	if (! defined $self->{'unit'}) {
+		$self->{'unit'} = 1;
+	}
+	if ($self->{'unit'} !~ m/^1$/ms) {
 		check_entity($self, 'unit');
 	}
 
@@ -103,8 +106,7 @@ Default value is 0.
 =item * C<unit>
 
 Unit of instance.
-Parameter is optional.
-Default value is undef - without unit.
+Default value is 1 (without unit).
 
 =item * C<upper_bound>
 
