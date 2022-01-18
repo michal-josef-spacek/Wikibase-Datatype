@@ -153,6 +153,11 @@ t/Wikibase-Datatype-Item/14-title.t
 t/Wikibase-Datatype-Lexeme/01-use.t
 t/Wikibase-Datatype-Lexeme/02-version.t
 t/Wikibase-Datatype-Lexeme/03-new.t
+t/Wikibase-Datatype-Lexeme/04-forms.t
+t/Wikibase-Datatype-Lexeme/05-language.t
+t/Wikibase-Datatype-Lexeme/06-lastrevid.t
+t/Wikibase-Datatype-Lexeme/07-lemmas.t
+t/Wikibase-Datatype-Lexeme/08-lexical_category.t
 t/Wikibase-Datatype-Mediainfo/01-use.t
 t/Wikibase-Datatype-Mediainfo/02-version.t
 t/Wikibase-Datatype-Mediainfo/03-new.t
