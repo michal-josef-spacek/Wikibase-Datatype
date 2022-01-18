@@ -16,7 +16,7 @@ author_requires 'Test::Pod::Coverage' => 0;
 license 'bsd';
 name 'Wikibase-Datatype';
 perl_version 5.006002;
-readme_from 'Datatype.pm';
+readme_from 'lib/Datatype.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0.03;
 requires 'Error::Pure' => 0.15;
