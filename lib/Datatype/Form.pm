@@ -134,7 +134,7 @@ Returns reference to array with Wikibase::Datatype::Value::Monolingual items.
 
 Get statements.
 
-Returns reference to array of Wikibase::Datatype::Statemnet items.
+Returns reference to array of Wikibase::Datatype::Statement items.
 
 =head1 ERRORS
 
