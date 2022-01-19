@@ -31,10 +31,7 @@ sub type {
 sub BUILD {
 	my $self = shift;
 
-	if (! defined $self->{'unit'}) {
-		$self->{'unit'} = 1;
-	}
-	if ($self->{'unit'} !~ m/^1$/ms) {
+	if (defined $self->{'unit'}) {
 		check_entity($self, 'unit');
 	}
 

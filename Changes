@@ -1,7 +1,6 @@
 0.11
  - Add test instances.
  - Fix check_language().
- - Fix default value for unit in Quantity.
  - Fix Unicode conversions in Item doc example.
  - Improve example in Form documentation.
  - Improve example in Sense documentation.

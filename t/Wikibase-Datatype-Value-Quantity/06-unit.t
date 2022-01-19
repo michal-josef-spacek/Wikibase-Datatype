@@ -10,7 +10,7 @@ my $obj = Wikibase::Datatype::Value::Quantity->new(
 	'value' => '10',
 );
 my $ret = $obj->unit;
-is($ret, 1, 'Get default unit().');
+is($ret, undef, 'Get default unit().');
 
 # Test.
 $obj = Wikibase::Datatype::Value::Quantity->new(
