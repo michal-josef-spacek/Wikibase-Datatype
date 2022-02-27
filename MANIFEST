@@ -54,7 +54,6 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/ReferenceURL/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/Retrieved/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/StatedIn/VIAF.pm
-lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/Image/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/ItemForThisSense/Dog.pm
@@ -114,8 +113,6 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/02-version.t
-t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Fixture1/01-use.t
-t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Fixture1/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-use.t
@@ -303,8 +300,6 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/01-pod_c
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/02-pod.t
-xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Fixture1/01-pod_coverage.t
-xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Fixture1/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-pod_coverage.t
