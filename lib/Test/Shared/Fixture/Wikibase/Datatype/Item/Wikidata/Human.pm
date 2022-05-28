@@ -7,6 +7,8 @@ use warnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human;
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male;
 
+our $VERSION = 0.12;
+
 sub new {
 	my $class = shift;
 
