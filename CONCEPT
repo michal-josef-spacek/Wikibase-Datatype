@@ -1,12 +1,6 @@
 CONCEPT
 =======
-Objects for Wikibase:
-- item
-- string
-- monolingualtext
-- wikibase-entityid
-- url
-- time
+Objects for Wikibase.
 
 https://www.mediawiki.org/wiki/Wikibase/DataModel
 https://www.wikidata.org/wiki/Help:Data_type
