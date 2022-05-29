@@ -51,6 +51,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Property/Wikidata/InstanceOf.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/ReferenceURL.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Sense/Wikidata/Dog.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/GivenName/Douglas.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/Image/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/InstanceOf/VersionEditionOrTranslation.pm
@@ -61,6 +62,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/ReferenceURL/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/Retrieved/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/StatedIn/VIAF.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/GivenName/Douglas.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/Image/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/VersionEditionOrTranslation.pm
@@ -68,6 +70,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/Wikidata
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/ItemForThisSense/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Dog.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Douglas.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Poem.pm
@@ -116,6 +119,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Sense-Wikidata-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Sense-Wikidata-Dog/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-GivenName-Douglas/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-GivenName-Douglas/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Image-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Image-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/01-use.t
@@ -136,6 +141,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-use.t
@@ -150,6 +157,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/01-u
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Male/01-use.t
@@ -325,6 +334,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/01-pod_
 xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Sense-Wikidata-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Sense-Wikidata-Dog/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-GivenName-Douglas/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-GivenName-Douglas/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Image-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Image-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/01-pod_coverage.t
@@ -345,6 +356,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/01-pod_c
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-pod_coverage.t
@@ -359,6 +372,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/01-
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Male/01-pod_coverage.t
