@@ -1,4 +1,4 @@
-0.12
+0.12 2022-05-29T20:11:07+02:00
  - Add Property datatype.
  - Add test instance for Property.
  - Fix minimal version of List::Util with none().
