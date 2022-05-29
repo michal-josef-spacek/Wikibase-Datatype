@@ -77,6 +77,7 @@ lib/Wikibase/Datatype/Lexeme.pm
 lib/Wikibase/Datatype/Mediainfo.pm
 lib/Wikibase/Datatype/MediainfoSnak.pm
 lib/Wikibase/Datatype/MediainfoStatement.pm
+lib/Wikibase/Datatype/Property.pm
 lib/Wikibase/Datatype/Reference.pm
 lib/Wikibase/Datatype/Sense.pm
 lib/Wikibase/Datatype/Sitelink.pm
@@ -203,6 +204,8 @@ t/Wikibase-Datatype-MediainfoStatement/04-id.t
 t/Wikibase-Datatype-MediainfoStatement/05-property_snaks.t
 t/Wikibase-Datatype-MediainfoStatement/06-rank.t
 t/Wikibase-Datatype-MediainfoStatement/07-snak.t
+t/Wikibase-Datatype-Property/01-use.t
+t/Wikibase-Datatype-Property/02-version.t
 t/Wikibase-Datatype-Reference/01-use.t
 t/Wikibase-Datatype-Reference/02-version.t
 t/Wikibase-Datatype-Reference/03-new.t
@@ -360,6 +363,8 @@ xt/Wikibase-Datatype-MediainfoSnak/01-pod_coverage.t
 xt/Wikibase-Datatype-MediainfoSnak/02-pod.t
 xt/Wikibase-Datatype-MediainfoStatement/01-pod_coverage.t
 xt/Wikibase-Datatype-MediainfoStatement/02-pod.t
+xt/Wikibase-Datatype-Property/01-pod_coverage.t
+xt/Wikibase-Datatype-Property/02-pod.t
 xt/Wikibase-Datatype-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Reference/02-pod.t
 xt/Wikibase-Datatype-Sense/01-pod_coverage.t

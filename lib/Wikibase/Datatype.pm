@@ -45,6 +45,10 @@ Wikibase mediainfo datatype.
 
 Wikibase mediainfo snak datatype.
 
+=item L<Wikibase::Datatype::Property>
+
+Wikibase property datatype.
+
 =item L<Wikibase::Datatype::Reference>
 
 Wikibase reference datatype.
