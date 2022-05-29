@@ -47,12 +47,14 @@ inc/Module/Install/WriteAll.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Form/Wikidata/DogCzechSingular.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Lexeme/Wikidata/DogCzechNoun.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Property/Wikidata/InstanceOf.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/ReferenceURL.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Sense/Wikidata/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/Image/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/InstanceOf/VersionEditionOrTranslation.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/InstanceOf/WikidataProperty.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/ItemForThisSense/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/Of/Poem.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/ReferenceURL/Fixture1.pm
@@ -62,6 +64,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/StatedIn/VIAF.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/Image/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/VersionEditionOrTranslation.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/WikidataProperty.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/ItemForThisSense/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Dog.pm
@@ -70,6 +73,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Poem.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/VersionEditionOrTranslation.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/VIAF.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/WikidataEntity.pm
 lib/Wikibase/Datatype.pm
 lib/Wikibase/Datatype/Form.pm
 lib/Wikibase/Datatype/Item.pm
@@ -104,6 +108,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-Fixture1/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-Fixture1/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/01-use.t
@@ -116,6 +122,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-ItemForThisSense-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-ItemForThisSense-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Of-Poem/01-use.t
@@ -134,6 +142,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-u
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-WikidataProperty/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-WikidataProperty/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-ItemForThisSense-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-ItemForThisSense-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/01-use.t
@@ -150,6 +160,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VersionEditionOrTran
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VersionEditionOrTranslation/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VIAF/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VIAF/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-WikidataEntity/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-WikidataEntity/02-version.t
 t/Wikibase-Datatype-Form/01-use.t
 t/Wikibase-Datatype-Form/02-version.t
 t/Wikibase-Datatype-Form/03-new.t
@@ -305,6 +317,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-Fixture1/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-Fixture1/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-ReferenceURL/01-pod_coverage.t
@@ -317,6 +331,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/01-pod_c
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-ItemForThisSense-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-ItemForThisSense-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Of-Poem/01-pod_coverage.t
@@ -335,6 +351,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-WikidataProperty/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-WikidataProperty/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-ItemForThisSense-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-ItemForThisSense-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-SexOrGender-Male/01-pod_coverage.t
@@ -351,6 +369,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VersionEditionOrTra
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VersionEditionOrTranslation/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VIAF/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-VIAF/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-WikidataEntity/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-WikidataEntity/02-pod.t
 xt/Wikibase-Datatype-Form/01-pod_coverage.t
 xt/Wikibase-Datatype-Form/02-pod.t
 xt/Wikibase-Datatype-Item/01-pod_coverage.t

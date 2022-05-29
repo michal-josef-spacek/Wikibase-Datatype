@@ -1,5 +1,6 @@
 0.12
  - Add Property datatype.
+ - Add test instance for Property.
  - Fix minimal version of List::Util with none().
  - Fix versions in test instances.
 
