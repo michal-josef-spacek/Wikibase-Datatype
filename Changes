@@ -1,4 +1,5 @@
 0.12
+ - Fix minimal version of List::Util with none().
  - Fix versions in test instances.
 
 0.11 2022-05-28T15:13:50+02:00
