@@ -1,4 +1,5 @@
 0.13
+ - Add tests for fixtures.
  - Add tests for Property.
  - Fix ns default value in doc of Property.
  - Fix place of error test in constructor in Item.
