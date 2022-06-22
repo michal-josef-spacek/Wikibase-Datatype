@@ -11,7 +11,8 @@ TODO
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
 54. Finish test item for Human.
-56.
+56. Add constructor tests for fixtures.
+57.
 
 Applied
 =======
