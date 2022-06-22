@@ -11,7 +11,6 @@ TODO
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
 54. Finish test item for Human.
-55. Add tests for Property
 56.
 
 Applied
@@ -165,3 +164,6 @@ OK [20211204] skim
 
 51. Prepsat check_language() na neco jineho (ISO::639::3 vola primo use utf8, takze to pak cele nefuguje)
 OK [20211204] skim
+
+55. Add tests for Property
+OK [20220622] skim
