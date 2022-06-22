@@ -1,4 +1,5 @@
 0.13
+ - Fix ns default value in doc of Property.
 
 0.12 2022-05-29T20:11:07+02:00
  - Add Property datatype.

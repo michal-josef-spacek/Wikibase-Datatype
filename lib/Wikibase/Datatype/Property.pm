@@ -213,7 +213,7 @@ Parameter is optional.
 =item * C<ns>
 
 Namespace.
-Default value is 0.
+Default value is 120.
 
 =item * C<page_id>
 
