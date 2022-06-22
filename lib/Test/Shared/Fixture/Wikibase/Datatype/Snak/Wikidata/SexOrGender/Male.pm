@@ -6,7 +6,7 @@ use warnings;
 
 use Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::Male;
 
-our $VERSION = 0.13;
+our $VERSION = 0.14;
 
 sub new {
 	my $class = shift;

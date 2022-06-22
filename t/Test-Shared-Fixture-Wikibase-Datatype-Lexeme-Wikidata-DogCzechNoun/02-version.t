@@ -6,4 +6,4 @@ use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun;
 
 # Test.
-is($Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun::VERSION, 0.13, 'Version.');
+is($Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun::VERSION, 0.14, 'Version.');

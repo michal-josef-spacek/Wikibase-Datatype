@@ -6,4 +6,4 @@ use Test::NoWarnings;
 use Wikibase::Datatype::Value::Globecoordinate;
 
 # Test.
-is($Wikibase::Datatype::Value::Globecoordinate::VERSION, 0.13, 'Version.');
+is($Wikibase::Datatype::Value::Globecoordinate::VERSION, 0.14, 'Version.');
