@@ -1,4 +1,4 @@
-0.14
+0.14 2022-06-24T13:37:55+02:00
  - Add modified and explicit ns parameters to Item fixture.
  - Add modified parameter to Lexeme fixture.
  - Add modified parameter to Property fixture.
