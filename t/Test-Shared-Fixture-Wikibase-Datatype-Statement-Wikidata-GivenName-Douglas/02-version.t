@@ -6,4 +6,4 @@ use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GivenName::Douglas;
 
 # Test.
-is($Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GivenName::Douglas::VERSION, 0.14, 'Version.');
+is($Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GivenName::Douglas::VERSION, 0.15, 'Version.');
