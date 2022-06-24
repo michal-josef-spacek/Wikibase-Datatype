@@ -37,7 +37,7 @@ has modified => (
 );
 
 has ns => (
-	default => 0,
+	default => 146,
 	is => 'ro',
 );
 
@@ -162,7 +162,7 @@ Parameter is optional.
 =item * C<ns>
 
 Namespace.
-Default value is 0.
+Default value is 146.
 
 =item * C<senses>
 
