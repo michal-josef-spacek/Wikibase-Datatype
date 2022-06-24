@@ -1,4 +1,5 @@
 0.14
+ - Add modified parameter to Lexeme fixture.
  - Add tests for fixtures.
 
 0.13 2022-06-23T00:09:39+02:00
