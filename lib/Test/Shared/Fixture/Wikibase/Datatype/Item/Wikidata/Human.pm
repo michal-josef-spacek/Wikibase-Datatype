@@ -34,6 +34,8 @@ sub new {
 			),
 		],
 		'lastrevid' => 1645190860,
+		'modified' => '2022-06-24T13:34:10Z',
+		'ns' => 0,
 		'statements' => [
 			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human->new,
 			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male->new,
