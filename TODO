@@ -4,8 +4,6 @@ TODO
 40. V Lexemech parametery lexical_category a language jsou presne hodnoty. Co s
     tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
     Wikidata upresnoval.
-43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
-    in Item object.
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
@@ -174,4 +172,9 @@ OK [20220622] skim
 OK [20220624] skim
 
 56. Add constructor tests for fixtures.
+OK [20220624] skim
+
+43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
+    in Item object.
+In Wikidata is ns=0 for items.
 OK [20220624] skim
