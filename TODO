@@ -6,7 +6,6 @@ TODO
     Wikidata upresnoval.
 43. Is Item->ns with default=0 right? Because undefined ns in json creates ns=0
     in Item object.
-48. Testy pro Lexem
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
@@ -168,3 +167,6 @@ OK [20211204] skim
 
 55. Add tests for Property
 OK [20220622] skim
+
+48. Testy pro Lexem
+OK [20220624] skim

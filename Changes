@@ -1,6 +1,7 @@
 0.14
  - Add modified parameter to Lexeme fixture.
  - Add tests for fixtures.
+ - Add tests for Lexeme.
  - Change ns for Lexeme to 146 (as Wikidata).
 
 0.13 2022-06-23T00:09:39+02:00
