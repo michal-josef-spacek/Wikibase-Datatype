@@ -140,6 +140,7 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/02-versio
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-Human/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-VersionEditionOrTranslation/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-InstanceOf-WikidataProperty/03-new.t
@@ -157,12 +158,16 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Retrieved-Fixture1/02-vers
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-Retrieved-Fixture1/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-SexOrGender-Male/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Snak-Wikidata-StatedIn-VIAF/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/01-use.t
