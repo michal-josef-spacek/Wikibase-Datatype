@@ -1,5 +1,6 @@
 0.14
  - Add modified parameter to Lexeme fixture.
+ - Add modified parameter to Property fixture.
  - Add tests for fixtures.
  - Add tests for Lexeme.
  - Change ns for Lexeme to 146 (as Wikidata).

@@ -27,6 +27,7 @@ sub new {
 			),
 		],
 		'lastrevid' => 1645333097,
+		'modified' => '2022-06-24T13:05:10Z',
 		'statements' => [
 			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::WikidataProperty->new,
 		],
