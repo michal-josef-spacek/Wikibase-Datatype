@@ -10,8 +10,10 @@ TODO
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
 54. Finish test item for Human.
-56. Add constructor tests for fixtures.
-57.
+57. Fixture for mediainfo
+58. Fixture for mediainfo snak
+59. Fixture for mediainfo statement
+60.
 
 Applied
 =======
@@ -169,4 +171,7 @@ OK [20211204] skim
 OK [20220622] skim
 
 48. Testy pro Lexem
+OK [20220624] skim
+
+56. Add constructor tests for fixtures.
 OK [20220624] skim
