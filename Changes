@@ -1,4 +1,4 @@
-0.16
+0.16 2022-06-25T16:25:54+02:00
  - Add Dog item fixture.
  - Add InstanceOf::CommonLivingOrganism statement fixture.
  - Rename Human fixture to better DouglasAdams.
