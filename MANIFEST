@@ -50,6 +50,9 @@ inc/Module/Install/WriteAll.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Form/Wikidata/DogCzechSingular.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Lexeme/Wikidata/DogCzechNoun.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Mediainfo/Commons/ImageOfHuman.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/MediainfoSnak/Commons/Depicts/Human.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/MediainfoStatement/Commons/Depicts/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Property/Wikidata/InstanceOf.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/Fixture1.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Reference/Wikidata/ReferenceURL.pm
@@ -74,6 +77,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/ItemForThisSense/Do
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Douglas.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/DouglasAdams.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Value/Item/Wikidata/Poem.pm
@@ -117,6 +121,15 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoSnak-Commons-Depicts-Human/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoSnak-Commons-Depicts-Human/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoSnak-Commons-Depicts-Human/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoStatement-Commons-Depicts-Human/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoStatement-Commons-Depicts-Human/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-MediainfoStatement-Commons-Depicts-Human/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/03-new.t
@@ -189,6 +202,9 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-DouglasAdams/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-DouglasAdams/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-DouglasAdams/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/03-new.t
@@ -379,6 +395,12 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-MediainfoSnak-Commons-Depicts-Human/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-MediainfoSnak-Commons-Depicts-Human/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-MediainfoStatement-Commons-Depicts-Human/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-MediainfoStatement-Commons-Depicts-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Property-Wikidata-InstanceOf/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Reference-Wikidata-Fixture1/01-pod_coverage.t
@@ -427,6 +449,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/01-pod_coverage
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Douglas/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-DouglasAdams/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-DouglasAdams/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Value-Item-Wikidata-Male/01-pod_coverage.t

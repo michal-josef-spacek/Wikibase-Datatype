@@ -8,9 +8,6 @@ TODO
 52. Check Time->value for ISO 8601.
 53. Doc for test instances
 54. Finish test item for Human.
-57. Fixture for mediainfo
-58. Fixture for mediainfo snak
-59. Fixture for mediainfo statement
 60.
 
 Applied
@@ -178,3 +175,12 @@ OK [20220624] skim
     in Item object.
 In Wikidata is ns=0 for items.
 OK [20220624] skim
+
+57. Fixture for mediainfo
+OK [20220625] skim
+
+58. Fixture for mediainfo snak
+OK [20220625] skim
+
+59. Fixture for mediainfo statement
+OK [20220625] skim

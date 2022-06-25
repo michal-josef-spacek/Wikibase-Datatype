@@ -1,5 +1,8 @@
 0.15
  - Fix Mediainfo doc.
+ - Add fixture for Mediainfo.
+ - Add fixture for MediainfoSnak.
+ - Add fixture for MediainfoStatement.
 
 0.14 2022-06-24T13:37:55+02:00
  - Add modified and explicit ns parameters to Item fixture.
