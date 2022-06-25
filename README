@@ -20,6 +20,9 @@ SEE ALSO
     Wikibase::Datatype::MediainfoSnak
         Wikibase mediainfo snak datatype.
 
+    Wikibase::Datatype::Property
+        Wikibase property datatype.
+
     Wikibase::Datatype::Reference
         Wikibase reference datatype.
 
