@@ -49,6 +49,7 @@ inc/Module/Install/ReadmeFromPod.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Form/Wikidata/DogCzechSingular.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Dog.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Lexeme/Wikidata/DogCzechNoun.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Mediainfo/Commons/ImageOfHuman.pm
@@ -71,6 +72,7 @@ lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/SexOrGender/Male.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Snak/Wikidata/StatedIn/VIAF.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/GivenName/Douglas.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/Image/Dog.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/CommonLivingOrganism.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/Human.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/VersionEditionOrTranslation.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Statement/Wikidata/InstanceOf/WikidataProperty.pm
@@ -116,6 +118,8 @@ SIGNATURE
 t/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/03-new.t
@@ -182,6 +186,8 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/03-
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/03-new.t
@@ -392,6 +398,8 @@ t/Wikibase-Datatype/01-use.t
 t/Wikibase-Datatype/02-version.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-pod_coverage.t
@@ -436,6 +444,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/01
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-GivenName-Douglas/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-VersionEditionOrTranslation/01-pod_coverage.t
