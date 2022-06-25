@@ -3,7 +3,7 @@ package Wikibase::Datatype;
 use strict;
 use warnings;
 
-our $VERSION = 0.16;
+our $VERSION = 0.17;
 
 1;
 
@@ -135,6 +135,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.16
+0.17
 
 =cut
