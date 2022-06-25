@@ -117,7 +117,7 @@ Returns instance of object.
 
 =item * C<descriptions>
 
-Item descriptions. One per language.
+Mediainfo descriptions. One per language.
 Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
@@ -128,7 +128,7 @@ Parameter is optional.
 
 =item * C<labels>
 
-Item descriptions. One per language.
+Mediainfo descriptions. One per language.
 Reference to array with Wikibase::Datatype::Value::Monolingual instances.
 Parameter is optional.
 
