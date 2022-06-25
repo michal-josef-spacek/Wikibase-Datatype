@@ -1,4 +1,4 @@
-package Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Human;
+package Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::DouglasAdams;
 
 use base qw(Wikibase::Datatype::Item);
 use strict;

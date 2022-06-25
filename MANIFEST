@@ -50,7 +50,7 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Form/Wikidata/DogCzechSingular.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Dog.pm
-lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/Human.pm
+lib/Test/Shared/Fixture/Wikibase/Datatype/Item/Wikidata/DouglasAdams.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Lexeme/Wikidata/DogCzechNoun.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/Mediainfo/Commons/ImageOfHuman.pm
 lib/Test/Shared/Fixture/Wikibase/Datatype/MediainfoSnak/Commons/Depicts/Human.pm
@@ -120,9 +120,10 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/02-versio
 t/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/02-version.t
-t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-use.t
-t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-version.t
-t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/03-new.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-DouglasAdams/01-use.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-DouglasAdams/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-DouglasAdams/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/03-new.t
@@ -188,6 +189,7 @@ t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/02-version.
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-Image-Dog/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/02-version.t
+t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-CommonLivingOrganism/03-new.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/01-use.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/02-version.t
 t/Test-Shared-Fixture-Wikibase-Datatype-Statement-Wikidata-InstanceOf-Human/03-new.t
@@ -400,8 +402,8 @@ xt/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/01-pod_c
 xt/Test-Shared-Fixture-Wikibase-Datatype-Form-Wikidata-DogCzechSingular/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Dog/02-pod.t
-xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/01-pod_coverage.t
-xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-Human/02-pod.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-DouglasAdams/01-pod_coverage.t
+xt/Test-Shared-Fixture-Wikibase-Datatype-Item-Wikidata-DouglasAdams/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/01-pod_coverage.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Lexeme-Wikidata-DogCzechNoun/02-pod.t
 xt/Test-Shared-Fixture-Wikibase-Datatype-Mediainfo-Commons-ImageOfHuman/01-pod_coverage.t
