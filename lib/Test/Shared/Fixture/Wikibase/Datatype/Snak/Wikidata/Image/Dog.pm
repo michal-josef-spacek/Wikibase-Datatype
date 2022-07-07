@@ -93,7 +93,7 @@ Returns string.
  use strict;
  use warnings;
 
- use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Image::Dog;;
+ use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Image::Dog;
  use Wikibase::Datatype::Print::Snak;
 
  # Object.
