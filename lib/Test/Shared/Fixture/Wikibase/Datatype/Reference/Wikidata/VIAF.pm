@@ -1,4 +1,4 @@
-package Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::Fixture1;
+package Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF;
 
 use base qw(Wikibase::Datatype::Reference);
 use strict;

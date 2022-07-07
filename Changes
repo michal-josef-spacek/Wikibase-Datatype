@@ -1,4 +1,5 @@
 0.17
+ - Rename Reference::Wikidata::Fixture1 fixture to VIAF.
 
 0.16 2022-06-25T16:25:54+02:00
  - Add Dog item fixture.

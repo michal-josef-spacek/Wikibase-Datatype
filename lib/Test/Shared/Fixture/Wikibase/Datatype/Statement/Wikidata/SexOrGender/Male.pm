@@ -4,7 +4,7 @@ use base qw(Wikibase::Datatype::Statement);
 use strict;
 use warnings;
 
-use Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::Fixture1;
+use Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF;
 use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::SexOrGender::Male;
 
 our $VERSION = 0.17;
@@ -15,7 +15,7 @@ sub new {
 	my @params = (
 		'snak' => Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::SexOrGender::Male->new,
 		'references' => [
-			Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::Fixture1->new,
+			Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF->new,
 		],
 	);
 
