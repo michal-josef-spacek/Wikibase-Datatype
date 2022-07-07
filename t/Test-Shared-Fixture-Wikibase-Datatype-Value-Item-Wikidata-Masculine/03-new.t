@@ -1,16 +1,10 @@
-#!/usr/bin/env perl
-
 use strict;
 use warnings;
 
+use Test::More 'tests' => 2;
+use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::Masculine;
-use Wikibase::Datatype::Print::Value::Item;
 
-# Object.
+# Test.
 my $obj = Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::Masculine->new;
-
-# Print out.
-print scalar Wikibase::Datatype::Print::Value::Item::print($obj);
-
-# Output:
-# Q499327
+isa_ok($obj, 'Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::Masculine');

@@ -3,14 +3,14 @@
 use strict;
 use warnings;
 
-use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Image::Dog;
+use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas;
 use Wikibase::Datatype::Print::Snak;
 
 # Object.
-my $obj = Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Image::Dog->new;
+my $obj = Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas->new;
 
 # Print out.
 print scalar Wikibase::Datatype::Print::Snak::print($obj);
 
 # Output:
-# P18: Canadian Inuit Dog.jpg
+# P735: Q463035
