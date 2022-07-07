@@ -6,8 +6,7 @@ use warnings;
 
 use Test::Shared::Fixture::Wikibase::Datatype::Form::Wikidata::DogCzechSingular;
 use Test::Shared::Fixture::Wikibase::Datatype::Sense::Wikidata::Dog;
-use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human;
-use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male;
+use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GrammaticalGender::Masculine;
 use Wikibase::Datatype::Value::Monolingual;
 
 our $VERSION = 0.17;
@@ -34,8 +33,7 @@ sub new {
 			Test::Shared::Fixture::Wikibase::Datatype::Sense::Wikidata::Dog->new,
 		],
 		'statements' => [
-			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human->new,
-			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male->new,
+			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GrammaticalGender::Masculine->new,
 		],
 		'title' => 'Lexeme:L469',
 	);

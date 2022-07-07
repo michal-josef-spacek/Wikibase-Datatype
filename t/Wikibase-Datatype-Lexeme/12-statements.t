@@ -18,4 +18,4 @@ is_deeply(
 # Test.
 $obj = Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun->new;
 $ret_ar = $obj->statements;
-is(@{$ret_ar}, 2, 'Get number of statements.');
+is(@{$ret_ar}, 1, 'Get number of statements.');

@@ -1,6 +1,7 @@
 0.17
  - Add doc for Snak::Wikidata::GivenName::Douglas fixture.
  - Add fixture for GrammaticalGender::Masculine.
+ - Improve Lexeme::Wikidata::DogCzechNoun fixture to reality.
  - Improve Property::Wikidata::InstanceOf object.
  - Remove ';;' from example.
  - Rename Reference::Wikidata::Fixture1 fixture to VIAF.
