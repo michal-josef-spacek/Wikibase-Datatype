@@ -331,7 +331,6 @@ Returns string.
                  Parameter 'aliases' must be a array.
                  Parameter 'descriptions' must be a array.
                  Parameter 'labels' must be a array.
-                 Parameter 'sitelinks' must be a array.
                  Parameter 'statements' must be a array.
                  Statement isn't 'Wikibase::Datatype::Statement' object.
          From Mo::utils::check_page_id():
