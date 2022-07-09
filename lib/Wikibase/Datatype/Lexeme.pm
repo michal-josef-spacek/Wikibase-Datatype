@@ -8,7 +8,7 @@ use Mo qw(build default is);
 use Mo::utils qw(check_array_object check_number);
 use Wikibase::Datatype::Utils qw(check_entity);
 
-our $VERSION = 0.19;
+our $VERSION = 0.20;
 
 has forms => (
 	default => [],
@@ -523,6 +523,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.19
+0.20
 
 =cut
