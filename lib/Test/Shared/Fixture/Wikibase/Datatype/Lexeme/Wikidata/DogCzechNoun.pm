@@ -18,6 +18,7 @@ sub new {
 		'forms' => [
 			Test::Shared::Fixture::Wikibase::Datatype::Form::Wikidata::DogCzechSingular->new,
 		],
+		'id' => 'L469',
 		'language' => 'Q9056',
 		'lastrevid' => 1428556087,
 		'lexical_category' => 'Q1084',

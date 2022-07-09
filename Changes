@@ -1,5 +1,6 @@
 0.18
  - Add id to Lexeme.
+ - Add id to Lexeme::Wikidata::DogCzechNoun fixture.
  - Add alias in another language to Datatype::Item::Wikidata::Dog fixture.
  - Unify LICENSE AND COPYRIGHT section in doc.
 
