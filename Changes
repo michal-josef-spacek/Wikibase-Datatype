@@ -1,4 +1,4 @@
-0.18
+0.18 2022-07-09T16:16:36+02:00
  - Add id to Lexeme.
  - Add id to Lexeme::Wikidata::DogCzechNoun fixture.
  - Add alias in another language to Datatype::Item::Wikidata::Dog fixture.
