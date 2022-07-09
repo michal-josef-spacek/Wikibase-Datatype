@@ -5,7 +5,7 @@ use warnings;
 
 use Mo;
 
-our $VERSION = 0.18;
+our $VERSION = 0.19;
 
 extends 'Wikibase::Datatype::Value';
 
@@ -139,6 +139,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.18
+0.19
 
 =cut

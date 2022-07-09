@@ -7,7 +7,7 @@ use warnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::WikidataProperty;
 use Wikibase::Datatype::Value::Monolingual;
 
-our $VERSION = 0.18;
+our $VERSION = 0.19;
 
 sub new {
 	my $class = shift;
