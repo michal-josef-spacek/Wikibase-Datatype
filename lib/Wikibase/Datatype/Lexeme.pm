@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build default is);
-use Mo::utils qw(check_array_object);
+use Mo::utils qw(check_array_object check_number);
 use Wikibase::Datatype::Utils qw(check_entity);
 
 our $VERSION = 0.19;
@@ -45,6 +45,10 @@ has ns => (
 	is => 'ro',
 );
 
+has page_id => (
+	is => 'ro',
+);
+
 has senses => (
 	default => [],
 	is => 'ro',
@@ -75,6 +79,9 @@ sub BUILD {
 
 	# Check language.
 	check_entity($self, 'language');
+
+	# Check page id.
+	check_number($self, 'page_id');
 
 	# Check senses.
 	check_array_object($self, 'senses', 'Wikibase::Datatype::Sense',
@@ -112,6 +119,7 @@ Wikibase::Datatype::Lexeme - Wikibase lexeme datatype.
  my $lexical_category = $obj->lexical_category;
  my $modified = $obj->modified;
  my $ns = $obj->ns;
+ my $page_id = $obj->page_id;
  my $senses_ar = $obj->senses;
  my $statements_ar = $obj->statements;
  my $title = $obj->title;
@@ -173,6 +181,11 @@ Parameter is optional.
 
 Namespace.
 Default value is 146.
+
+=item * C<page_id>
+
+Page id. Numeric value.
+Parameter is optional.
 
 =item * C<senses>
 
@@ -254,6 +267,14 @@ Returns string.
  my $ns = $obj->ns;
 
 Get namespace.
+
+Returns number.
+
+=head2 C<page_id>
+
+ my $page_id = $obj->page_id;
+
+Get page id.
 
 Returns number.
 

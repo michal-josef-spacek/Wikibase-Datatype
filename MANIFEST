@@ -278,9 +278,10 @@ t/Wikibase-Datatype-Lexeme/08-lemmas.t
 t/Wikibase-Datatype-Lexeme/09-lexical_category.t
 t/Wikibase-Datatype-Lexeme/10-modified.t
 t/Wikibase-Datatype-Lexeme/11-ns.t
-t/Wikibase-Datatype-Lexeme/12-senses.t
-t/Wikibase-Datatype-Lexeme/13-statements.t
-t/Wikibase-Datatype-Lexeme/14-title.t
+t/Wikibase-Datatype-Lexeme/12-page_id.t
+t/Wikibase-Datatype-Lexeme/13-senses.t
+t/Wikibase-Datatype-Lexeme/14-statements.t
+t/Wikibase-Datatype-Lexeme/15-title.t
 t/Wikibase-Datatype-Mediainfo/01-use.t
 t/Wikibase-Datatype-Mediainfo/02-version.t
 t/Wikibase-Datatype-Mediainfo/03-new.t
