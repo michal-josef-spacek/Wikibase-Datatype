@@ -1,5 +1,6 @@
 0.19
  - Add page_id to Lexeme.
+ - Add page_id to Lexeme::Wikidata::DogCzechNoun fixture.
 
 0.18 2022-07-09T16:16:36+02:00
  - Add id to Lexeme.

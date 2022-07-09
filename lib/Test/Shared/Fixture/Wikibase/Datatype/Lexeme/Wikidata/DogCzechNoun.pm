@@ -30,6 +30,7 @@ sub new {
 		],
 		'modified' => '2022-06-24T12:42:10Z',
 		'ns' => 146,
+		'page_id' => 54393954,
 		'senses' => [
 			Test::Shared::Fixture::Wikibase::Datatype::Sense::Wikidata::Dog->new,
 		],
