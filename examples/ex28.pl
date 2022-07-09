@@ -110,6 +110,7 @@ my $statement2 = Wikibase::Datatype::Statement->new(
 
 # Main item.
 my $obj = Wikibase::Datatype::Lexeme->new(
+        'id' => 'L469',
         'lemmas' => [
                 Wikibase::Datatype::Value::Monolingual->new(
                         'language' => 'cs',
@@ -125,6 +126,7 @@ my $obj = Wikibase::Datatype::Lexeme->new(
 
 # Print out.
 print "Title: ".$obj->title."\n";
+print 'Id: '.$obj->id."\n";
 print "Statements:\n";
 foreach my $statement (@{$obj->statements}) {
         print "\tStatement:\n";
@@ -146,6 +148,7 @@ foreach my $statement (@{$obj->statements}) {
 
 # Output:
 # Title: Lexeme:L469
+# Id: L469
 # Statements:
 #         Statement:
 #                 P31 -> Q5

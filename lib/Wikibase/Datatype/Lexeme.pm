@@ -15,6 +15,10 @@ has forms => (
 	is => 'ro',
 );
 
+has id => (
+	is => 'ro',
+);
+
 has language => (
 	is => 'ro',
 );
@@ -101,6 +105,7 @@ Wikibase::Datatype::Lexeme - Wikibase lexeme datatype.
 
  my $obj = Wikibase::Datatype::Lexeme->new(%params);
  my $forms_ar = $obj->forms;
+ my $id = $obj->id;
  my $language = $obj->language;
  my $lastrevid = $obj->lastrevid;
  my $lemmas_ar = $obj->lemmas;
@@ -131,6 +136,11 @@ Returns instance of object.
 
 Forms.
 Reference to array with Wikibase::Datatype::Form instances.
+Parameter is optional.
+
+=item * C<id>
+
+Id.
 Parameter is optional.
 
 =item * C<language>
@@ -190,6 +200,14 @@ Parameter is optional.
 Get forms.
 
 Returns reference to array with Wikibase::Datatype::Form instances.
+
+=head2 C<id>
+
+ my $id = $obj->id;
+
+Get id.
+
+Returns string.
 
 =head2 C<language>
 
@@ -391,6 +409,7 @@ Returns string.
 
  # Main item.
  my $obj = Wikibase::Datatype::Lexeme->new(
+         'id' => 'L469',
          'lemmas' => [
                  Wikibase::Datatype::Value::Monolingual->new(
                          'language' => 'cs',
@@ -406,6 +425,7 @@ Returns string.
 
  # Print out.
  print "Title: ".$obj->title."\n";
+ print 'Id: '.$obj->id."\n";
  print "Statements:\n";
  foreach my $statement (@{$obj->statements}) {
          print "\tStatement:\n";
@@ -427,6 +447,7 @@ Returns string.
 
  # Output:
  # Title: Lexeme:L469
+ # Id: L469
  # Statements:
  #         Statement:
  #                 P31 -> Q5
