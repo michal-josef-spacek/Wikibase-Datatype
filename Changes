@@ -1,4 +1,5 @@
 0.20
+ - Unify LICENSE AND COPYRIGHT section in doc.
 
 0.19 2022-07-09T16:32:51+02:00
  - Add page_id to Lexeme.
