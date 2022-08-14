@@ -131,6 +131,10 @@ L<Mo::utils>.
 
 =over
 
+=item L<Wikibase::Datatype::Value::Globecoordinate>
+
+Wikibase globe coordinate value datatype.
+
 =item L<Wikibase::Datatype::Value::Item>
 
 Wikibase item value datatype.
@@ -138,6 +142,14 @@ Wikibase item value datatype.
 =item L<Wikibase::Datatype::Value::Monolingual>
 
 Wikibase monolingual value datatype.
+
+=item L<Wikibase::Datatype::Value::Property>
+
+Wikibase property value datatype.
+
+=item L<Wikibase::Datatype::Value::Quantity>
+
+Wikibase quantity value datatype.
 
 =item L<Wikibase::Datatype::Value::String>
 
