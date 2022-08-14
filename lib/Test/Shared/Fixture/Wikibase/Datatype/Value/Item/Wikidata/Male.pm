@@ -66,6 +66,8 @@ Returns string.
 
 =head1 EXAMPLE
 
+=for comment filename=fixture_create_and_print_value_item_wd_male.pl
+
  use strict;
  use warnings;
 

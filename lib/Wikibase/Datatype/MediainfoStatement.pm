@@ -161,6 +161,8 @@ Returns Wikibase::Datatype::MediainfoSnak instance.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_mediainfostatement.pl
+
  use strict;
  use warnings;
 

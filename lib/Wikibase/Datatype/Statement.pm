@@ -188,6 +188,8 @@ Returns Wikibase::Datatype::Snak instance.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_statement.pl
+
  use strict;
  use warnings;
 

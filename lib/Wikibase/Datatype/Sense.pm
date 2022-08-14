@@ -130,6 +130,8 @@ Returns reference to array with Wikibase::Datatype::Statement instances.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_sense.pl
+
  use strict;
  use warnings;
 

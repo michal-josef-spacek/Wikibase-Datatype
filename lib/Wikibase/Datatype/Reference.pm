@@ -84,6 +84,8 @@ Returns reference to array of Wikibase::Datatype::Snak instances.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_reference.pl
+
  use strict;
  use warnings;
 

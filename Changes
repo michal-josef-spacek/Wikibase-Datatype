@@ -1,5 +1,6 @@
 0.20
  - Improve SEE ALSO section in Value object.
+ - Rename files in examples/ directory to better names.
  - Unify LICENSE AND COPYRIGHT section in doc.
 
 0.19 2022-07-09T16:32:51+02:00

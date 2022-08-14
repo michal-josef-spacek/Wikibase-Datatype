@@ -90,6 +90,8 @@ Returns string.
 
 =head1 EXAMPLE
 
+=for comment filename=fixture_create_and_print_snak_wd_image_dog.pl
+
  use strict;
  use warnings;
 

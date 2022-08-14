@@ -137,6 +137,8 @@ Returns undef.
 
 =head1 EXAMPLE1
 
+=for comment filename=check_entity_success.pl
+
  use strict;
  use warnings;
 
@@ -154,6 +156,8 @@ Returns undef.
  # ok
 
 =head1 EXAMPLE2
+
+=for comment filename=check_entity_fail.pl
 
  use strict;
  use warnings;
@@ -176,6 +180,8 @@ Returns undef.
 
 =head1 EXAMPLE3
 
+=for comment filename=check_lexeme_success.pl
+
  use strict;
  use warnings;
 
@@ -193,6 +199,8 @@ Returns undef.
  # ok
 
 =head1 EXAMPLE4
+
+=for comment filename=check_lexeme_fail.pl
 
  use strict;
  use warnings;
@@ -215,6 +223,8 @@ Returns undef.
 
 =head1 EXAMPLE5
 
+=for comment filename=check_property_success.pl
+
  use strict;
  use warnings;
 
@@ -232,6 +242,8 @@ Returns undef.
  # ok
 
 =head1 EXAMPLE6
+
+=for comment filename=check_property_fail.pl
 
  use strict;
  use warnings;

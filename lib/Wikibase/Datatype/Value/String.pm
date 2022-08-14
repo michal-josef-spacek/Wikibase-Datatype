@@ -82,6 +82,8 @@ Returns string.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_value_string.pl
+
  use strict;
  use warnings;
 

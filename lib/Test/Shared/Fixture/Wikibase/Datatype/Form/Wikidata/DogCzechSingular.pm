@@ -119,6 +119,8 @@ Returns reference to array of Wikibase::Datatype::Statement items.
 
 =head1 EXAMPLE
 
+=for comment filename=fixture_create_and_print_form_wd_dogczechsingular.pl
+
  use strict;
  use warnings;
 

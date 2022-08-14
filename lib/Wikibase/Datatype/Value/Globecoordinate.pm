@@ -205,6 +205,8 @@ Returns string.
 
 =head1 EXAMPLE
 
+=for comment filename=create_and_print_value_globecoordinate.pl
+
  use strict;
  use warnings;
 
