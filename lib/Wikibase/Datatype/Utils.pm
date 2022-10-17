@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::Util qw(none);
-use Locale::Language;
+use Wikibase::Datatype::Languages qw(all_language_codes);
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(check_entity check_language check_lexeme check_property);
@@ -269,7 +269,6 @@ Returns undef.
 L<Exporter>,
 L<Error::Pure>,
 L<List::Util>,
-L<Locale::Language>,
 L<Readonly>.
 
 =head1 SEE ALSO
