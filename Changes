@@ -1,4 +1,4 @@
-0.22
+0.22 2022-10-19T11:07:21+02:00
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman.
  - Fix minimal version of Mo::utils.
