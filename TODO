@@ -10,7 +10,8 @@ TODO
 54. Finish test item for Human.
 60. In Wikibase::Datatype::Lexeme example in doc is blank Qualifiers. Remove it.
 61. Add unknown value to Item.
-62.
+62. Add multiple values to Item.
+63.
 
 Applied
 =======
