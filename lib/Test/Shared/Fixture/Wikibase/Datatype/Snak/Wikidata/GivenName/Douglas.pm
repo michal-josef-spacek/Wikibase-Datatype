@@ -6,7 +6,7 @@ use warnings;
 
 use Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::Douglas;
 
-our $VERSION = 0.23;
+our $VERSION = 0.24;
 
 sub new {
 	my $class = shift;
@@ -142,6 +142,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.23
+0.24
 
 =cut

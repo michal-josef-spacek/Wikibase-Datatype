@@ -16,7 +16,7 @@ Readonly::Array our @SNAK_TYPES => qw(
 	value
 );
 
-our $VERSION = 0.23;
+our $VERSION = 0.24;
 
 has datavalue => (
 	is => 'ro',
@@ -231,6 +231,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.23
+0.24
 
 =cut
