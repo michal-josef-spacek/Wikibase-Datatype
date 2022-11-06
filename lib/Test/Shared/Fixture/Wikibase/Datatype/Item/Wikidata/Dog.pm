@@ -58,6 +58,10 @@ sub new {
 				'language' => 'en',
 				'value' => 'dog',
 			),
+			Wikibase::Datatype::Value::Monolingual->new(
+				'language' => 'cs',
+				'value' => 'pes',
+			),
 		],
 		'id' => 'Q144',
 		'lastrevid' => 1539465460,

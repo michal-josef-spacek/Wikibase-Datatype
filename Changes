@@ -1,4 +1,6 @@
 0.23
+ - Add cs label to
+   Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
 
 0.22 2022-10-19T11:07:21+02:00
  - Add doc for
