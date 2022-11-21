@@ -20,7 +20,7 @@ sub new {
 		'aliases' => [
 			Wikibase::Datatype::Value::Monolingual->new(
 				'language' => 'cs',
-				'value' => 'pes',
+				'value' => decode_utf8('pes domácí'),
 			),
 			Wikibase::Datatype::Value::Monolingual->new(
 				'language' => 'en',
