@@ -49,6 +49,10 @@ sub new {
 		],
 		'descriptions' => [
 			Wikibase::Datatype::Value::Monolingual->new(
+				'language' => 'cs',
+				'value' => decode_utf8('domácí zvíře'),
+			),
+			Wikibase::Datatype::Value::Monolingual->new(
 				'language' => 'en',
 				'value' => 'domestic animal',
 			),

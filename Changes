@@ -1,4 +1,6 @@
 0.24
+ - Add Czech description to
+   Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Change alias from 'pes' to 'pes domácí' in
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Sort labels in
