@@ -55,12 +55,12 @@ sub new {
 		],
 		'labels' => [
 			Wikibase::Datatype::Value::Monolingual->new(
-				'language' => 'en',
-				'value' => 'dog',
-			),
-			Wikibase::Datatype::Value::Monolingual->new(
 				'language' => 'cs',
 				'value' => 'pes',
+			),
+			Wikibase::Datatype::Value::Monolingual->new(
+				'language' => 'en',
+				'value' => 'dog',
 			),
 		],
 		'id' => 'Q144',
