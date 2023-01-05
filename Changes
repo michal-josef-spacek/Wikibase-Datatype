@@ -7,6 +7,7 @@
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Sort labels in
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
+ - Update copyright years.
  - Update examples.
 
 0.23 2022-11-06T11:03:06+01:00
