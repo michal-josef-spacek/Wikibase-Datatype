@@ -1,6 +1,7 @@
 0.24
  - Add Czech description to
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
+ - Add check for label length (250). If it's longer then strip.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Change alias from 'pes' to 'pes domácí' in
