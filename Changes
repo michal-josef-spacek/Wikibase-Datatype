@@ -1,4 +1,4 @@
-0.24
+0.24 2023-01-06T12:57:15+01:00
  - Add Czech description to
    Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Add check for label length (250). If it's longer then strip.
