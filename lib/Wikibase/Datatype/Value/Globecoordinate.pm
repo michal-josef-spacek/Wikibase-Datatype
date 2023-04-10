@@ -268,7 +268,7 @@ Wikibase datatypes.
 
 =item L<Wikibase::Datatype::Print::Value::Globecoordinate>
 
-Wikibase globe coordinate pretty print helpers.
+Wikibase globe coordinate value pretty print helpers.
 
 =back
 
