@@ -266,6 +266,10 @@ L<Wikibase::Datatype::Value>.
 
 Wikibase datatypes.
 
+=item L<Wikibase::Datatype::Print::Value::Globecoordinate>
+
+Wikibase globe coordinate pretty print helpers.
+
 =back
 
 =head1 REPOSITORY

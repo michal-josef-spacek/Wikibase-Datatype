@@ -1,4 +1,6 @@
 0.25
+ - Add item to doc SEE ALSO section in
+   Wikibase::Datatype::Value::Globecoordinate.
 
 0.24 2023-01-06T12:57:15+01:00
  - Add Czech description to
