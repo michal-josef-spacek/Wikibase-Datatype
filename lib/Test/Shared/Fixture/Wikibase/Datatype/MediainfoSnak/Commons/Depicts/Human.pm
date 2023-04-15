@@ -12,7 +12,6 @@ sub new {
 	my $class = shift;
 
 	my @params = (
-		'datatype' => 'wikibase-item',
 		'datavalue' => Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::DouglasAdams->new,
 		'property' => 'P180',
 	);
