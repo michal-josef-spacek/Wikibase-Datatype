@@ -10,6 +10,8 @@
  - Fix
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human
    object.
+ - Sort usage modules in
+   Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF.
 
 0.24 2023-01-06T12:57:15+01:00
  - Add Czech description to
