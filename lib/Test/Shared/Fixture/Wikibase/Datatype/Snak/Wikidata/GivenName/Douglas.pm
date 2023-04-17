@@ -32,7 +32,7 @@ __END__
 
 =head1 NAME
 
-Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas - Test instance for Wikidata item value.
+Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas - Test instance for Wikidata snak.
 
 =head1 SYNOPSIS
 
