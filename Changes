@@ -4,6 +4,7 @@
  - Add reference to
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
    as example of statement with multiple references.
+ - Add references parameter and method to MediainfoStatement.
  - Fix
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human
    object.
