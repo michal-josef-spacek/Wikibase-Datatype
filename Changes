@@ -1,6 +1,9 @@
 0.25
  - Add item to doc SEE ALSO section in
    Wikibase::Datatype::Value::Globecoordinate.
+ - Add reference to
+   Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
+   as example of statement with multiple references.
  - Fix
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human
    object.
