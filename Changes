@@ -1,6 +1,8 @@
 0.25
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::ReferenceURL.
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF.
  - Add item to doc SEE ALSO section in
    Wikibase::Datatype::Value::Globecoordinate.
  - Add reference to
