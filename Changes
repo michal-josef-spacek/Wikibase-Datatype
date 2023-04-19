@@ -1,6 +1,8 @@
 0.26
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GrammaticalGender::Masculine.
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::Human.
  - Fix module doc description in
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas.
 
