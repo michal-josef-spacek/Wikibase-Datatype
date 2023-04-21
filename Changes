@@ -5,6 +5,7 @@
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::Human.
  - Fix module doc description in
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas.
+ - Improve doc EXAMPLE in Wikibase::Datatype::Reference to something real.
 
 0.25 2023-04-17T11:28:59+02:00
  - Add doc for
