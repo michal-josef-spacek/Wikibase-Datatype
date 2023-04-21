@@ -5,6 +5,8 @@
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GrammaticalGender::Masculine.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::Human.
+ - Fix example in
+   Test::Shared::Fixture::Wikibase::Datatype::Value::Item::Wikidata::WikidataEntity.
  - Fix module doc description in
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GivenName::Douglas.
  - Improve doc EXAMPLE in Wikibase::Datatype::Reference to something real.
