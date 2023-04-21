@@ -1,5 +1,7 @@
 Changes
 examples/all_language_codes.pl
+examples/check_datetime_fail.pl
+examples/check_datetime_success.pl
 examples/check_entity_fail.pl
 examples/check_entity_success.pl
 examples/check_lexeme_fail.pl
@@ -364,10 +366,11 @@ t/Wikibase-Datatype-Statement/07-references.t
 t/Wikibase-Datatype-Statement/08-snak.t
 t/Wikibase-Datatype-Utils/01-use.t
 t/Wikibase-Datatype-Utils/02-version.t
-t/Wikibase-Datatype-Utils/03-check_entity.t
-t/Wikibase-Datatype-Utils/04-check_language.t
-t/Wikibase-Datatype-Utils/05-check_lexeme.t
-t/Wikibase-Datatype-Utils/06-check_property.t
+t/Wikibase-Datatype-Utils/03-check_datetime.t
+t/Wikibase-Datatype-Utils/04-check_entity.t
+t/Wikibase-Datatype-Utils/05-check_language.t
+t/Wikibase-Datatype-Utils/06-check_lexeme.t
+t/Wikibase-Datatype-Utils/07-check_property.t
 t/Wikibase-Datatype-Value-Globecoordinate/01-use.t
 t/Wikibase-Datatype-Value-Globecoordinate/02-version.t
 t/Wikibase-Datatype-Value-Globecoordinate/03-new.t
