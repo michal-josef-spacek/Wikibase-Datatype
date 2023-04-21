@@ -515,7 +515,7 @@ Readonly::Hash our %LANGUAGES => (
 	'zu' => 'isiZulu' # Zulu
 );
 
-our $VERSION = 0.26;
+our $VERSION = 0.27;
 
 sub all_language_codes {
 	return keys %LANGUAGES;
@@ -1091,6 +1091,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.26
+0.27
 
 =cut

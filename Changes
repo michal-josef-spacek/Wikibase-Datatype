@@ -1,3 +1,5 @@
+0.27
+
 0.26 2023-04-21T20:18:03+02:00
  - Add check_datetime() utility.
  - Add date time check to Wikibase::Datatype::Value::Time.
