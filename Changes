@@ -1,5 +1,6 @@
 0.26
  - Add check_datetime() utility.
+ - Add date time check to Wikibase::Datatype::Value::Time.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::GrammaticalGender::Masculine.
  - Add doc for
