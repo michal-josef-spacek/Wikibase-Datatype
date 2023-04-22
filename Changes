@@ -1,6 +1,8 @@
 0.27
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::VersionEditionOrTranslation.
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::WikidataProperty.
  - Improve example comments.
 
 0.26 2023-04-21T20:18:03+02:00
