@@ -5,6 +5,8 @@
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::WikidataProperty.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::ItemForThisSense::Dog.
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Of::Poem.
  - Improve example comments.
 
 0.26 2023-04-21T20:18:03+02:00
