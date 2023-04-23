@@ -1,4 +1,6 @@
 0.29
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::ReferenceURL::Fixture1.
  - Fix datetime check.
  - Fix MANIFEST file for sense value.
  - Improve Wikibase::Datatype doc links.
