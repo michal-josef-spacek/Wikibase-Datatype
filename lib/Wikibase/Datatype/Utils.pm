@@ -18,7 +18,7 @@ our $VERSION = 0.29;
 sub check_datetime {
 	my ($self, $key) = @_;
 
-	if ($self->{$key} !~ m/^([\+\-]\d{4})\-(\d{2})\-(\d{2})T(\d{2}):(\d{2}):(\d{2})Z$/ms) {
+	if ($self->{$key} !~ m/^([\+\-]\d+)\-(\d{2})\-(\d{2})T(\d{2}):(\d{2}):(\d{2})Z$/ms) {
 		err "Parameter '$key' has bad date time.",
 			'Value', $self->{$key},
 		;
