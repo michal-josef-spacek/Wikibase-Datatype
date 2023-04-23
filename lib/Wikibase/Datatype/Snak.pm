@@ -26,6 +26,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'url' => 'Wikibase::Datatype::Value::String',
 	'wikibase-item' => 'Wikibase::Datatype::Value::Item',
 	'wikibase-property' => 'Wikibase::Datatype::Value::Property',
+	'wikibase-sense' => 'Wikibase::Datatype::Value::Sense',
 );
 Readonly::Array our @SNAK_TYPES => qw(
 	novalue
@@ -144,6 +145,7 @@ Parameter is required.
  - url (Wikibase::Datatype::Value::String)
  - wikibase-item (Wikibase::Datatype::Value::Item)
  - wikibase-property (Wikibase::Datatype::Value::Property)
+ - wikibase-sense (Wikibase::Datatype::Value::Sense)
 
 =item * C<datavalue>
 

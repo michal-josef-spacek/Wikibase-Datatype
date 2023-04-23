@@ -1,5 +1,6 @@
 0.28
  - Add check_sense() to Utils.
+ - Add support of wikibase-sense to Snak.
  - Add Wikibase::Datatype::Value::Sense class.
  - Fix doc in Wikibase::Datatype::Value::Property.
 
