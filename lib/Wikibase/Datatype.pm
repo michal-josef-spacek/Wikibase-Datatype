@@ -45,6 +45,10 @@ Wikibase mediainfo datatype.
 
 Wikibase mediainfo snak datatype.
 
+=item L<Wikibase::Datatype::MediainfoStatement>
+
+Wikibase mediainfo statement datatype.
+
 =item L<Wikibase::Datatype::Property>
 
 Wikibase property datatype.
@@ -97,6 +101,10 @@ Wikibase property value datatype.
 
 Wikibase quantity value datatype.
 
+=item L<Wikibase::Datatype::Value::Sense>
+
+Wikibase sense value datatype.
+
 =item L<Wikibase::Datatype::Value::String>
 
 Wikibase string value datatype.
@@ -110,6 +118,10 @@ Wikibase time value datatype.
 Another projects:
 
 =over
+
+=item L<Wikibase::Datatype::Print>
+
+Wikibase datatype print helpers.
 
 =item L<Wikibase::Datatype::Struct>
 

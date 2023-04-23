@@ -20,6 +20,9 @@ SEE ALSO
     Wikibase::Datatype::MediainfoSnak
         Wikibase mediainfo snak datatype.
 
+    Wikibase::Datatype::MediainfoStatement
+        Wikibase mediainfo statement datatype.
+
     Wikibase::Datatype::Property
         Wikibase property datatype.
 
@@ -59,6 +62,9 @@ SEE ALSO
     Wikibase::Datatype::Value::Quantity
         Wikibase quantity value datatype.
 
+    Wikibase::Datatype::Value::Sense
+        Wikibase sense value datatype.
+
     Wikibase::Datatype::Value::String
         Wikibase string value datatype.
 
@@ -66,6 +72,9 @@ SEE ALSO
         Wikibase time value datatype.
 
     Another projects:
+
+    Wikibase::Datatype::Print
+        Wikibase datatype print helpers.
 
     Wikibase::Datatype::Struct
         Wikibase structure serialization.

@@ -1,4 +1,5 @@
 0.29
+ - Improve Wikibase::Datatype doc links.
 
 0.28 2023-04-23T10:34:23+02:00
  - Add check_sense() to Utils.
