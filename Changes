@@ -1,5 +1,6 @@
 0.29
  - Fix datetime check.
+ - Fix MANIFEST file for sense value.
  - Improve Wikibase::Datatype doc links.
 
 0.28 2023-04-23T10:34:23+02:00
