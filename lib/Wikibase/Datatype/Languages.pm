@@ -592,7 +592,7 @@ Readonly::Hash our %LANGUAGES => (
 	'ybb' => 'Yemba', # Yemba - T263946
 );
 
-our $VERSION = 0.28;
+our $VERSION = 0.29;
 
 sub all_language_codes {
 	return keys %LANGUAGES;
@@ -1169,6 +1169,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.28
+0.29
 
 =cut
