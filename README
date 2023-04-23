@@ -11,6 +11,9 @@ SEE ALSO
     Wikibase::Datatype::Item
         Wikibase item datatype.
 
+    Wikibase::Datatype::Languages
+        Wikibase datatype languages.
+
     Wikibase::Datatype::Lexeme
         Wikibase lexeme datatype.
 

@@ -33,6 +33,10 @@ Wikibase form datatype.
 
 Wikibase item datatype.
 
+=item L<Wikibase::Datatype::Languages>
+
+Wikibase datatype languages.
+
 =item L<Wikibase::Datatype::Lexeme>
 
 Wikibase lexeme datatype.
