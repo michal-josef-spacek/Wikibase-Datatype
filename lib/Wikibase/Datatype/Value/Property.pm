@@ -44,7 +44,7 @@ Wikibase::Datatype::Value::Property - Wikibase property value datatype.
 
 =head1 DESCRIPTION
 
-This datatype is item class for representation of wikibase item (e.g. Q123).
+This datatype is property class for representation of wikibase item (e.g. P31).
 
 =head1 METHODS
 
