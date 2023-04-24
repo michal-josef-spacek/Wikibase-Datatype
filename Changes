@@ -2,6 +2,8 @@
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::ReferenceURL::Fixture1.
  - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::SexOrGender::Male.
+ - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::StatedIn::VIAF.
  - Add Wikibase::Datatype::Languages to Wikibase::Datatype doc.
  - Fix datetime check.
