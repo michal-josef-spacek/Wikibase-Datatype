@@ -8,6 +8,8 @@
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::Image::Dog.
  - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::ItemForThisSense::Dog.
+ - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male.
  - Fix author tests for Wikibase::Datatype::Value::Sense.
 
