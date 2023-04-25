@@ -10,6 +10,8 @@
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::CommonLivingOrganism.
  - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human.
+ - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::ItemForThisSense::Dog.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male.
