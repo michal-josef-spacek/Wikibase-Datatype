@@ -1,5 +1,7 @@
 0.30
  - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human.
+ - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::Retrieved::Fixture1.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::GivenName::Douglas.
