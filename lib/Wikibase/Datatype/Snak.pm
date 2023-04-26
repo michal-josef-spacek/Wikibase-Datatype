@@ -272,6 +272,10 @@ L<Wikibase::Datatype::Utils>.
 
 Wikibase datatypes.
 
+=item L<Wikibase::Datatype::MediainfoSnak>
+
+Wikibase mediainfo snak datatype.
+
 =back
 
 =head1 REPOSITORY
