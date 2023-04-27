@@ -1,5 +1,7 @@
 0.31
  - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::DouglasAdams.
+ - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human.
