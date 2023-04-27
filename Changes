@@ -2,6 +2,7 @@
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human.
  - Add SEE ALSO link to Wikibase::Datatype::Snak.
+ - Fix output of example in Wikibase::Datatype::Languages doc.
 
 0.30 2023-04-26T10:57:20+02:00
  - Add doc for
