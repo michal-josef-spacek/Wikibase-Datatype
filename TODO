@@ -5,7 +5,6 @@ TODO
     tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
     Wikidata upresnoval.
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
-53. Doc for test instances
 54. Finish test item for Human.
 60. In Wikibase::Datatype::Lexeme example in doc is blank Qualifiers. Remove it.
 61. Add unknown value to Item.
@@ -192,3 +191,6 @@ OK [20220625] skim
 52. Check Time->value for ISO 8601.
 note: This is no ISO 8601
 OK [20230421] skim
+
+53. Doc for test instances
+OK [20230427] skim

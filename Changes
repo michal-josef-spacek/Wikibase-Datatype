@@ -7,6 +7,8 @@
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human.
  - Add doc for
    Test::Shared::Fixture::Wikibase::Datatype::Property::Wikidata::InstanceOf.
+ - Add doc for
+   Test::Shared::Fixture::Wikibase::Datatype::Sense::Wikidata::Dog.
  - Add SEE ALSO link to Wikibase::Datatype::Snak.
  - Fix output of example in Wikibase::Datatype::Languages doc.
  - Fix typos in doc.
