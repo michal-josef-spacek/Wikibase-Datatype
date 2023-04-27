@@ -50,7 +50,7 @@ Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Huma
 
 Constructor.
 
-Retruns instance of object.
+Returns instance of object.
 
 =head2 C<datavalue>
 

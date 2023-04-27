@@ -121,7 +121,7 @@ This datatype is snak class for representing relation between property and value
 
 Constructor.
 
-Retruns instance of object.
+Returns instance of object.
 
 =over 8
 

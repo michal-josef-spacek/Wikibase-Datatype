@@ -75,7 +75,7 @@ Wikibase::Datatype::Form - Wikibase form datatype.
 
 Constructor.
 
-Retruns instance of object.
+Returns instance of object.
 
 =over 8
 
