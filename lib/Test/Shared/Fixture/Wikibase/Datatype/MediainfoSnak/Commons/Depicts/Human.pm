@@ -31,7 +31,7 @@ __END__
 
 =head1 NAME
 
-Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human - Test instance for Wikidata mediainfo snak.
+Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human - Test instance for Wikimedia Commons mediainfo snak.
 
 =head1 SYNOPSIS
 

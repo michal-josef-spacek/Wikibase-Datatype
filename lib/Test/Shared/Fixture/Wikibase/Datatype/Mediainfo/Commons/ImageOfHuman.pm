@@ -47,7 +47,7 @@ __END__
 
 =head1 NAME
 
-Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman - Test instance for Wikidata mediainfo.
+Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman - Test instance for Wikimedia Commons mediainfo.
 
 =head1 SYNOPSIS
 
