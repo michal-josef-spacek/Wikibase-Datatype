@@ -270,7 +270,7 @@ Returns string.
  use Wikibase::Datatype::Value::String;
  use Wikibase::Datatype::Value::Time;
 
- # Object.
+ # Statements.
  my $statement1 = Wikibase::Datatype::MediainfoStatement->new(
          # depicts (P180) beach (Q40080)
          'snak' => Wikibase::Datatype::MediainfoSnak->new(
