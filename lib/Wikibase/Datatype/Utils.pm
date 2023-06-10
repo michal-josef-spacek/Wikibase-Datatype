@@ -469,6 +469,14 @@ L<Readonly>.
 
 Wikibase datatypes.
 
+=item L<Mo::utils>
+
+Mo utilities.
+
+=item L<Mo::utils::Language>
+
+Mo language utilities.
+
 =back
 
 =head1 REPOSITORY
