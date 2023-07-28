@@ -1,5 +1,6 @@
 0.32
  - Add fixtures for statement of given name with Michal value.
+ - Add missing Sense to Value doc.
  - Improve doc comments.
  - Improve Wikibase::Datatype::Utils SEE ALSO section in doc.
  - Update Module::Install to 1.21.

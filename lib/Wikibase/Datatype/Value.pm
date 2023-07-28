@@ -153,6 +153,10 @@ Wikibase property value datatype.
 
 Wikibase quantity value datatype.
 
+=item L<Wikibase::Datatype::Value::Sense>
+
+Wikibase sense value datatype.
+
 =item L<Wikibase::Datatype::Value::String>
 
 Wikibase string value datatype.
