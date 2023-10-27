@@ -1,4 +1,4 @@
-0.32
+0.32 2023-10-27T20:25:33+02:00
  - Add Wikibase::Datatype::Value::Lexeme.
  - Add fixtures for statement of given name with Michal value.
  - Add missing Sense to Value doc.
