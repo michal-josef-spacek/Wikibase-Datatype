@@ -25,6 +25,7 @@ Readonly::Hash our %DATA_TYPES => (
 	'time' => 'Wikibase::Datatype::Value::Time',
 	'url' => 'Wikibase::Datatype::Value::String',
 	'wikibase-item' => 'Wikibase::Datatype::Value::Item',
+	'wikibase-lexeme' => 'Wikibase::Datatype::Value::Lexeme',
 	'wikibase-property' => 'Wikibase::Datatype::Value::Property',
 	'wikibase-sense' => 'Wikibase::Datatype::Value::Sense',
 );
@@ -144,6 +145,7 @@ Parameter is required.
  - time (Wikibase::Datatype::Value::Time)
  - url (Wikibase::Datatype::Value::String)
  - wikibase-item (Wikibase::Datatype::Value::Item)
+ - wikibase-lexeme (Wikibase::Datatype::Value::Lexeme)
  - wikibase-property (Wikibase::Datatype::Value::Property)
  - wikibase-sense (Wikibase::Datatype::Value::Sense)
 

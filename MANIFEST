@@ -148,6 +148,7 @@ lib/Wikibase/Datatype/Utils.pm
 lib/Wikibase/Datatype/Value.pm
 lib/Wikibase/Datatype/Value/Globecoordinate.pm
 lib/Wikibase/Datatype/Value/Item.pm
+lib/Wikibase/Datatype/Value/Lexeme.pm
 lib/Wikibase/Datatype/Value/Monolingual.pm
 lib/Wikibase/Datatype/Value/Property.pm
 lib/Wikibase/Datatype/Value/Quantity.pm
@@ -423,6 +424,11 @@ t/Wikibase-Datatype-Value-Item/02-version.t
 t/Wikibase-Datatype-Value-Item/03-new.t
 t/Wikibase-Datatype-Value-Item/04-type.t
 t/Wikibase-Datatype-Value-Item/05-value.t
+t/Wikibase-Datatype-Value-Lexeme/01-use.t
+t/Wikibase-Datatype-Value-Lexeme/02-version.t
+t/Wikibase-Datatype-Value-Lexeme/03-new.t
+t/Wikibase-Datatype-Value-Lexeme/04-type.t
+t/Wikibase-Datatype-Value-Lexeme/05-value.t
 t/Wikibase-Datatype-Value-Monolingual/01-use.t
 t/Wikibase-Datatype-Value-Monolingual/02-version.t
 t/Wikibase-Datatype-Value-Monolingual/03-new.t
@@ -591,6 +597,8 @@ xt/Wikibase-Datatype-Value-Globecoordinate/01-pod_coverage.t
 xt/Wikibase-Datatype-Value-Globecoordinate/02-pod.t
 xt/Wikibase-Datatype-Value-Item/01-pod_coverage.t
 xt/Wikibase-Datatype-Value-Item/02-pod.t
+xt/Wikibase-Datatype-Value-Lexeme/01-pod_coverage.t
+xt/Wikibase-Datatype-Value-Lexeme/02-pod.t
 xt/Wikibase-Datatype-Value-Monolingual/01-pod_coverage.t
 xt/Wikibase-Datatype-Value-Monolingual/02-pod.t
 xt/Wikibase-Datatype-Value-Property/01-pod_coverage.t
