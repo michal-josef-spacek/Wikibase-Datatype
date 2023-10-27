@@ -1,4 +1,5 @@
 0.33
+ - Regen examples.
 
 0.32 2023-10-27T20:25:33+02:00
  - Add Wikibase::Datatype::Value::Lexeme.

@@ -25,6 +25,7 @@ examples/create_and_print_statement.pl
 examples/create_and_print_value.pl
 examples/create_and_print_value_globecoordinate.pl
 examples/create_and_print_value_item.pl
+examples/create_and_print_value_lexeme.pl
 examples/create_and_print_value_monolingual.pl
 examples/create_and_print_value_property.pl
 examples/create_and_print_value_quantity1.pl
