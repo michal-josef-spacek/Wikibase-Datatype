@@ -8,3 +8,5 @@ on:
 jobs:
   test:
     uses: perl-actions/github-workflows/.github/workflows/simple-perltester-workflow.yml@main
+    with:
+      since-perl: 5.14
