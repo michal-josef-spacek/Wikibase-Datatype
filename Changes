@@ -1,6 +1,7 @@
 0.33
  - Add fixtures with tests and examples.
  - Regen examples.
+ - Update Wikibase::Datatype doc.
 
 0.32 2023-10-27T20:25:33+02:00
  - Add Wikibase::Datatype::Value::Lexeme.

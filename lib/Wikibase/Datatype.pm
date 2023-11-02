@@ -93,6 +93,10 @@ Wikibase globe coordinate value datatype.
 
 Wikibase item value datatype.
 
+=item L<Wikibase::Datatype::Value::Lexeme>
+
+Wikibase lexeme value datatype.
+
 =item L<Wikibase::Datatype::Value::Monolingual>
 
 Wikibase monolingual value datatype.
