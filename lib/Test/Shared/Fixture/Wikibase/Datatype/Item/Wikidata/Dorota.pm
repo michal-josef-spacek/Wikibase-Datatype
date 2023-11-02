@@ -8,7 +8,7 @@ use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SubjectLexem
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::FemaleGivenName;
 use Wikibase::Datatype::Value::Monolingual;
 
-our $VERSION = 0.33;
+our $VERSION = 0.34;
 
 sub new {
 	my $class = shift;
@@ -259,6 +259,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.33
+0.34
 
 =cut
