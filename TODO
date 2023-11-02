@@ -11,7 +11,6 @@ TODO
 62. Add multiple values to Item.
 63. Add MediainfoStatement with reference and qualifiers
 Example: https://commons.wikimedia.org/wiki/File:Middelburg_(NL),_Bevrijdingsmonument_--_2022_--_4907.jpg
-64. Add lexeme value to some fixture (like Q1246129)
 65.
 
 Applied
@@ -195,3 +194,6 @@ OK [20230421] skim
 
 53. Doc for test instances
 OK [20230427] skim
+
+64. Add lexeme value to some fixture (like Q1246129)
+OK [20231102] skim
