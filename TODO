@@ -1,9 +1,11 @@
 TODO
 ====
 22. Badges jsou presny seznam. Kde ho ziskam, jak ho zkontroluji?
+See Wikidata::Constants
 40. V Lexemech parametery lexical_category a language jsou presne hodnoty. Co s
     tim? Tady, stejne jako 22 by bylo dobre mit Wikidata objekt, ktery by to pro
     Wikidata upresnoval.
+See Wikidata::Constants
 49. Testy pro Form udelat nejak, aby hodnoty davaly realny smysl na Wikidatech.
 54. Finish test item for Human.
 60. In Wikibase::Datatype::Lexeme example in doc is blank Qualifiers. Remove it.
@@ -12,6 +14,7 @@ TODO
 63. Add MediainfoStatement with reference and qualifiers
 Example: https://commons.wikimedia.org/wiki/File:Middelburg_(NL),_Bevrijdingsmonument_--_2022_--_4907.jpg
 65. Calendarmodel only two possibilities.
+See Wikidata::Constants
 66.
 
 Applied
