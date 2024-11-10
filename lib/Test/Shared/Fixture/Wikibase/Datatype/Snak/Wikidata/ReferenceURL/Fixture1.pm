@@ -6,7 +6,7 @@ use warnings;
 
 use Wikibase::Datatype::Value::String;
 
-our $VERSION = 0.34;
+our $VERSION = 0.35;
 
 sub new {
 	my $class = shift;
@@ -144,6 +144,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.34
+0.35
 
 =cut
