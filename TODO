@@ -15,7 +15,8 @@ See Wikidata::Constants
 Example: https://commons.wikimedia.org/wiki/File:Middelburg_(NL),_Bevrijdingsmonument_--_2022_--_4907.jpg
 65. Calendarmodel only two possibilities.
 See Wikidata::Constants
-66.
+66. Move Wikibase::Datatype::Utils::_check_item_with_char() to Mo::utils::*.
+67.
 
 Applied
 =======
