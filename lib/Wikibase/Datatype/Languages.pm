@@ -580,7 +580,7 @@ Readonly::Hash our %LANGUAGES => (
 
 	# Codes from https://github.com/wikimedia/mediawiki-extensions-Wikibase/blob/master/lib/includes/WikibaseContentLanguages.php
 	# TODO Native names.
-	# Updated 2023-04-22 from https://github.com/wikimedia/mediawiki-extensions-Wikibase/blob/master/lib/includes/WikibaseContentLanguages.php
+	# Updated 2025-01-01 from mediawiki-extensions-Wikibase/lib/includes/WikibaseContentLanguages.php, commit 1e626b913d5d8a28cb719a55baba4fdaa3324221
 	'agq' => 'Aghem', # Aghem - T288335
 	'bag' => 'Tuki', # Tuki - T263946
 	'bas' => 'Basaa', # Basaa - T263946
@@ -593,6 +593,7 @@ Readonly::Hash our %LANGUAGES => (
 	'bqz' => "Mka'a", # Mka'a - T263946
 	'byv' => 'Medumba', # Medumba - T263946
 	'cak' => 'Cakchiquel', # Cakchiquel - T278854
+	'cal' => 'Carolinian', # Carolinian - T308062
 	'cnh' => 'Chin', # Chin - T263946
 	'dua' => 'Duala', # Duala - T263946
 	'en-us' => 'American English', # American English - T154589
@@ -626,11 +627,11 @@ Readonly::Hash our %LANGUAGES => (
 	'rwr' => 'Marwari', # Marwari - T61905
 	'ryu' => 'Okinawan, Central', # Okinawan, Central - T271215
 	'sjd' => 'Sami, Kildin', # Sami, Kildin - T226701
-	'sje' => 'Sami, Pite', # Sami, Pite - T146707
 	'sju' => 'Sami, Ume', # Sami, Ume - T226701
 	'smj' => 'Lule Sámi', # Lule Sámi - T146707
 	'sms' => 'Skolt Sami', # Skolt Sami - T220118, T223544
 	'srq' => 'Sirionó', # Sirionó - T113408
+	'tpv' => 'Tanapag', # Tanapag - T308062
 	'tvu' => 'Tunen', # Tunen - T263946
 	'vut' => 'Vute', # Vute - T263946
 	'wes' => 'Pidgin (Cameroon)', # Pidgin (Cameroon) - T263946
