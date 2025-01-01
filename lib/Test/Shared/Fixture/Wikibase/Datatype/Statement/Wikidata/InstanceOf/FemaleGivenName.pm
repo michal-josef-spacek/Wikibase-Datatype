@@ -7,7 +7,7 @@ use warnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Reference::Wikidata::VIAF;
 use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::InstanceOf::FemaleGivenName;
 
-our $VERSION = 0.35;
+our $VERSION = 0.36;
 
 sub new {
 	my $class = shift;
@@ -159,6 +159,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.35
+0.36
 
 =cut
