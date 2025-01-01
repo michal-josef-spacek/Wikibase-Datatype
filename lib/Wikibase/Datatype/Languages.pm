@@ -698,9 +698,11 @@ Returns array with codes.
 
  # Output:
  # aa
+ # aae
  # ab
  # abs
  # ace
+ # acf
  # acm
  # ady
  # ady-cyrl
@@ -709,7 +711,6 @@ Returns array with codes.
  # aeb-latn
  # af
  # agq
- # ak
  # aln
  # als
  # alt
@@ -719,6 +720,7 @@ Returns array with codes.
  # ang
  # ann
  # anp
+ # apc
  # ar
  # arc
  # arn
@@ -749,11 +751,14 @@ Returns array with codes.
  # bcc
  # bci
  # bcl
+ # bdr
  # be
  # be-tarask
  # be-x-old
+ # bew
  # bfd
  # bg
+ # bgc
  # bgn
  # bh
  # bho
@@ -779,22 +784,33 @@ Returns array with codes.
  # byv
  # ca
  # cak
+ # cal
  # cbk-zam
+ # ccp
  # cdo
+ # cdo-hant
+ # cdo-latn
  # ce
  # ceb
  # ch
+ # chn
  # cho
  # chr
  # chy
  # ckb
  # cnh
  # co
+ # cop
  # cps
+ # cpx
+ # cpx-hans
+ # cpx-hant
+ # cpx-latn
  # cr
  # crh
  # crh-cyrl
  # crh-latn
+ # crh-ro
  # cs
  # csb
  # cu
@@ -816,6 +832,7 @@ Returns array with codes.
  # dv
  # dz
  # ee
+ # efi
  # egl
  # el
  # eml
@@ -850,6 +867,7 @@ Returns array with codes.
  # frp
  # frr
  # fur
+ # fvr
  # fy
  # ga
  # gaa
@@ -857,6 +875,7 @@ Returns array with codes.
  # gan
  # gan-hans
  # gan-hant
+ # gcf
  # gcr
  # gd
  # gl
@@ -879,12 +898,16 @@ Returns array with codes.
  # gya
  # ha
  # hak
+ # hak-hans
+ # hak-hant
+ # hak-latn
  # haw
  # he
  # hi
  # hif
  # hif-latn
  # hil
+ # hke
  # hno
  # ho
  # hr
@@ -898,6 +921,8 @@ Returns array with codes.
  # hyw
  # hz
  # ia
+ # iba
+ # ibb
  # id
  # ie
  # ig
@@ -911,6 +936,8 @@ Returns array with codes.
  # io
  # is
  # isu
+ # isv-cyrl
+ # isv-latn
  # it
  # iu
  # ja
@@ -921,6 +948,7 @@ Returns array with codes.
  # ka
  # kaa
  # kab
+ # kai
  # kbd
  # kbd-cyrl
  # kbp
@@ -928,6 +956,7 @@ Returns array with codes.
  # kea
  # ker
  # kg
+ # kge
  # khw
  # ki
  # kiu
@@ -944,6 +973,7 @@ Returns array with codes.
  # kl
  # km
  # kn
+ # knc
  # ko
  # ko-kp
  # koi
@@ -987,6 +1017,7 @@ Returns array with codes.
  # lrc
  # lt
  # ltg
+ # lua
  # lus
  # luz
  # lv
@@ -1008,6 +1039,9 @@ Returns array with codes.
  # mk
  # ml
  # mn
+ # mnc
+ # mnc-latn
+ # mnc-mong
  # mni
  # mnw
  # mo
@@ -1019,6 +1053,7 @@ Returns array with codes.
  # ms-arab
  # mt
  # mua
+ # mui
  # mul
  # mus
  # mwl
@@ -1029,6 +1064,9 @@ Returns array with codes.
  # nah
  # nan
  # nan-hani
+ # nan-hant
+ # nan-latn-pehoeji
+ # nan-latn-tailo
  # nap
  # nb
  # nds
@@ -1038,6 +1076,7 @@ Returns array with codes.
  # ng
  # nge
  # nia
+ # nit
  # niu
  # nl
  # nl-informal
@@ -1052,11 +1091,14 @@ Returns array with codes.
  # nog
  # nov
  # nqo
+ # nr
  # nrm
  # nso
+ # nup
  # nv
  # ny
  # nyn
+ # nyo
  # nys
  # oc
  # ojb
@@ -1108,6 +1150,7 @@ Returns array with codes.
  # ruq
  # ruq-cyrl
  # ruq-latn
+ # rut
  # rw
  # rwr
  # ryu
@@ -1182,6 +1225,7 @@ Returns array with codes.
  # tg-latn
  # th
  # ti
+ # tig
  # tk
  # tl
  # tly
@@ -1190,6 +1234,7 @@ Returns array with codes.
  # to
  # tok
  # tpi
+ # tpv
  # tr
  # tru
  # trv
@@ -1197,6 +1242,7 @@ Returns array with codes.
  # tt
  # tt-cyrl
  # tt-latn
+ # ttj
  # tum
  # tvu
  # tw
@@ -1231,6 +1277,8 @@ Returns array with codes.
  # wls
  # wo
  # wuu
+ # wuu-hans
+ # wuu-hant
  # wya
  # xal
  # xh
@@ -1244,9 +1292,12 @@ Returns array with codes.
  # yo
  # yrl
  # yue
+ # yue-hans
+ # yue-hant
  # za
  # zea
  # zgh
+ # zgh-latn
  # zh
  # zh-classical
  # zh-cn
