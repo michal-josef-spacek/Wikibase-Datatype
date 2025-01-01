@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::CommonLivingOrganism;
+use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::NumberOfLimbs::Four;
 use Unicode::UTF8 qw(decode_utf8);
 use Wikibase::Datatype::Sitelink;
 use Wikibase::Datatype::Statement;
@@ -80,6 +81,7 @@ sub new {
 		],
 		'statements' => [
 			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::CommonLivingOrganism->new,
+			Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::NumberOfLimbs::Four->new,
 		],
 		'title' => 'Q144',
 	);
@@ -249,6 +251,7 @@ Returns string.
  #   P31: Q55983715 (normal)
  #    P642: Q20717272
  #    P642: Q26972265
+ #   P123456789: 4 (normal)
 
 =head1 DEPENDENCIES
 
