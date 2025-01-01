@@ -1,4 +1,6 @@
 0.36
+ - Error message change: Fix check of quantity upperBound and lowerBound.
+   They could be same as amount. Fix errors.
 
 0.35 2025-01-01T15:09:35+01:00
  - Update Wikibase content language codes.
