@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 use Unicode::UTF8 qw(decode_utf8);
 use Wikibase::Datatype::Value::Monolingual;
@@ -48,3 +48,11 @@ eval {
 };
 is($EVAL_ERROR, "Language code 'ger' isn't code supported by Wikibase.\n",
 	"Language code 'ger' isn't code supported by Wikibase.");
+
+# Test.
+$Wikibase::Datatype::Utils::SKIP_CHECK_LANG = 1;
+$obj = Wikibase::Datatype::Value::Monolingual->new(
+	'language' => 'ger',
+	'value' => 'foo',
+);
+isa_ok($obj, 'Wikibase::Datatype::Value::Monolingual');

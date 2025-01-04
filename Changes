@@ -1,5 +1,7 @@
 0.37
  - Error message change: Rename error message for check_language() helper.
+ - Add $Wikibase::Datatype::Utils::SKIP_CHECK_LANG variable to skip check of
+   Wikibase languages which are supported.
  - Remove obsolete error message in doc for check_language() helper.
 
 0.36 2025-01-01T22:02:29+01:00

@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 use Wikibase::Datatype::Utils qw(check_language);
 
@@ -35,3 +35,11 @@ $self = {
 };
 my $ret = check_language($self, 'key');
 is($ret, undef, 'Right language is present.');
+
+# Test.
+$self = {
+	'key' => 'xx',
+};
+$Wikibase::Datatype::Utils::SKIP_CHECK_LANG = 1;
+$ret = check_language($self, 'key');
+is($ret, undef, 'Not supported language is present without error.');

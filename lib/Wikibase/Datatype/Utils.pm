@@ -13,6 +13,8 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(check_datetime check_entity check_language
 	check_lexeme check_property check_sense);
 
+our $SKIP_CHECK_LANG => 0;
+
 our $VERSION = 0.37;
 
 sub check_datetime {
@@ -77,7 +79,7 @@ sub check_entity {
 sub check_language {
 	my ($self, $key) = @_;
 
-	if (none { $_ eq $self->{$key} } all_language_codes()) {
+	if (! $SKIP_CHECK_LANG && none { $_ eq $self->{$key} } all_language_codes()) {
 		err "Language code '".$self->{$key}."' isn't code supported by Wikibase.";
 	}
 
@@ -154,6 +156,14 @@ Wikibase::Datatype::Utils - Wikibase datatype utilities.
 =head1 DESCRIPTION
 
 Datatype utilities for checking of data objects.
+
+=head1 VARIABLES
+
+=head2 C<$SKIP_CHECK_LANG>
+
+Boolean variable to skip check of right language.
+
+Default value is 0, checking is working.
 
 =head1 SUBROUTINES
 
