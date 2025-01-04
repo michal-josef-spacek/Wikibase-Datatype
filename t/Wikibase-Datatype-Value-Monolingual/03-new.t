@@ -36,8 +36,8 @@ eval {
 		'value' => 'foo',
 	);
 };
-is($EVAL_ERROR, "Language code 'xx' isn't ISO 639-1 code.\n",
-	"Language code 'xx' isn't ISO 639-1 code.");
+is($EVAL_ERROR, "Language code 'xx' isn't code supported by Wikibase.\n",
+	"Language code 'xx' isn't code supported by Wikibase.");
 
 # Test.
 eval {
@@ -46,5 +46,5 @@ eval {
 		'value' => 'foo',
 	);
 };
-is($EVAL_ERROR, "Language code 'ger' isn't ISO 639-1 code.\n",
-	"Language code 'ger' isn't ISO 639-1 code.");
+is($EVAL_ERROR, "Language code 'ger' isn't code supported by Wikibase.\n",
+	"Language code 'ger' isn't code supported by Wikibase.");

@@ -78,7 +78,7 @@ sub check_language {
 	my ($self, $key) = @_;
 
 	if (none { $_ eq $self->{$key} } all_language_codes()) {
-		err "Language code '".$self->{$key}."' isn't ISO 639-1 code.";
+		err "Language code '".$self->{$key}."' isn't code supported by Wikibase.";
 	}
 
 	return;
@@ -226,7 +226,7 @@ Returns undef.
          Parameter '%s' must begin with 'Q' and number after it.";
 
  check_language():
-         Language code '%s' isn't ISO 639-1 code.
+         Language code '%s' isn't code supported by Wikibase.
 
  check_lexeme():
          Parameter '%s' must begin with 'L' and number after it.";
