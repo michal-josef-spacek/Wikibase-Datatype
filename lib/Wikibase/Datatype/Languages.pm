@@ -640,6 +640,9 @@ Readonly::Hash our %LANGUAGES => (
 	'yat' => 'Yambeta', # Yambeta - T263946
 	'yav' => 'Yangben', # Yangben - T263946
 	'ybb' => 'Yemba', # Yemba - T263946
+
+	# Other, used in Q111803082
+	'ak' => 'Akan',
 );
 
 our $VERSION = 0.37;
@@ -711,6 +714,7 @@ Returns array with codes.
  # aeb-latn
  # af
  # agq
+ # ak
  # aln
  # als
  # alt

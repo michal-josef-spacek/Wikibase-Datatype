@@ -1,5 +1,6 @@
 0.37
  - Error message change: Rename error message for check_language() helper.
+ - Add 'ak' language code used in Q111803082.
  - Add $Wikibase::Datatype::Utils::SKIP_CHECK_LANG variable to skip check of
    Wikibase languages which are supported.
  - Remove obsolete error message in doc for check_language() helper.
