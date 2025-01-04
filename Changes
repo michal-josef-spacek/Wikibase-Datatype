@@ -3,6 +3,8 @@
  - Add 'ak' language code used in Q111803082.
  - Add $Wikibase::Datatype::Utils::SKIP_CHECK_LANG variable to skip check of
    Wikibase languages which are supported.
+ - Add @Wikibase::Datatype::Utils::LANGUAGE_CODES variable to define user
+   language codes list.
  - Remove obsolete error message in doc for check_language() helper.
 
 0.36 2025-01-01T22:02:29+01:00

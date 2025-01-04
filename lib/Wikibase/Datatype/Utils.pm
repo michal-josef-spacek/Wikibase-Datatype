@@ -14,6 +14,7 @@ Readonly::Array our @EXPORT_OK => qw(check_datetime check_entity check_language
 	check_lexeme check_property check_sense);
 
 our $SKIP_CHECK_LANG => 0;
+our @LANGUAGE_CODES => ();
 
 our $VERSION = 0.37;
 
@@ -79,8 +80,19 @@ sub check_entity {
 sub check_language {
 	my ($self, $key) = @_;
 
-	if (! $SKIP_CHECK_LANG && none { $_ eq $self->{$key} } all_language_codes()) {
-		err "Language code '".$self->{$key}."' isn't code supported by Wikibase.";
+	if (! $SKIP_CHECK_LANG) {
+		my @language_codes;
+		my $error_message;
+		if (@LANGUAGE_CODES) {
+			@language_codes = @LANGUAGE_CODES;
+			$error_message = "Language code '".$self->{$key}."' isn't user defined language code.";
+		} else {
+			@language_codes = all_language_codes();
+			$error_message = "Language code '".$self->{$key}."' isn't code supported by Wikibase.";
+		}
+		if (none { $_ eq $self->{$key} } @language_codes) {
+			err $error_message;
+		}
 	}
 
 	return;
@@ -164,6 +176,12 @@ Datatype utilities for checking of data objects.
 Boolean variable to skip check of right language.
 
 Default value is 0, checking is working.
+
+=head2 C<@LANGUAGE_CODES>
+
+List of supported language codes defined by user.
+
+Default value is (), checking official language codes.
 
 =head1 SUBROUTINES
 
