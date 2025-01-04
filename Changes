@@ -1,4 +1,5 @@
 0.37
+ - Remove obsolete error message in doc for check_language() helper.
 
 0.36 2025-01-01T22:02:29+01:00
  - Error message change: Fix check of quantity upperBound and lowerBound.
