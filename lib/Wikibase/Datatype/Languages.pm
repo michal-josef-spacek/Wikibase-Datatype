@@ -645,7 +645,7 @@ Readonly::Hash our %LANGUAGES => (
 	'ak' => 'Akan',
 );
 
-our $VERSION = 0.37;
+our $VERSION = 0.38;
 
 sub all_language_codes {
 	return keys %LANGUAGES;
@@ -1340,6 +1340,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.37
+0.38
 
 =cut

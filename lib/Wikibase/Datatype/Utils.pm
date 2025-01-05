@@ -16,7 +16,7 @@ Readonly::Array our @EXPORT_OK => qw(check_datetime check_entity check_language
 our $SKIP_CHECK_LANG => 0;
 our @LANGUAGE_CODES => ();
 
-our $VERSION = 0.37;
+our $VERSION = 0.38;
 
 sub check_datetime {
 	my ($self, $key) = @_;
@@ -524,6 +524,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.37
+0.38
 
 =cut
