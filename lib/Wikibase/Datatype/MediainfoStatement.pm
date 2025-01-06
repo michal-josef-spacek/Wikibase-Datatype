@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use List::MoreUtils qw(none);
+use List::Util qw(none);
 use Mo qw(build default is);
 use Mo::utils qw(check_array_object check_isa check_required);
 use Readonly;
@@ -272,7 +272,7 @@ Returns Wikibase::Datatype::MediainfoSnak instance.
 =head1 DEPENDENCIES
 
 L<Error::Pure>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Mo>,
 L<Mo::utils>.
 L<Readonly>.
