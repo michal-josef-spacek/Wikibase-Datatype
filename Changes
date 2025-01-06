@@ -1,4 +1,5 @@
 0.38
+ - Rewrite List::MoreUtils::none to List::Util.
 
 0.37 2025-01-05T11:40:52+01:00
  - Error message change: Rename error message for check_language() helper.
