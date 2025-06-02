@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use List::Util qw(none);
+use List::Util 1.33 qw(none);
 use Mo qw(build default is);
 use Mo::utils qw(check_array_object check_number check_number_of_items check_required);
 use Readonly;
