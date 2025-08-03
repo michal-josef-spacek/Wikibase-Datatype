@@ -6,7 +6,8 @@ use warnings;
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build default is);
-use Mo::utils qw(check_array_object check_isa check_required);
+use Mo::utils qw(check_isa check_required);
+use Mo::utils::Array qw(check_array_object);
 use Readonly;
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
@@ -52,12 +53,10 @@ sub BUILD {
 	check_isa($self, 'snak', 'Wikibase::Datatype::Snak');
 
 	# Check property snaks.
-	check_array_object($self, 'property_snaks', 'Wikibase::Datatype::Snak',
-		'Property snak');
+	check_array_object($self, 'property_snaks', 'Wikibase::Datatype::Snak');
 
 	# Check references.
-	check_array_object($self, 'references', 'Wikibase::Datatype::Reference',
-		'Reference');
+	check_array_object($self, 'references', 'Wikibase::Datatype::Reference');
 
 	return;
 }
@@ -175,15 +174,26 @@ Returns Wikibase::Datatype::Snak instance.
 =head1 ERRORS
 
  new():
-         From Mo::utils::check_array_object():
-                 Parameter 'property_snaks' must be a array.
-                 Parameter 'references' must be a array.
-                 Property snak isn't 'Wikibase::Datatype::Snak' object.
-                 Reference isn't 'Wikibase::Datatype::Reference' object.
          From Mo::utils::check_isa():
                  Parameter 'snak' must be a 'Wikibase::Datatype::Snak' object.
+
          From Mo::utils::check_required():
                  Parameter 'snak' is required.
+
+         From Mo::utils::Array::check_array_object():
+                 Parameter 'property_snaks' must be a array.
+                         Value: %s
+                         Reference: %s
+                 Parameter 'property_snaks' with array must contain 'Wikibase::Datatype::Snak' objects.
+                         Value: %s
+                         Reference: %s
+                 Parameter 'references' must be a array.
+                         Value: %s
+                         Reference: %s
+                 Parameter 'references' with array must contain 'Wikibase::Datatype::Reference' objects.
+                         Value: %s
+                         Reference: %s
+
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
 
 =head1 EXAMPLE
@@ -292,6 +302,7 @@ L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
 L<Mo::utils>.
+L<Mo::utils::Array>.
 L<Readonly>.
 
 =head1 SEE ALSO

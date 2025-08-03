@@ -6,7 +6,8 @@ use warnings;
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build default is);
-use Mo::utils qw(check_array_object check_isa check_required);
+use Mo::utils qw(check_isa check_required);
+use Mo::utils::Array qw(check_array_object);
 use Readonly;
 
 Readonly::Array our @RANKS => qw(normal preferred deprecated);
@@ -52,12 +53,10 @@ sub BUILD {
 	check_isa($self, 'snak', 'Wikibase::Datatype::MediainfoSnak');
 
 	# Check property snaks.
-	check_array_object($self, 'property_snaks', 'Wikibase::Datatype::MediainfoSnak',
-		'Property mediainfo snak');
+	check_array_object($self, 'property_snaks', 'Wikibase::Datatype::MediainfoSnak');
 
 	# Check references.
-	check_array_object($self, 'references', 'Wikibase::Datatype::Reference',
-		'Reference');
+	check_array_object($self, 'references', 'Wikibase::Datatype::Reference');
 
 	return;
 }
@@ -175,15 +174,18 @@ Returns Wikibase::Datatype::MediainfoSnak instance.
 =head1 ERRORS
 
  new():
-         From Mo::utils::check_array_object():
-                 Parameter 'property_snaks' must be a array.
-                 Parameter 'references' must be a array.
-                 Property mediainfo snak isn't 'Wikibase::Datatype::MediainfoSnak' object.
-                 Reference isn't 'Wikibase::Datatype::Reference' object.
          From Mo::utils::check_isa():
                  Parameter 'snak' must be a 'Wikibase::Datatype::MediainfoSnak' object.
+
          From Mo::utils::check_required():
                  Parameter 'snak' is required.
+
+         From Mo::utils::Array::check_array_object():
+                 Parameter 'property_snaks' must be a array.
+                 Parameter 'property_snaks' with array must contain 'Wikibase::Datatype::MediainfoSnak' objects.
+                 Parameter 'references' must be a array.
+                 Parameter 'references' with array must contain 'Wikibase::Datatype::Reference' objects.
+
          Parameter 'rank' has bad value. Possible values are normal, preferred, deprecated.
 
 =head1 EXAMPLE
@@ -275,6 +277,7 @@ L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
 L<Mo::utils>.
+L<Mo::utils::Array>.
 L<Readonly>.
 
 =head1 SEE ALSO
