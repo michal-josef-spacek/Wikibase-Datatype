@@ -3,7 +3,7 @@ package Wikibase::Datatype::Term;
 use strict;
 use warnings;
 
-use Mo qw(is);
+use Mo qw(build is);
 use Mo::utils 0.01 qw(check_required);
 use Wikibase::Datatype::Utils qw(check_language_term);
 
