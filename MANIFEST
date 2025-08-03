@@ -376,6 +376,8 @@ t/Wikibase-Datatype-Item/13-statements.t
 t/Wikibase-Datatype-Item/14-title.t
 t/Wikibase-Datatype-Languages/01-use.t
 t/Wikibase-Datatype-Languages/02-version.t
+t/Wikibase-Datatype-Languages/03-all_language_codes.t
+t/Wikibase-Datatype-Languages/04-all_term_language_codes.t
 t/Wikibase-Datatype-Lexeme/01-use.t
 t/Wikibase-Datatype-Lexeme/02-version.t
 t/Wikibase-Datatype-Lexeme/03-new.t

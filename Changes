@@ -1,5 +1,6 @@
 0.38
  - Add Languages::all_term_languages_codes() subroutine.
+ - Add tests for Languages.
  - Rewrite List::MoreUtils::none to List::Util.
 
 0.37 2025-01-05T11:40:52+01:00
