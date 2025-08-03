@@ -19,7 +19,8 @@ See Wikidata::Constants
 67. Add globecoordinate to fixtures
 68. Regen four/four_tolerance examples after print() update.
 69. Use Term object.
-70.
+70. Tests for Utils::check_language_term().
+71.
 
 Applied
 =======
