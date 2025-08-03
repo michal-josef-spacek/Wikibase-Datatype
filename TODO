@@ -18,7 +18,6 @@ See Wikidata::Constants
 66. Move Wikibase::Datatype::Utils::_check_item_with_char() to Mo::utils::*.
 67. Add globecoordinate to fixtures
 68. Regen four/four_tolerance examples after print() update.
-69. Use Term object.
 71.
 
 Applied
@@ -207,4 +206,7 @@ OK [20230427] skim
 OK [20231102] skim
 
 70. Tests for Utils::check_language_term().
+OK [20250803] skim
+
+69. Use Term object.
 OK [20250803] skim
