@@ -1,4 +1,4 @@
-0.38
+0.38 2025-08-03T11:12:14+02:00
  - Add Languages::all_term_languages_codes() subroutine.
  - Add Term object.
  - Add Utils::check_language_term() helper.
