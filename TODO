@@ -19,7 +19,6 @@ See Wikidata::Constants
 67. Add globecoordinate to fixtures
 68. Regen four/four_tolerance examples after print() update.
 69. Use Term object.
-70. Tests for Utils::check_language_term().
 71.
 
 Applied
@@ -206,3 +205,6 @@ OK [20230427] skim
 
 64. Add lexeme value to some fixture (like Q1246129)
 OK [20231102] skim
+
+70. Tests for Utils::check_language_term().
+OK [20250803] skim
