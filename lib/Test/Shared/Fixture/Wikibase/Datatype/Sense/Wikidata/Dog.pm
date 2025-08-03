@@ -9,7 +9,7 @@ use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::ItemForThisS
 use Unicode::UTF8 qw(decode_utf8);
 use Wikibase::Datatype::Value::Monolingual;
 
-our $VERSION = 0.39;
+our $VERSION = 0.40;
 
 sub new {
 	my $class = shift;
@@ -163,6 +163,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.39
+0.40
 
 =cut

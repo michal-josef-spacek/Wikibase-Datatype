@@ -9,7 +9,7 @@ use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::
 use Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male;
 use Wikibase::Datatype::Term;
 
-our $VERSION = 0.39;
+our $VERSION = 0.40;
 
 sub new {
 	my $class = shift;
@@ -258,6 +258,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.39
+0.40
 
 =cut
