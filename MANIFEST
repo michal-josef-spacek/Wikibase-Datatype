@@ -1,5 +1,6 @@
 Changes
 examples/all_language_codes.pl
+examples/all_term_language_codes.pl
 examples/check_datetime_fail.pl
 examples/check_datetime_success.pl
 examples/check_entity_fail.pl
