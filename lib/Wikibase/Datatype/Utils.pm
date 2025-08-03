@@ -299,6 +299,7 @@ Returns undef.
 
  check_language():
          Language code '%s' isn't code supported by Wikibase.
+         Language code '%s' isn't user defined language code."
 
  check_language_term():
          Language code '%s' isn't code supported for terms by Wikibase.
