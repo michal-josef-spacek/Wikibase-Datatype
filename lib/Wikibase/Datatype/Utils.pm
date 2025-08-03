@@ -6,12 +6,12 @@ use warnings;
 
 use DateTime;
 use Error::Pure qw(err);
-use List::Util qw(none);
-use Wikibase::Datatype::Languages qw(all_language_codes);
+use List::Util 1.33 qw(none);
+use Wikibase::Datatype::Languages qw(all_language_codes all_term_language_codes);
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(check_datetime check_entity check_language
-	check_lexeme check_property check_sense);
+	check_language_term check_lexeme check_property check_sense);
 
 our $SKIP_CHECK_LANG => 0;
 our @LANGUAGE_CODES => ();
@@ -98,6 +98,17 @@ sub check_language {
 	return;
 }
 
+sub check_language_term {
+	my ($self, $key) = @_;
+
+	my @term_language_codes = all_term_language_codes();
+	if (none { $_ eq $self->{$key} } @term_language_codes) {
+		err "Language code '".$self->{$key}."' isn't code supported for terms by Wikibase.";
+	}
+
+	return;
+}
+
 sub check_lexeme {
 	my ($self, $key) = @_;
 
@@ -156,11 +167,12 @@ Wikibase::Datatype::Utils - Wikibase datatype utilities.
 
 =head1 SYNOPSIS
 
- use Wikibase::Datatype::Utils qw(check_datetime check_entity check_language check_lexeme check_property check_sense);
+ use Wikibase::Datatype::Utils qw(check_datetime check_entity check_language check_language_term check_lexeme check_property check_sense);
 
  check_datetime($self, $key);
  check_entity($self, $key);
  check_language($self, $key);
+ check_language_term($self, $key);
  check_lexeme($self, $key);
  check_property($self, $key);
  check_sense($self, $key);
@@ -210,6 +222,14 @@ Check parameter defined by C<$key> if it's ISO 639-1 language code and if langua
 
 Returns undef.
 
+=head2 C<check_language_term>
+
+ check_language_term($self, $key);
+
+Check parameter defined by C<$key> if it's language code for L<Wikibase::Datatype::Term> and if language exists.
+
+Returns undef.
+
 =head2 C<check_lexeme>
 
  check_lexeme($self, $key);
@@ -255,6 +275,9 @@ Returns undef.
 
  check_language():
          Language code '%s' isn't code supported by Wikibase.
+
+ check_language_term():
+         Language code '%s' isn't code supported for terms by Wikibase.
 
  check_lexeme():
          Parameter '%s' must begin with 'L' and number after it.";

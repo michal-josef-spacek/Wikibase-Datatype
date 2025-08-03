@@ -1,5 +1,6 @@
 0.38
  - Add Languages::all_term_languages_codes() subroutine.
+ - Add Utils::check_language_term() helper.
  - Add tests for Languages.
  - Rewrite List::MoreUtils::none to List::Util.
 
