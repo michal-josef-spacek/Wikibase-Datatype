@@ -9,7 +9,7 @@ use Mo::utils qw(check_number check_number_of_items);
 use Mo::utils::Array qw(check_array_object);
 use Wikibase::Datatype::Value::Monolingual;
 
-our $VERSION = 0.38;
+our $VERSION = 0.39;
 
 has aliases => (
 	default => [],
@@ -639,6 +639,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.38
+0.39
 
 =cut
