@@ -6,7 +6,7 @@ use warnings;
 
 use Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::NumberOfLimbs::FourTolerance;
 
-our $VERSION = 0.40;
+our $VERSION = 0.41;
 
 sub new {
 	my $class = shift;
@@ -148,6 +148,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.40
+0.41
 
 =cut
