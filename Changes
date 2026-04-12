@@ -1,4 +1,4 @@
-0.40
+0.40 2026-04-12T12:21:22+02:00
  - Fix tolerance in
    Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::NumberOfLimbs::FourTolerance.
  - Regen examples with tolerances for new version of print.
