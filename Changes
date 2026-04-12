@@ -1,4 +1,6 @@
 0.40
+ - Fix tolerance in
+   Test::Shared::Fixture::Wikibase::Datatype::Snak::Wikidata::NumberOfLimbs::FourTolerance.
  - Update languages.
  - Update copyright years.
 

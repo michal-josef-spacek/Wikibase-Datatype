@@ -14,9 +14,9 @@ sub new {
 	my @params = (
 		'datatype' => 'quantity',
 		'datavalue' => Wikibase::Datatype::Value::Quantity->new(
+			'lower_bound' => 3,
+			'upper_bound' => 5,
 			'value' => 4,
-			'upper_limit' => 4,
-			'lower_limit' => 3,
 		),
 		'property' => 'P123456789',
 	);
