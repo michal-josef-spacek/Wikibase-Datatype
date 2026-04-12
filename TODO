@@ -17,7 +17,6 @@ Example: https://commons.wikimedia.org/wiki/File:Middelburg_(NL),_Bevrijdingsmon
 See Wikidata::Constants
 66. Move Wikibase::Datatype::Utils::_check_item_with_char() to Mo::utils::*.
 67. Add globecoordinate to fixtures
-68. Regen four/four_tolerance examples after print() update.
 71.
 
 Applied
@@ -210,3 +209,6 @@ OK [20250803] skim
 
 69. Use Term object.
 OK [20250803] skim
+
+68. Regen four/four_tolerance examples after print() update.
+OK [20260412] skim
